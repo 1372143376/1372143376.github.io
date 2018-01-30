@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae92a0aa-129b-4600-897b-2de2cf7bd68d" name="默认" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/categories/日记/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/archives/page/4/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/imgs/favicon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/imgs/favicon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/imgs/favicon.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/ku6广告/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/乐视广告/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/优酷广告/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/土豆广告/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/失眠/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/如何解决/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/日记/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/晚睡/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/爱奇艺广告/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/视频广告屏蔽/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/读书笔记/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/读后感/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/锁区如何玩/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/锁区如何玩，如何解决，Pokemon/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imgs/favicon.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imgs/favicon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imgs/favicon.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/04/22/Scrapy-examples尝试/index.html" afterPath="$PROJECT_DIR$/2016/04/22/Scrapy-examples尝试/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/04/22/iterable/index.html" afterPath="$PROJECT_DIR$/2016/04/22/iterable/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/03/反思毕业3年/index.html" afterPath="$PROJECT_DIR$/2016/05/03/反思毕业3年/index.html" />
@@ -70,11 +70,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/404.html" afterPath="$PROJECT_DIR$/404.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/04/22/Scrapy-examples尝试/index.html" afterPath="$PROJECT_DIR$/_site/2016/04/22/Scrapy-examples尝试/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/04/22/iterable/index.html" afterPath="$PROJECT_DIR$/_site/2016/04/22/iterable/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/03/反思毕业3年/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/03/反思毕业3年/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/04/关于scarpy-ip的bug/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/04/关于scarpy-ip的bug/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/05/如果不知道问题在哪里，就去上个厕所吧，也许回来就知道了/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/05/如果不知道问题在哪里，就去上个厕所吧，也许回来就知道了/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/06/scrapy登录知乎以及相关问题/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/06/scrapy登录知乎以及相关问题/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/09/Atom插件/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/09/Atom插件/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/09/Pycharm怎么用/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/09/Pycharm怎么用/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/09/scrapy-在不同的抓取级别的Request之间传递参数的办法/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/09/scrapy-在不同的抓取级别的Request之间传递参数的办法/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/09/scrapy抓取知乎话题下的子话题的url/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/09/scrapy抓取知乎话题下的子话题的url/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/10/CSS选择器例子/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/10/CSS选择器例子/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/10/XPath选择器相关/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/10/XPath选择器相关/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/10/hexo相关操作/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/10/hexo相关操作/index.html" />
@@ -87,7 +90,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/12/Scrapy-ItemLoader返回的是列表如何选择第一个/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/12/Scrapy-ItemLoader返回的是列表如何选择第一个/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/12/Scrapy-爬虫中的一些技巧/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/12/Scrapy-爬虫中的一些技巧/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/16/git相关操作/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/16/git相关操作/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/16/关于yield函数的理解/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/16/关于yield函数的理解/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/18/Pycharm主题设置/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/18/Pycharm主题设置/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/18/如何找到Python的site-packages路径/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/18/如何找到Python的site-packages路径/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/19/MongoDB创建索引/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/19/MongoDB创建索引/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/19/MongoDB常用命令/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/19/MongoDB常用命令/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/19/Scrapy下载中间件/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/19/Scrapy下载中间件/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/19/开始使用D3JS作图/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/19/开始使用D3JS作图/index.html" />
@@ -97,9 +103,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/31/Monogdb-update更新数据/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/31/Monogdb-update更新数据/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/01/HPUX宕机差错步骤/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/01/HPUX宕机差错步骤/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/06/一些后悔没有早点懂的道理/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/06/一些后悔没有早点懂的道理/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/24/MongoDB2-75之后删除冗余文档/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/24/MongoDB2-75之后删除冗余文档/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/26/Surge低价购买-配置详解-去广告/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/26/Surge低价购买-配置详解-去广告/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/28/NodeBB安装（1）/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/28/NodeBB安装（1）/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/01/Surge相关配置/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/01/Surge相关配置/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/11/Pokemon锁区如何玩/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/11/Pokemon锁区如何玩/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/11/如何注册Google账户/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/11/如何注册Google账户/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/13/IBM-DS5300-Impending-Drive-Failure报错/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/13/IBM-DS5300-Impending-Drive-Failure报错/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/13/Pokemon-Go-1-0-1更新内容介绍/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/13/Pokemon-Go-1-0-1更新内容介绍/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/13/Pokemon-Go-攻略及一些常见问题详解/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/13/Pokemon-Go-攻略及一些常见问题详解/index.html" />
@@ -108,6 +117,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/22/Mongodb-Make-at-least-3379MB-available-in-data-db-journal-or-use/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/22/Mongodb-Make-at-least-3379MB-available-in-data-db-journal-or-use/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/09/08/论语之道/index.html" afterPath="$PROJECT_DIR$/_site/2016/09/08/论语之道/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/10/04/Centos6-4-SSH连接断开问题/index.html" afterPath="$PROJECT_DIR$/_site/2016/10/04/Centos6-4-SSH连接断开问题/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2017/01/05/提高效率的15个iPhone-App推荐/index.html" afterPath="$PROJECT_DIR$/_site/2017/01/05/提高效率的15个iPhone-App推荐/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/404.html" afterPath="$PROJECT_DIR$/_site/404.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/about/index.html" afterPath="$PROJECT_DIR$/_site/about/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/04/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/04/index.html" />
@@ -129,11 +139,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/index.html" afterPath="$PROJECT_DIR$/_site/archives/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/page/2/index.html" afterPath="$PROJECT_DIR$/_site/archives/page/2/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/page/3/index.html" afterPath="$PROJECT_DIR$/_site/archives/page/3/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/page/4/index.html" afterPath="$PROJECT_DIR$/_site/archives/page/4/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/page/5/index.html" afterPath="$PROJECT_DIR$/_site/archives/page/5/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/categories/Python/index.html" afterPath="$PROJECT_DIR$/_site/categories/Python/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/categories/error/index.html" afterPath="$PROJECT_DIR$/_site/categories/error/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/categories/index.html" afterPath="$PROJECT_DIR$/_site/categories/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/categories/日记/index.html" afterPath="$PROJECT_DIR$/_site/categories/日记/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/page/2/index.html" afterPath="$PROJECT_DIR$/_site/page/2/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/page/3/index.html" afterPath="$PROJECT_DIR$/_site/page/3/index.html" />
@@ -167,6 +177,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/virtualenv/index.html" afterPath="$PROJECT_DIR$/_site/tags/virtualenv/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/xpath/index.html" afterPath="$PROJECT_DIR$/_site/tags/xpath/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/yield/index.html" afterPath="$PROJECT_DIR$/_site/tags/yield/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/乐视广告/index.html" afterPath="$PROJECT_DIR$/_site/tags/乐视广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/优酷广告/index.html" afterPath="$PROJECT_DIR$/_site/tags/优酷广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/失眠/index.html" afterPath="$PROJECT_DIR$/_site/tags/失眠/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/如何解决/index.html" afterPath="$PROJECT_DIR$/_site/tags/如何解决/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/日记/index.html" afterPath="$PROJECT_DIR$/_site/tags/日记/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/爱奇艺广告/index.html" afterPath="$PROJECT_DIR$/_site/tags/爱奇艺广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/锁区如何玩，如何解决，Pokemon/index.html" afterPath="$PROJECT_DIR$/_site/tags/锁区如何玩，如何解决，Pokemon/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about/index.html" afterPath="$PROJECT_DIR$/about/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/04/index.html" afterPath="$PROJECT_DIR$/archives/2016/04/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/05/index.html" afterPath="$PROJECT_DIR$/archives/2016/05/index.html" />
@@ -253,8 +270,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="1505" column="25" lean-forward="false" selection-start-line="1505" selection-start-column="25" selection-end-line="1505" selection-end-column="54" />
+            <state relative-caret-position="226">
+              <caret line="1466" column="20" lean-forward="false" selection-start-line="1466" selection-start-column="20" selection-end-line="1466" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -265,7 +282,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="202">
               <caret line="474" column="20" lean-forward="false" selection-start-line="474" selection-start-column="20" selection-end-line="474" selection-end-column="20" />
-              <folding />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#2;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#2;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -274,7 +295,7 @@
         <entry file="file://$PROJECT_DIR$/2016/09/08/论语之道/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="157">
-              <caret line="485" column="20" lean-forward="false" selection-start-line="485" selection-start-column="20" selection-end-line="485" selection-end-column="66" />
+              <caret line="485" column="20" lean-forward="false" selection-start-line="485" selection-start-column="20" selection-end-line="485" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -285,15 +306,27 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>https://github.com/Profeel</find>
-      <find>github</find>
       <find>http://7xr6vh.com1.z0.glb.clouddn.com/hexofavicon.png</find>
       <find>1372143376</find>
       <find>https://github.com/1372143376/imgs/favicon.jpg</find>
+      <find>https://github.com/1372143376/imgs/favicon.gif</find>
+      <find>http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-14_IMG_5485.JPG</find>
+      <find>http://7xr6vh.com1.z0.glb.clouddn.com/hexo_%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE.png</find>
+      <find>http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-01_14:30:46.jpg</find>
+      <find>https://1372143376.github.io/imgs/wecagt.png</find>
+      <find>https://1372143376.github.io/imgs/favicon.jpg</find>
+      <find>github</find>
     </findStrings>
     <replaceStrings>
       <replace>https://github.com/1372143376</replace>
       <replace>https://github.com/1372143376/imgs/favicon.jpg</replace>
       <replace>https://github.com/1372143376/imgs/favicon.gif</replace>
+      <replace>https://1372143376.github.io/imgs/favicon.jpg</replace>
+      <replace>https://1372143376.github.io/imgs/wecagt.png</replace>
+      <replace>https://1372143376.github.io/images/wxpay_qrcode.png</replace>
+      <replace>https://1372143376.github.io/images/alipay_qrcode.jpg</replace>
+      <replace>https://1372143376.github.io/images/add_wechat.png</replace>
+      <replace>https://1372143376.github.io/images/favicon.jpg</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -428,18 +461,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517306309525</updated>
-      <workItem from="1517306310809" duration="1214000" />
+      <workItem from="1517306310809" duration="1901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1214000" />
+    <option name="totallyTimeSpent" value="1901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17590618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.010127932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -469,14 +501,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="1505" column="25" lean-forward="false" selection-start-line="1505" selection-start-column="25" selection-end-line="1505" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imgs/favicon.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -485,7 +509,15 @@
     <entry file="file://$PROJECT_DIR$/2016/09/08/论语之道/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
-          <caret line="485" column="20" lean-forward="false" selection-start-line="485" selection-start-column="20" selection-end-line="485" selection-end-column="66" />
+          <caret line="485" column="20" lean-forward="false" selection-start-line="485" selection-start-column="20" selection-end-line="485" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="1466" column="20" lean-forward="false" selection-start-line="1466" selection-start-column="20" selection-end-line="1466" selection-end-column="67" />
           <folding />
         </state>
       </provider>
@@ -494,7 +526,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="474" column="20" lean-forward="false" selection-start-line="474" selection-start-column="20" selection-end-line="474" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#2;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#2;n#article#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
