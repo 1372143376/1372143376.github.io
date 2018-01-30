@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ae92a0aa-129b-4600-897b-2de2cf7bd68d" name="默认" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imgs/favicon.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/04/22/Scrapy-examples尝试/index.html" afterPath="$PROJECT_DIR$/2016/04/22/Scrapy-examples尝试/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/04/22/iterable/index.html" afterPath="$PROJECT_DIR$/2016/04/22/iterable/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/03/反思毕业3年/index.html" afterPath="$PROJECT_DIR$/2016/05/03/反思毕业3年/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/04/关于scarpy-ip的bug/index.html" afterPath="$PROJECT_DIR$/2016/05/04/关于scarpy-ip的bug/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/05/如果不知道问题在哪里，就去上个厕所吧，也许回来就知道了/index.html" afterPath="$PROJECT_DIR$/2016/05/05/如果不知道问题在哪里，就去上个厕所吧，也许回来就知道了/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/06/scrapy登录知乎以及相关问题/index.html" afterPath="$PROJECT_DIR$/2016/05/06/scrapy登录知乎以及相关问题/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/09/Atom插件/index.html" afterPath="$PROJECT_DIR$/2016/05/09/Atom插件/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/09/Pycharm怎么用/index.html" afterPath="$PROJECT_DIR$/2016/05/09/Pycharm怎么用/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/09/scrapy-在不同的抓取级别的Request之间传递参数的办法/index.html" afterPath="$PROJECT_DIR$/2016/05/09/scrapy-在不同的抓取级别的Request之间传递参数的办法/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/09/scrapy抓取知乎话题下的子话题的url/index.html" afterPath="$PROJECT_DIR$/2016/05/09/scrapy抓取知乎话题下的子话题的url/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/10/CSS选择器例子/index.html" afterPath="$PROJECT_DIR$/2016/05/10/CSS选择器例子/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/10/XPath选择器相关/index.html" afterPath="$PROJECT_DIR$/2016/05/10/XPath选择器相关/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/10/hexo相关操作/index.html" afterPath="$PROJECT_DIR$/2016/05/10/hexo相关操作/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/10/关于ShadowSocks连接Dropbox设置/index.html" afterPath="$PROJECT_DIR$/2016/05/10/关于ShadowSocks连接Dropbox设置/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/11/《超级时间整理书》笔记/index.html" afterPath="$PROJECT_DIR$/2016/05/11/《超级时间整理书》笔记/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/11/关于Mac-Pro连接外接显示器分辨率问题/index.html" afterPath="$PROJECT_DIR$/2016/05/11/关于Mac-Pro连接外接显示器分辨率问题/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/11/晚睡强迫症患者/index.html" afterPath="$PROJECT_DIR$/2016/05/11/晚睡强迫症患者/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/12/Python-Or-Scrapy之预先善其事必先利其器/index.html" afterPath="$PROJECT_DIR$/2016/05/12/Python-Or-Scrapy之预先善其事必先利其器/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/12/Scrapy-ItemLoader的使用/index.html" afterPath="$PROJECT_DIR$/2016/05/12/Scrapy-ItemLoader的使用/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/12/Scrapy-ItemLoader返回的是列表如何选择第一个/index.html" afterPath="$PROJECT_DIR$/2016/05/12/Scrapy-ItemLoader返回的是列表如何选择第一个/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/12/Scrapy-爬虫中的一些技巧/index.html" afterPath="$PROJECT_DIR$/2016/05/12/Scrapy-爬虫中的一些技巧/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/16/git相关操作/index.html" afterPath="$PROJECT_DIR$/2016/05/16/git相关操作/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/16/关于yield函数的理解/index.html" afterPath="$PROJECT_DIR$/2016/05/16/关于yield函数的理解/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/18/Pycharm主题设置/index.html" afterPath="$PROJECT_DIR$/2016/05/18/Pycharm主题设置/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/18/如何找到Python的site-packages路径/index.html" afterPath="$PROJECT_DIR$/2016/05/18/如何找到Python的site-packages路径/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/19/MongoDB创建索引/index.html" afterPath="$PROJECT_DIR$/2016/05/19/MongoDB创建索引/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/19/MongoDB常用命令/index.html" afterPath="$PROJECT_DIR$/2016/05/19/MongoDB常用命令/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/19/Scrapy下载中间件/index.html" afterPath="$PROJECT_DIR$/2016/05/19/Scrapy下载中间件/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/19/开始使用D3JS作图/index.html" afterPath="$PROJECT_DIR$/2016/05/19/开始使用D3JS作图/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/20/DS5300-Lose-path-redundancy错误解决/index.html" afterPath="$PROJECT_DIR$/2016/05/20/DS5300-Lose-path-redundancy错误解决/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/24/Virtualenv的使用方法/index.html" afterPath="$PROJECT_DIR$/2016/05/24/Virtualenv的使用方法/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/25/MongoDB-查询返回某一列的值/index.html" afterPath="$PROJECT_DIR$/2016/05/25/MongoDB-查询返回某一列的值/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/31/Monogdb-update更新数据/index.html" afterPath="$PROJECT_DIR$/2016/05/31/Monogdb-update更新数据/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/06/01/HPUX宕机差错步骤/index.html" afterPath="$PROJECT_DIR$/2016/06/01/HPUX宕机差错步骤/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/06/06/一些后悔没有早点懂的道理/index.html" afterPath="$PROJECT_DIR$/2016/06/06/一些后悔没有早点懂的道理/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/06/24/MongoDB2-75之后删除冗余文档/index.html" afterPath="$PROJECT_DIR$/2016/06/24/MongoDB2-75之后删除冗余文档/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/06/26/Surge低价购买-配置详解-去广告/index.html" afterPath="$PROJECT_DIR$/2016/06/26/Surge低价购买-配置详解-去广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/06/28/NodeBB安装（1）/index.html" afterPath="$PROJECT_DIR$/2016/06/28/NodeBB安装（1）/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/01/Surge相关配置/index.html" afterPath="$PROJECT_DIR$/2016/07/01/Surge相关配置/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/11/Pokemon锁区如何玩/index.html" afterPath="$PROJECT_DIR$/2016/07/11/Pokemon锁区如何玩/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/11/如何注册Google账户/index.html" afterPath="$PROJECT_DIR$/2016/07/11/如何注册Google账户/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/13/IBM-DS5300-Impending-Drive-Failure报错/index.html" afterPath="$PROJECT_DIR$/2016/07/13/IBM-DS5300-Impending-Drive-Failure报错/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/13/Pokemon-Go-1-0-1更新内容介绍/index.html" afterPath="$PROJECT_DIR$/2016/07/13/Pokemon-Go-1-0-1更新内容介绍/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/13/Pokemon-Go-攻略及一些常见问题详解/index.html" afterPath="$PROJECT_DIR$/2016/07/13/Pokemon-Go-攻略及一些常见问题详解/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/13/ShadowSocks注册详解/index.html" afterPath="$PROJECT_DIR$/2016/07/13/ShadowSocks注册详解/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/15/PDF-Expert老是崩溃/index.html" afterPath="$PROJECT_DIR$/2016/07/15/PDF-Expert老是崩溃/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/22/Mongodb-Make-at-least-3379MB-available-in-data-db-journal-or-use/index.html" afterPath="$PROJECT_DIR$/2016/07/22/Mongodb-Make-at-least-3379MB-available-in-data-db-journal-or-use/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/09/08/论语之道/index.html" afterPath="$PROJECT_DIR$/2016/09/08/论语之道/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/10/04/Centos6-4-SSH连接断开问题/index.html" afterPath="$PROJECT_DIR$/2016/10/04/Centos6-4-SSH连接断开问题/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017/01/05/提高效率的15个iPhone-App推荐/index.html" afterPath="$PROJECT_DIR$/2017/01/05/提高效率的15个iPhone-App推荐/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/404.html" afterPath="$PROJECT_DIR$/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about/index.html" afterPath="$PROJECT_DIR$/about/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/04/index.html" afterPath="$PROJECT_DIR$/archives/2016/04/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/05/index.html" afterPath="$PROJECT_DIR$/archives/2016/05/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/05/page/2/index.html" afterPath="$PROJECT_DIR$/archives/2016/05/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/05/page/3/index.html" afterPath="$PROJECT_DIR$/archives/2016/05/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/05/page/4/index.html" afterPath="$PROJECT_DIR$/archives/2016/05/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/06/index.html" afterPath="$PROJECT_DIR$/archives/2016/06/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/07/index.html" afterPath="$PROJECT_DIR$/archives/2016/07/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/09/index.html" afterPath="$PROJECT_DIR$/archives/2016/09/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/10/index.html" afterPath="$PROJECT_DIR$/archives/2016/10/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/index.html" afterPath="$PROJECT_DIR$/archives/2016/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/page/2/index.html" afterPath="$PROJECT_DIR$/archives/2016/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/page/3/index.html" afterPath="$PROJECT_DIR$/archives/2016/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/page/4/index.html" afterPath="$PROJECT_DIR$/archives/2016/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/page/5/index.html" afterPath="$PROJECT_DIR$/archives/2016/page/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2017/01/index.html" afterPath="$PROJECT_DIR$/archives/2017/01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2017/index.html" afterPath="$PROJECT_DIR$/archives/2017/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/index.html" afterPath="$PROJECT_DIR$/archives/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/page/2/index.html" afterPath="$PROJECT_DIR$/archives/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/page/3/index.html" afterPath="$PROJECT_DIR$/archives/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/page/4/index.html" afterPath="$PROJECT_DIR$/archives/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/page/5/index.html" afterPath="$PROJECT_DIR$/archives/page/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/categories/Python/index.html" afterPath="$PROJECT_DIR$/categories/Python/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/categories/error/index.html" afterPath="$PROJECT_DIR$/categories/error/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/categories/index.html" afterPath="$PROJECT_DIR$/categories/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/categories/日记/index.html" afterPath="$PROJECT_DIR$/categories/日记/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/2/index.html" afterPath="$PROJECT_DIR$/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/3/index.html" afterPath="$PROJECT_DIR$/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/4/index.html" afterPath="$PROJECT_DIR$/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/5/index.html" afterPath="$PROJECT_DIR$/page/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/AIX/index.html" afterPath="$PROJECT_DIR$/tags/AIX/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/DS5300/index.html" afterPath="$PROJECT_DIR$/tags/DS5300/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/IBM/index.html" afterPath="$PROJECT_DIR$/tags/IBM/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/MongoDB/index.html" afterPath="$PROJECT_DIR$/tags/MongoDB/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/MonogDB/index.html" afterPath="$PROJECT_DIR$/tags/MonogDB/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/Pokemon/index.html" afterPath="$PROJECT_DIR$/tags/Pokemon/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/PokemonGo/index.html" afterPath="$PROJECT_DIR$/tags/PokemonGo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/Pycharm-tools/index.html" afterPath="$PROJECT_DIR$/tags/Pycharm-tools/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/ShadowSocks/index.html" afterPath="$PROJECT_DIR$/tags/ShadowSocks/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/css-selector/index.html" afterPath="$PROJECT_DIR$/tags/css-selector/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/d3js/index.html" afterPath="$PROJECT_DIR$/tags/d3js/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/dropbox/index.html" afterPath="$PROJECT_DIR$/tags/dropbox/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/error/index.html" afterPath="$PROJECT_DIR$/tags/error/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/git/index.html" afterPath="$PROJECT_DIR$/tags/git/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/google/index.html" afterPath="$PROJECT_DIR$/tags/google/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/hexo/index.html" afterPath="$PROJECT_DIR$/tags/hexo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/hpux/index.html" afterPath="$PROJECT_DIR$/tags/hpux/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/index.html" afterPath="$PROJECT_DIR$/tags/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/ku6广告/index.html" afterPath="$PROJECT_DIR$/tags/ku6广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/python/index.html" afterPath="$PROJECT_DIR$/tags/python/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/scrapy-downloadmidware/index.html" afterPath="$PROJECT_DIR$/tags/scrapy-downloadmidware/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/scrapy/index.html" afterPath="$PROJECT_DIR$/tags/scrapy/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/scrapy/page/2/index.html" afterPath="$PROJECT_DIR$/tags/scrapy/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/surge/index.html" afterPath="$PROJECT_DIR$/tags/surge/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/tips/index.html" afterPath="$PROJECT_DIR$/tags/tips/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/tools/index.html" afterPath="$PROJECT_DIR$/tags/tools/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/virtualenv/index.html" afterPath="$PROJECT_DIR$/tags/virtualenv/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/xpath/index.html" afterPath="$PROJECT_DIR$/tags/xpath/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/yield/index.html" afterPath="$PROJECT_DIR$/tags/yield/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/乐视广告/index.html" afterPath="$PROJECT_DIR$/tags/乐视广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/优酷广告/index.html" afterPath="$PROJECT_DIR$/tags/优酷广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/土豆广告/index.html" afterPath="$PROJECT_DIR$/tags/土豆广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/失眠/index.html" afterPath="$PROJECT_DIR$/tags/失眠/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/如何解决/index.html" afterPath="$PROJECT_DIR$/tags/如何解决/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/日记/index.html" afterPath="$PROJECT_DIR$/tags/日记/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/晚睡/index.html" afterPath="$PROJECT_DIR$/tags/晚睡/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/爱奇艺广告/index.html" afterPath="$PROJECT_DIR$/tags/爱奇艺广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/视频广告屏蔽/index.html" afterPath="$PROJECT_DIR$/tags/视频广告屏蔽/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/读书笔记/index.html" afterPath="$PROJECT_DIR$/tags/读书笔记/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/读后感/index.html" afterPath="$PROJECT_DIR$/tags/读后感/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/锁区如何玩/index.html" afterPath="$PROJECT_DIR$/tags/锁区如何玩/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/锁区如何玩，如何解决，Pokemon/index.html" afterPath="$PROJECT_DIR$/tags/锁区如何玩，如何解决，Pokemon/index.html" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="1505" column="25" lean-forward="false" selection-start-line="1505" selection-start-column="25" selection-end-line="1505" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2016/04/22/Scrapy-examples尝试/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="485" column="16" lean-forward="false" selection-start-line="485" selection-start-column="16" selection-end-line="485" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2016/09/08/论语之道/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="485" column="20" lean-forward="false" selection-start-line="485" selection-start-column="20" selection-end-line="485" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>https://github.com/Profeel</find>
+      <find>github</find>
+      <find>http://7xr6vh.com1.z0.glb.clouddn.com/hexofavicon.png</find>
+      <find>1372143376</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>https://github.com/1372143376</replace>
+      <replace>https://github.com/1372143376/imgs/favicon.jpg</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/2016/04/22/Scrapy-examples尝试/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="324" />
+    <option name="y" value="33" />
+    <option name="width" value="1604" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource ProjectPane="true" />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="1372143376.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1372143376.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="1372143376.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1372143376.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="2016" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="1372143376.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1372143376.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="2016" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="04" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="1372143376.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1372143376.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="2016" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="04" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="22" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="1372143376.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1372143376.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="2016" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="04" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="22" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Scrapy-examples尝试" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="1372143376.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1372143376.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="2016" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="09" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="1372143376.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1372143376.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="2016" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="09" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="08" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="1372143376.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1372143376.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="2016" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="09" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="08" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="论语之道" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="1372143376.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1372143376.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="imgs" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae92a0aa-129b-4600-897b-2de2cf7bd68d" name="默认" comment="" />
+      <created>1517306309525</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1517306309525</updated>
+      <workItem from="1517306310809" duration="559000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="559000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17590618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="1505" column="25" lean-forward="false" selection-start-line="1505" selection-start-column="25" selection-end-line="1505" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imgs/favicon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016/09/08/论语之道/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="485" column="20" lean-forward="false" selection-start-line="485" selection-start-column="20" selection-end-line="485" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016/04/22/Scrapy-examples尝试/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="485" column="16" lean-forward="false" selection-start-line="485" selection-start-column="16" selection-end-line="485" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
