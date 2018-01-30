@@ -1,7 +1,246 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae92a0aa-129b-4600-897b-2de2cf7bd68d" name="默认" comment="" />
+    <list default="true" id="ae92a0aa-129b-4600-897b-2de2cf7bd68d" name="默认" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/categories/日记/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/ku6广告/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/乐视广告/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/优酷广告/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/土豆广告/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/失眠/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/如何解决/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/日记/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/晚睡/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/爱奇艺广告/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/视频广告屏蔽/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/读书笔记/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/读后感/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/锁区如何玩/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags/锁区如何玩，如何解决，Pokemon/index.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/04/22/Scrapy-examples尝试/index.html" afterPath="$PROJECT_DIR$/2016/04/22/Scrapy-examples尝试/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/04/22/iterable/index.html" afterPath="$PROJECT_DIR$/2016/04/22/iterable/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/03/反思毕业3年/index.html" afterPath="$PROJECT_DIR$/2016/05/03/反思毕业3年/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/04/关于scarpy-ip的bug/index.html" afterPath="$PROJECT_DIR$/2016/05/04/关于scarpy-ip的bug/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/05/如果不知道问题在哪里，就去上个厕所吧，也许回来就知道了/index.html" afterPath="$PROJECT_DIR$/2016/05/05/如果不知道问题在哪里，就去上个厕所吧，也许回来就知道了/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/06/scrapy登录知乎以及相关问题/index.html" afterPath="$PROJECT_DIR$/2016/05/06/scrapy登录知乎以及相关问题/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/09/Atom插件/index.html" afterPath="$PROJECT_DIR$/2016/05/09/Atom插件/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/09/Pycharm怎么用/index.html" afterPath="$PROJECT_DIR$/2016/05/09/Pycharm怎么用/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/09/scrapy-在不同的抓取级别的Request之间传递参数的办法/index.html" afterPath="$PROJECT_DIR$/2016/05/09/scrapy-在不同的抓取级别的Request之间传递参数的办法/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/09/scrapy抓取知乎话题下的子话题的url/index.html" afterPath="$PROJECT_DIR$/2016/05/09/scrapy抓取知乎话题下的子话题的url/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/10/CSS选择器例子/index.html" afterPath="$PROJECT_DIR$/2016/05/10/CSS选择器例子/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/10/XPath选择器相关/index.html" afterPath="$PROJECT_DIR$/2016/05/10/XPath选择器相关/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/10/hexo相关操作/index.html" afterPath="$PROJECT_DIR$/2016/05/10/hexo相关操作/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/10/关于ShadowSocks连接Dropbox设置/index.html" afterPath="$PROJECT_DIR$/2016/05/10/关于ShadowSocks连接Dropbox设置/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/11/《超级时间整理书》笔记/index.html" afterPath="$PROJECT_DIR$/2016/05/11/《超级时间整理书》笔记/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/11/关于Mac-Pro连接外接显示器分辨率问题/index.html" afterPath="$PROJECT_DIR$/2016/05/11/关于Mac-Pro连接外接显示器分辨率问题/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/11/晚睡强迫症患者/index.html" afterPath="$PROJECT_DIR$/2016/05/11/晚睡强迫症患者/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/12/Python-Or-Scrapy之预先善其事必先利其器/index.html" afterPath="$PROJECT_DIR$/2016/05/12/Python-Or-Scrapy之预先善其事必先利其器/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/12/Scrapy-ItemLoader的使用/index.html" afterPath="$PROJECT_DIR$/2016/05/12/Scrapy-ItemLoader的使用/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/12/Scrapy-ItemLoader返回的是列表如何选择第一个/index.html" afterPath="$PROJECT_DIR$/2016/05/12/Scrapy-ItemLoader返回的是列表如何选择第一个/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/12/Scrapy-爬虫中的一些技巧/index.html" afterPath="$PROJECT_DIR$/2016/05/12/Scrapy-爬虫中的一些技巧/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/16/git相关操作/index.html" afterPath="$PROJECT_DIR$/2016/05/16/git相关操作/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/16/关于yield函数的理解/index.html" afterPath="$PROJECT_DIR$/2016/05/16/关于yield函数的理解/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/18/Pycharm主题设置/index.html" afterPath="$PROJECT_DIR$/2016/05/18/Pycharm主题设置/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/18/如何找到Python的site-packages路径/index.html" afterPath="$PROJECT_DIR$/2016/05/18/如何找到Python的site-packages路径/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/19/MongoDB创建索引/index.html" afterPath="$PROJECT_DIR$/2016/05/19/MongoDB创建索引/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/19/MongoDB常用命令/index.html" afterPath="$PROJECT_DIR$/2016/05/19/MongoDB常用命令/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/19/Scrapy下载中间件/index.html" afterPath="$PROJECT_DIR$/2016/05/19/Scrapy下载中间件/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/19/开始使用D3JS作图/index.html" afterPath="$PROJECT_DIR$/2016/05/19/开始使用D3JS作图/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/20/DS5300-Lose-path-redundancy错误解决/index.html" afterPath="$PROJECT_DIR$/2016/05/20/DS5300-Lose-path-redundancy错误解决/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/24/Virtualenv的使用方法/index.html" afterPath="$PROJECT_DIR$/2016/05/24/Virtualenv的使用方法/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/25/MongoDB-查询返回某一列的值/index.html" afterPath="$PROJECT_DIR$/2016/05/25/MongoDB-查询返回某一列的值/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/05/31/Monogdb-update更新数据/index.html" afterPath="$PROJECT_DIR$/2016/05/31/Monogdb-update更新数据/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/06/01/HPUX宕机差错步骤/index.html" afterPath="$PROJECT_DIR$/2016/06/01/HPUX宕机差错步骤/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/06/06/一些后悔没有早点懂的道理/index.html" afterPath="$PROJECT_DIR$/2016/06/06/一些后悔没有早点懂的道理/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/06/24/MongoDB2-75之后删除冗余文档/index.html" afterPath="$PROJECT_DIR$/2016/06/24/MongoDB2-75之后删除冗余文档/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/06/26/Surge低价购买-配置详解-去广告/index.html" afterPath="$PROJECT_DIR$/2016/06/26/Surge低价购买-配置详解-去广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/06/28/NodeBB安装（1）/index.html" afterPath="$PROJECT_DIR$/2016/06/28/NodeBB安装（1）/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/01/Surge相关配置/index.html" afterPath="$PROJECT_DIR$/2016/07/01/Surge相关配置/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/11/Pokemon锁区如何玩/index.html" afterPath="$PROJECT_DIR$/2016/07/11/Pokemon锁区如何玩/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/11/如何注册Google账户/index.html" afterPath="$PROJECT_DIR$/2016/07/11/如何注册Google账户/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/13/IBM-DS5300-Impending-Drive-Failure报错/index.html" afterPath="$PROJECT_DIR$/2016/07/13/IBM-DS5300-Impending-Drive-Failure报错/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/13/Pokemon-Go-1-0-1更新内容介绍/index.html" afterPath="$PROJECT_DIR$/2016/07/13/Pokemon-Go-1-0-1更新内容介绍/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/13/Pokemon-Go-攻略及一些常见问题详解/index.html" afterPath="$PROJECT_DIR$/2016/07/13/Pokemon-Go-攻略及一些常见问题详解/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/13/ShadowSocks注册详解/index.html" afterPath="$PROJECT_DIR$/2016/07/13/ShadowSocks注册详解/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/15/PDF-Expert老是崩溃/index.html" afterPath="$PROJECT_DIR$/2016/07/15/PDF-Expert老是崩溃/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/07/22/Mongodb-Make-at-least-3379MB-available-in-data-db-journal-or-use/index.html" afterPath="$PROJECT_DIR$/2016/07/22/Mongodb-Make-at-least-3379MB-available-in-data-db-journal-or-use/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/09/08/论语之道/index.html" afterPath="$PROJECT_DIR$/2016/09/08/论语之道/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2016/10/04/Centos6-4-SSH连接断开问题/index.html" afterPath="$PROJECT_DIR$/2016/10/04/Centos6-4-SSH连接断开问题/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017/01/05/提高效率的15个iPhone-App推荐/index.html" afterPath="$PROJECT_DIR$/2017/01/05/提高效率的15个iPhone-App推荐/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/404.html" afterPath="$PROJECT_DIR$/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/04/22/Scrapy-examples尝试/index.html" afterPath="$PROJECT_DIR$/_site/2016/04/22/Scrapy-examples尝试/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/04/22/iterable/index.html" afterPath="$PROJECT_DIR$/_site/2016/04/22/iterable/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/05/如果不知道问题在哪里，就去上个厕所吧，也许回来就知道了/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/05/如果不知道问题在哪里，就去上个厕所吧，也许回来就知道了/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/06/scrapy登录知乎以及相关问题/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/06/scrapy登录知乎以及相关问题/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/09/Atom插件/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/09/Atom插件/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/09/Pycharm怎么用/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/09/Pycharm怎么用/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/09/scrapy-在不同的抓取级别的Request之间传递参数的办法/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/09/scrapy-在不同的抓取级别的Request之间传递参数的办法/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/10/CSS选择器例子/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/10/CSS选择器例子/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/10/XPath选择器相关/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/10/XPath选择器相关/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/10/hexo相关操作/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/10/hexo相关操作/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/10/关于ShadowSocks连接Dropbox设置/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/10/关于ShadowSocks连接Dropbox设置/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/11/《超级时间整理书》笔记/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/11/《超级时间整理书》笔记/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/11/关于Mac-Pro连接外接显示器分辨率问题/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/11/关于Mac-Pro连接外接显示器分辨率问题/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/11/晚睡强迫症患者/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/11/晚睡强迫症患者/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/12/Python-Or-Scrapy之预先善其事必先利其器/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/12/Python-Or-Scrapy之预先善其事必先利其器/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/12/Scrapy-ItemLoader的使用/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/12/Scrapy-ItemLoader的使用/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/12/Scrapy-ItemLoader返回的是列表如何选择第一个/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/12/Scrapy-ItemLoader返回的是列表如何选择第一个/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/12/Scrapy-爬虫中的一些技巧/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/12/Scrapy-爬虫中的一些技巧/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/16/git相关操作/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/16/git相关操作/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/18/如何找到Python的site-packages路径/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/18/如何找到Python的site-packages路径/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/19/MongoDB常用命令/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/19/MongoDB常用命令/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/19/Scrapy下载中间件/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/19/Scrapy下载中间件/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/19/开始使用D3JS作图/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/19/开始使用D3JS作图/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/20/DS5300-Lose-path-redundancy错误解决/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/20/DS5300-Lose-path-redundancy错误解决/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/24/Virtualenv的使用方法/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/24/Virtualenv的使用方法/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/25/MongoDB-查询返回某一列的值/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/25/MongoDB-查询返回某一列的值/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/05/31/Monogdb-update更新数据/index.html" afterPath="$PROJECT_DIR$/_site/2016/05/31/Monogdb-update更新数据/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/01/HPUX宕机差错步骤/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/01/HPUX宕机差错步骤/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/06/一些后悔没有早点懂的道理/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/06/一些后悔没有早点懂的道理/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/26/Surge低价购买-配置详解-去广告/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/26/Surge低价购买-配置详解-去广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/06/28/NodeBB安装（1）/index.html" afterPath="$PROJECT_DIR$/_site/2016/06/28/NodeBB安装（1）/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/11/Pokemon锁区如何玩/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/11/Pokemon锁区如何玩/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/13/IBM-DS5300-Impending-Drive-Failure报错/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/13/IBM-DS5300-Impending-Drive-Failure报错/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/13/Pokemon-Go-1-0-1更新内容介绍/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/13/Pokemon-Go-1-0-1更新内容介绍/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/13/Pokemon-Go-攻略及一些常见问题详解/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/13/Pokemon-Go-攻略及一些常见问题详解/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/13/ShadowSocks注册详解/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/13/ShadowSocks注册详解/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/15/PDF-Expert老是崩溃/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/15/PDF-Expert老是崩溃/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/07/22/Mongodb-Make-at-least-3379MB-available-in-data-db-journal-or-use/index.html" afterPath="$PROJECT_DIR$/_site/2016/07/22/Mongodb-Make-at-least-3379MB-available-in-data-db-journal-or-use/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/09/08/论语之道/index.html" afterPath="$PROJECT_DIR$/_site/2016/09/08/论语之道/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/10/04/Centos6-4-SSH连接断开问题/index.html" afterPath="$PROJECT_DIR$/_site/2016/10/04/Centos6-4-SSH连接断开问题/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/404.html" afterPath="$PROJECT_DIR$/_site/404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/about/index.html" afterPath="$PROJECT_DIR$/_site/about/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/04/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/04/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/05/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/05/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/05/page/2/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/05/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/05/page/3/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/05/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/05/page/4/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/05/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/06/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/06/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/07/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/07/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/09/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/09/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/10/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/10/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/page/2/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/page/3/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/page/4/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2016/page/5/index.html" afterPath="$PROJECT_DIR$/_site/archives/2016/page/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2017/01/index.html" afterPath="$PROJECT_DIR$/_site/archives/2017/01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/2017/index.html" afterPath="$PROJECT_DIR$/_site/archives/2017/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/index.html" afterPath="$PROJECT_DIR$/_site/archives/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/page/2/index.html" afterPath="$PROJECT_DIR$/_site/archives/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/page/3/index.html" afterPath="$PROJECT_DIR$/_site/archives/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/page/4/index.html" afterPath="$PROJECT_DIR$/_site/archives/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archives/page/5/index.html" afterPath="$PROJECT_DIR$/_site/archives/page/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/categories/Python/index.html" afterPath="$PROJECT_DIR$/_site/categories/Python/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/categories/error/index.html" afterPath="$PROJECT_DIR$/_site/categories/error/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/categories/index.html" afterPath="$PROJECT_DIR$/_site/categories/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/page/2/index.html" afterPath="$PROJECT_DIR$/_site/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/page/3/index.html" afterPath="$PROJECT_DIR$/_site/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/page/4/index.html" afterPath="$PROJECT_DIR$/_site/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/page/5/index.html" afterPath="$PROJECT_DIR$/_site/page/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/AIX/index.html" afterPath="$PROJECT_DIR$/_site/tags/AIX/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/DS5300/index.html" afterPath="$PROJECT_DIR$/_site/tags/DS5300/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/IBM/index.html" afterPath="$PROJECT_DIR$/_site/tags/IBM/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/MongoDB/index.html" afterPath="$PROJECT_DIR$/_site/tags/MongoDB/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/MonogDB/index.html" afterPath="$PROJECT_DIR$/_site/tags/MonogDB/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/Pokemon/index.html" afterPath="$PROJECT_DIR$/_site/tags/Pokemon/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/PokemonGo/index.html" afterPath="$PROJECT_DIR$/_site/tags/PokemonGo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/Pycharm-tools/index.html" afterPath="$PROJECT_DIR$/_site/tags/Pycharm-tools/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/ShadowSocks/index.html" afterPath="$PROJECT_DIR$/_site/tags/ShadowSocks/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/css-selector/index.html" afterPath="$PROJECT_DIR$/_site/tags/css-selector/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/d3js/index.html" afterPath="$PROJECT_DIR$/_site/tags/d3js/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/dropbox/index.html" afterPath="$PROJECT_DIR$/_site/tags/dropbox/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/error/index.html" afterPath="$PROJECT_DIR$/_site/tags/error/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/git/index.html" afterPath="$PROJECT_DIR$/_site/tags/git/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/google/index.html" afterPath="$PROJECT_DIR$/_site/tags/google/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/hexo/index.html" afterPath="$PROJECT_DIR$/_site/tags/hexo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/hpux/index.html" afterPath="$PROJECT_DIR$/_site/tags/hpux/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/index.html" afterPath="$PROJECT_DIR$/_site/tags/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/python/index.html" afterPath="$PROJECT_DIR$/_site/tags/python/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/scrapy-downloadmidware/index.html" afterPath="$PROJECT_DIR$/_site/tags/scrapy-downloadmidware/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/scrapy/index.html" afterPath="$PROJECT_DIR$/_site/tags/scrapy/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/scrapy/page/2/index.html" afterPath="$PROJECT_DIR$/_site/tags/scrapy/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/surge/index.html" afterPath="$PROJECT_DIR$/_site/tags/surge/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/tips/index.html" afterPath="$PROJECT_DIR$/_site/tags/tips/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/tools/index.html" afterPath="$PROJECT_DIR$/_site/tags/tools/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/virtualenv/index.html" afterPath="$PROJECT_DIR$/_site/tags/virtualenv/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/xpath/index.html" afterPath="$PROJECT_DIR$/_site/tags/xpath/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tags/yield/index.html" afterPath="$PROJECT_DIR$/_site/tags/yield/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about/index.html" afterPath="$PROJECT_DIR$/about/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/04/index.html" afterPath="$PROJECT_DIR$/archives/2016/04/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/05/index.html" afterPath="$PROJECT_DIR$/archives/2016/05/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/05/page/2/index.html" afterPath="$PROJECT_DIR$/archives/2016/05/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/05/page/3/index.html" afterPath="$PROJECT_DIR$/archives/2016/05/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/05/page/4/index.html" afterPath="$PROJECT_DIR$/archives/2016/05/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/06/index.html" afterPath="$PROJECT_DIR$/archives/2016/06/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/07/index.html" afterPath="$PROJECT_DIR$/archives/2016/07/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/09/index.html" afterPath="$PROJECT_DIR$/archives/2016/09/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/10/index.html" afterPath="$PROJECT_DIR$/archives/2016/10/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/index.html" afterPath="$PROJECT_DIR$/archives/2016/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/page/2/index.html" afterPath="$PROJECT_DIR$/archives/2016/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/page/3/index.html" afterPath="$PROJECT_DIR$/archives/2016/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/page/4/index.html" afterPath="$PROJECT_DIR$/archives/2016/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2016/page/5/index.html" afterPath="$PROJECT_DIR$/archives/2016/page/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2017/01/index.html" afterPath="$PROJECT_DIR$/archives/2017/01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/2017/index.html" afterPath="$PROJECT_DIR$/archives/2017/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/index.html" afterPath="$PROJECT_DIR$/archives/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/page/2/index.html" afterPath="$PROJECT_DIR$/archives/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/page/3/index.html" afterPath="$PROJECT_DIR$/archives/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/page/4/index.html" afterPath="$PROJECT_DIR$/archives/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/archives/page/5/index.html" afterPath="$PROJECT_DIR$/archives/page/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/categories/Python/index.html" afterPath="$PROJECT_DIR$/categories/Python/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/categories/error/index.html" afterPath="$PROJECT_DIR$/categories/error/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/categories/index.html" afterPath="$PROJECT_DIR$/categories/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/categories/日记/index.html" afterPath="$PROJECT_DIR$/categories/日记/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/2/index.html" afterPath="$PROJECT_DIR$/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/3/index.html" afterPath="$PROJECT_DIR$/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/4/index.html" afterPath="$PROJECT_DIR$/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/5/index.html" afterPath="$PROJECT_DIR$/page/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/AIX/index.html" afterPath="$PROJECT_DIR$/tags/AIX/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/DS5300/index.html" afterPath="$PROJECT_DIR$/tags/DS5300/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/IBM/index.html" afterPath="$PROJECT_DIR$/tags/IBM/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/MongoDB/index.html" afterPath="$PROJECT_DIR$/tags/MongoDB/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/MonogDB/index.html" afterPath="$PROJECT_DIR$/tags/MonogDB/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/Pokemon/index.html" afterPath="$PROJECT_DIR$/tags/Pokemon/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/PokemonGo/index.html" afterPath="$PROJECT_DIR$/tags/PokemonGo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/Pycharm-tools/index.html" afterPath="$PROJECT_DIR$/tags/Pycharm-tools/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/ShadowSocks/index.html" afterPath="$PROJECT_DIR$/tags/ShadowSocks/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/css-selector/index.html" afterPath="$PROJECT_DIR$/tags/css-selector/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/d3js/index.html" afterPath="$PROJECT_DIR$/tags/d3js/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/dropbox/index.html" afterPath="$PROJECT_DIR$/tags/dropbox/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/error/index.html" afterPath="$PROJECT_DIR$/tags/error/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/git/index.html" afterPath="$PROJECT_DIR$/tags/git/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/google/index.html" afterPath="$PROJECT_DIR$/tags/google/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/hexo/index.html" afterPath="$PROJECT_DIR$/tags/hexo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/hpux/index.html" afterPath="$PROJECT_DIR$/tags/hpux/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/index.html" afterPath="$PROJECT_DIR$/tags/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/ku6广告/index.html" afterPath="$PROJECT_DIR$/tags/ku6广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/python/index.html" afterPath="$PROJECT_DIR$/tags/python/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/scrapy-downloadmidware/index.html" afterPath="$PROJECT_DIR$/tags/scrapy-downloadmidware/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/scrapy/index.html" afterPath="$PROJECT_DIR$/tags/scrapy/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/scrapy/page/2/index.html" afterPath="$PROJECT_DIR$/tags/scrapy/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/surge/index.html" afterPath="$PROJECT_DIR$/tags/surge/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/tips/index.html" afterPath="$PROJECT_DIR$/tags/tips/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/tools/index.html" afterPath="$PROJECT_DIR$/tags/tools/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/virtualenv/index.html" afterPath="$PROJECT_DIR$/tags/virtualenv/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/xpath/index.html" afterPath="$PROJECT_DIR$/tags/xpath/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/yield/index.html" afterPath="$PROJECT_DIR$/tags/yield/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/乐视广告/index.html" afterPath="$PROJECT_DIR$/tags/乐视广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/优酷广告/index.html" afterPath="$PROJECT_DIR$/tags/优酷广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/土豆广告/index.html" afterPath="$PROJECT_DIR$/tags/土豆广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/失眠/index.html" afterPath="$PROJECT_DIR$/tags/失眠/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/如何解决/index.html" afterPath="$PROJECT_DIR$/tags/如何解决/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/日记/index.html" afterPath="$PROJECT_DIR$/tags/日记/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/晚睡/index.html" afterPath="$PROJECT_DIR$/tags/晚睡/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/爱奇艺广告/index.html" afterPath="$PROJECT_DIR$/tags/爱奇艺广告/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/视频广告屏蔽/index.html" afterPath="$PROJECT_DIR$/tags/视频广告屏蔽/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/读书笔记/index.html" afterPath="$PROJECT_DIR$/tags/读书笔记/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/读后感/index.html" afterPath="$PROJECT_DIR$/tags/读后感/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/锁区如何玩/index.html" afterPath="$PROJECT_DIR$/tags/锁区如何玩/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tags/锁区如何玩，如何解决，Pokemon/index.html" afterPath="$PROJECT_DIR$/tags/锁区如何玩，如何解决，Pokemon/index.html" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +263,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2016/04/22/Scrapy-examples尝试/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="478" column="14" lean-forward="true" selection-start-line="478" selection-start-column="14" selection-end-line="478" selection-end-column="14" />
+            <state relative-caret-position="202">
+              <caret line="474" column="20" lean-forward="false" selection-start-line="474" selection-start-column="20" selection-end-line="474" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -49,10 +288,12 @@
       <find>github</find>
       <find>http://7xr6vh.com1.z0.glb.clouddn.com/hexofavicon.png</find>
       <find>1372143376</find>
+      <find>https://github.com/1372143376/imgs/favicon.jpg</find>
     </findStrings>
     <replaceStrings>
       <replace>https://github.com/1372143376</replace>
       <replace>https://github.com/1372143376/imgs/favicon.jpg</replace>
+      <replace>https://github.com/1372143376/imgs/favicon.gif</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -187,12 +428,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517306309525</updated>
-      <workItem from="1517306310809" duration="1057000" />
+      <workItem from="1517306310809" duration="1214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1057000" />
+    <option name="totallyTimeSpent" value="1214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -251,8 +492,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2016/04/22/Scrapy-examples尝试/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="478" column="14" lean-forward="true" selection-start-line="478" selection-start-column="14" selection-end-line="478" selection-end-column="14" />
+        <state relative-caret-position="202">
+          <caret line="474" column="20" lean-forward="false" selection-start-line="474" selection-start-column="20" selection-end-line="474" selection-end-column="20" />
           <folding />
         </state>
       </provider>
