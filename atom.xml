@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Profeel</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-01-06T15:48:55.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Profeel</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>提高效率的15个iPhone App推荐</title>
+    <link href="http://yoursite.com/2017/01/05/%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87%E7%9A%8415%E4%B8%AAiPhone-App%E6%8E%A8%E8%8D%90/"/>
+    <id>http://yoursite.com/2017/01/05/提高效率的15个iPhone-App推荐/</id>
+    <published>2017-01-05T15:17:09.000Z</published>
+    <updated>2017-01-06T15:48:55.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;提高效率的xx个App推荐&quot;&gt;&lt;a href=&quot;#提高效率的xx个App推荐&quot; class=&quot;headerlink&quot; title=&quot;提高效率的xx个App推荐&quot;&gt;&lt;/a&gt;提高效率的xx个App推荐&lt;/h1&gt;&lt;h3 id=&quot;1-科学上网-Surge-ShadowRocket-推荐度：❤❤❤❤❤-价格：18-ShadowSocks&quot;&gt;&lt;a href=&quot;#1-科学上网-Surge-ShadowRocket-推荐度：❤❤❤❤❤-价格：18-ShadowSocks&quot; class=&quot;headerlink&quot; title=&quot;1.科学上网-Surge/ShadowRocket  推荐度：❤❤❤❤❤  价格：18+ShadowSocks&quot;&gt;&lt;/a&gt;1.科学上网-Surge/ShadowRocket  推荐度：❤❤❤❤❤  价格：18+ShadowSocks&lt;/h3&gt;&lt;p&gt;   Surge比较贵，功能太多&lt;br&gt;   如果仅仅是翻墙，还是建议使用ShadowRocket比较划算，毕竟才￥18&lt;br&gt;   可以尝试去App Store翻一下Surge的价格 - -！&lt;br&gt;   可以参考一下App Store Surge的价格：&lt;br&gt;    &lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2017-01-05-Jietu20170105-091206.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;然而ShadowRocket的价格就亲民很多，可以使用ShadowSocks的规则，也是很稳定的，所以，如果日常使用的话，可以选择这个来进行“科学上网”&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2017-01-05-142136.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;strong&gt;ShadowSocks服务&lt;/strong&gt;：ShadowSocks是一个VPN服务，通过ShadowSocks可以访问国外一些不能访问的网站，如Google、Facebook、Twitter等网站；购买ShadowSocks服务，可以在各个平台通用，都可以翻墙，比如Windows、IOS、安卓、linux、浏览器插件、路由器等；购买之后，得到的是一个服务器账号和密码，需要通过其他工具配合使用，一次配置，持久使用&lt;br&gt;详细介绍请参考：&lt;a href=&quot;http://profeel.github.io/2016/07/13/ShadowSocks%E6%B3%A8%E5%86%8C%E8%AF%A6%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ShadowSocks注册详解&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-相册备份-Google相册-推荐度：❤❤❤❤❤-价格：免费&quot;&gt;&lt;a href=&quot;#2-相册备份-Google相册-推荐度：❤❤❤❤❤-价格：免费&quot; class=&quot;headerlink&quot; title=&quot;2.相册备份-Google相册  推荐度：❤❤❤❤❤   价格：免费&quot;&gt;&lt;/a&gt;2.相册备份-Google相册  推荐度：❤❤❤❤❤   价格：免费&lt;/h3&gt;&lt;p&gt;为什么选择Google相册呢？原因就是不用考虑空间容量的大小，高清质量图片备份&lt;strong&gt;无限容量&lt;/strong&gt;&lt;br&gt;当然，这个前提是你科学上网了&lt;/p&gt;
+&lt;h3 id=&quot;3-密码管理-1Password-推荐度：❤❤❤❤❤-价格：免费&quot;&gt;&lt;a href=&quot;#3-密码管理-1Password-推荐度：❤❤❤❤❤-价格：免费&quot; class=&quot;headerlink&quot; title=&quot;3.密码管理-1Password  推荐度：❤❤❤❤❤   价格：免费&quot;&gt;&lt;/a&gt;3.密码管理-1Password  推荐度：❤❤❤❤❤   价格：免费&lt;/h3&gt;&lt;p&gt;因为现在的App，很多，动不动就需要注册，很多时候，我们都是用同一个密码登录所有的网站，但是！！！&lt;br&gt;这样实在是不安全！&lt;br&gt;因为黑客会攻击最容易攻破的网站，然后使用这个密码来撞库（就是用这个账户和密码来尝试登录其他的网站）&lt;br&gt;所以，很有必要设置一些不同的密码。&lt;br&gt;而且，很多网站，我们并不需要登录很多次，可能只需要登录几次，所以，这些密码，我们可以设置得很复杂，然后，自己都不知道，但是可以保存在1Password中，然后需要的时候，再来这里找到这个密码和账户。&lt;/p&gt;
+&lt;p&gt;当然，如果仅仅是保存密码和账户，那么简单，可能觉得一个记事本就可以了&lt;br&gt;笔者用的是Mac，有Chrome浏览器插件，&lt;strong&gt;当你注册一个新的网站的时候，可以选择使用1Password进行解锁，然后直接保存，无需手动保存，并且会记录当时输入密码的网站&lt;/strong&gt;，并且，&lt;strong&gt;支持生成密码，按照规则生成密码&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2017-01-05-143313.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;当你登录这个网站的时候，会在插件中显示这个账户，免去你去搜索这个账户&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2017-01-05-143447.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;最重要的是，每次你登录1Password的时候，都需要输入密码，或者用指纹进行解锁，所以，你只需要记得一个复杂的，无法被轻易破解的密码即可。&lt;br&gt;这个工具，笔者每天都会打开，完全依赖了！&lt;/p&gt;
+&lt;h3 id=&quot;4-Wuderlist奇妙清单-清单Clear-推荐度：❤❤❤❤❤-价格：免费&quot;&gt;&lt;a href=&quot;#4-Wuderlist奇妙清单-清单Clear-推荐度：❤❤❤❤❤-价格：免费&quot; class=&quot;headerlink&quot; title=&quot;4.Wuderlist奇妙清单-清单Clear  推荐度：❤❤❤❤❤  价格：免费&quot;&gt;&lt;/a&gt;4.Wuderlist奇妙清单-清单Clear  推荐度：❤❤❤❤❤  价格：免费&lt;/h3&gt;&lt;p&gt;笔者用过很多的清单，无论是各种花哨的，功能强大的，但是用的最多的还是奇妙清单，并且已经把其他的都删掉了，工具，好用就OK&lt;br&gt;奇妙清单最多支持二级菜单，但是对我来说已经足够&lt;br&gt;另外支持分享清单，支持@其他人&lt;br&gt;更多的是，界面简单，多平台支持！！！&lt;br&gt;工作和个人的都可以放里面&lt;br&gt;我现在甚至是把它当做了，工作日志记录工具&lt;br&gt;并且支持话题，使用&lt;code&gt;#话题#&lt;/code&gt;就可以设置话题，根据话题找到相关的任务，十分好用的功能&lt;br&gt;iPhone截图&lt;br&gt;  &lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2017-01-05-145346.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;提高效率的xx个App推荐&quot;&gt;&lt;a href=&quot;#提高效率的xx个App推荐&quot; class=&quot;headerlink&quot; title=&quot;提高效率的xx个App推荐&quot;&gt;&lt;/a&gt;提高效率的xx个App推荐&lt;/h1&gt;&lt;h3 id=&quot;1-科学上网-Surge-ShadowRo
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Centos6.4 SSH连接断开问题</title>
+    <link href="http://yoursite.com/2016/10/04/Centos6-4-SSH%E8%BF%9E%E6%8E%A5%E6%96%AD%E5%BC%80%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2016/10/04/Centos6-4-SSH连接断开问题/</id>
+    <published>2016-10-04T02:26:57.000Z</published>
+    <updated>2016-10-04T02:47:49.000Z</updated>
+    
+    <content type="html">&lt;p&gt;修改 /etc/ssh/sshd_config&lt;br&gt;ClientAliveInterval 60&lt;/p&gt;
+&lt;p&gt;然后重启sshd服务&lt;br&gt;service sshd restart&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;修改 /etc/ssh/sshd_config&lt;br&gt;ClientAliveInterval 60&lt;/p&gt;
+&lt;p&gt;然后重启sshd服务&lt;br&gt;service sshd restart&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>论语之道</title>
+    <link href="http://yoursite.com/2016/09/08/%E8%AE%BA%E8%AF%AD%E4%B9%8B%E9%81%93/"/>
+    <id>http://yoursite.com/2016/09/08/论语之道/</id>
+    <published>2016-09-08T15:21:06.000Z</published>
+    <updated>2016-09-08T15:52:35.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&amp;nbsp;&amp;nbsp;为什么读起了《论语》，因为偶然在市图书馆翻看《季羡林谈人生》，里面有说到耄耋之际一些古语，觉得很有韵味，而又很有道理。感觉最近需要一些智者来指点生活中的一二，又无从说起。“生活不如意有八九，与人言说二三”，心中的苦闷只有自己知道，而身边的朋友知道的只有皮毛而已，所以，还是觉得应该寻求智者的开导，对于近期状态大有裨益。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;工作之后，坦然的心态越来越明显，觉得人生不过如此，并没有什么恐惧的新情况无法处理，或者新的人无法面对，又或者是往昔无法忘却，心中多了一种豁达。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;今天读完《于丹论语心得》，里面有说到，六十而耳顺，说得是人年纪到了六十，什么话都能听得进去，还有意思就是到了六十，应该能接受所有的好的或者坏的事情的发生，能明白好的事和坏的事为什么发生，比如极恶或者小人之道，这些发生的时候，心中不会泛起波澜，而是莞尔一笑，明白其中的仁与不仁。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;反观自身，我觉得是在我看完《权利的游戏》之后，里面的弑君者给我的印象很深，天下人都以他为耻，称他为弑君者，在君主背后捅刀子的人，但是很少人能理解他为什么弑君。在他背负君命，但君主令他杀死自己的父亲，杀死自己保卫的百姓，已经处于疯癫的状态的时候，他做出了他认为对的行为，然而，并没有得到全世界人的理解，只有他自己默默知道，这是对的，而忍辱偷生。仅仅有他最亲近的家人能理解这样的行为，即使全世界人都知道这样的一个君主是疯子。对于这样的一种情况，我也能理解为什么百姓无法接受他这种行为，毕竟大家不会设身处地地为Jimmy着想，不会想到他所处的环境和背景，一叶障目而心生恨意，但是又不会去真的用实际行动去对他赶尽杀绝，因为他又有贵族身份，这就是所谓的小人之道。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;至于三十而立，我觉得是面对世界，有傲骨而无傲气，坦然面对所有事情，有自己安身立命的本事，同时肩负着自己角色的使命，并以君子为目标去继续生活。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;当然，耳顺便是终极目标，韩信的胯下之辱，能够忍辱而负重，不以为心中负担而作为动力前行，是真正的智慧和勇气。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;又说道，仁者的勇气是能够直面过去和愧疚，一日三省，能坦然和淡定地面对生命中的遗憾，能接受这些遗憾，并用行动去弥补这些遗憾，便是大智大勇。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;仁者不忧，知者不惑，勇者不惧。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;2016，知己，习以仁德。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;nbsp;&amp;nbsp;为什么读起了《论语》，因为偶然在市图书馆翻看《季羡林谈人生》，里面有说到耄耋之际一些古语，觉得很有韵味，而又很有道理。感觉最近需要一些智者来指点生活中的一二，又无从说起。“生活不如意有八九，与人言说二三”，心中的苦闷只有自己知道，而身边的朋友知道的只
+    
+    </summary>
+    
+    
+      <category term="读后感" scheme="http://yoursite.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mongodb--Make at least 3379MB available in /data/db/journal or use ...</title>
+    <link href="http://yoursite.com/2016/07/22/Mongodb-Make-at-least-3379MB-available-in-data-db-journal-or-use/"/>
+    <id>http://yoursite.com/2016/07/22/Mongodb-Make-at-least-3379MB-available-in-data-db-journal-or-use/</id>
+    <published>2016-07-22T06:39:59.000Z</published>
+    <updated>2016-07-22T06:40:36.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Error Code:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[root@cloud bin]# ./mongod&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.781+0800 I JOURNAL  [initandlisten] journal dir=/data/db/journal&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.782+0800 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.782+0800 I JOURNAL  [initandlisten] &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.782+0800 E JOURNAL  [initandlisten] Insufficient free space for journal files&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.782+0800 I JOURNAL  [initandlisten] Please make at least 3379MB available in /data/db/journal or use --smallfiles&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.782+0800 I JOURNAL  [initandlisten] &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.782+0800 I STORAGE  [initandlisten] exception in initAndListen: 15926 Insufficient free space for journals, terminating&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.782+0800 I CONTROL  [initandlisten] now exiting&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.783+0800 I NETWORK  [initandlisten] shutdown: going to close listening sockets...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.783+0800 I NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.783+0800 I NETWORK  [initandlisten] shutdown: going to flush diaglog...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.783+0800 I NETWORK  [initandlisten] shutdown: going to close sockets...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.783+0800 I STORAGE  [initandlisten] shutdown: waiting for fs preallocator...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.783+0800 I STORAGE  [initandlisten] shutdown: final commit...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.783+0800 I STORAGE  [initandlisten] shutdown: closing all files...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.784+0800 I STORAGE  [initandlisten] closeAllFiles() finished&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2016-07-22T14:34:05.784+0800 I CONTROL  [initandlisten] dbexit:  rc: 100&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Error Code:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/sp
+    
+    </summary>
+    
+    
+      <category term="MongoDB" scheme="http://yoursite.com/tags/MongoDB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PDF Expert老是崩溃</title>
+    <link href="http://yoursite.com/2016/07/15/PDF-Expert%E8%80%81%E6%98%AF%E5%B4%A9%E6%BA%83/"/>
+    <id>http://yoursite.com/2016/07/15/PDF-Expert老是崩溃/</id>
+    <published>2016-07-15T08:43:50.000Z</published>
+    <updated>2016-07-15T09:42:19.000Z</updated>
+    
+    <content type="html">&lt;p&gt;系统相关信息：&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-15_17:40:37.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;PDF Expert版本：1.4.2&lt;/p&gt;
+&lt;p&gt;经常性崩溃解决办法：&lt;br&gt;官方回复：&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-15_17:42:03.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;系统相关信息：&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-15_17:40:37.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;PDF Expert版本：1.4.2&lt;/p&gt;
+&lt;p&gt;经常性崩溃解决办法：&lt;b
+    
+    </summary>
+    
+    
+      <category term="tools" scheme="http://yoursite.com/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ShadowSocks注册详解</title>
+    <link href="http://yoursite.com/2016/07/13/ShadowSocks%E6%B3%A8%E5%86%8C%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://yoursite.com/2016/07/13/ShadowSocks注册详解/</id>
+    <published>2016-07-13T06:44:59.000Z</published>
+    <updated>2016-07-13T07:30:26.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;购买链接&quot;&gt;&lt;a href=&quot;#购买链接&quot; class=&quot;headerlink&quot; title=&quot;购买链接&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://portal.shadowsocks.com/aff.php?aff=6996&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;strong&gt;购买链接&lt;/strong&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h1 id=&quot;什么是ShadowSocks？&quot;&gt;&lt;a href=&quot;#什么是ShadowSocks？&quot; class=&quot;headerlink&quot; title=&quot;什么是ShadowSocks？&quot;&gt;&lt;/a&gt;什么是ShadowSocks？&lt;/h1&gt;&lt;p&gt;ShadowSocks是一个VPN服务，通过ShadowSocks可以访问国外一些不能访问的网站，如Google、Facebook、Twitter等网站；购买ShadowSocks服务，可以在各个平台通用，都可以翻墙，比如Windows、IOS、安卓、linux、浏览器插件、路由器等；购买之后，得到的是一个服务器账号和密码，需要通过其他工具配合使用，一次配置，持久使用&lt;/p&gt;
+&lt;h1 id=&quot;为什么选择ShadowSocks？&quot;&gt;&lt;a href=&quot;#为什么选择ShadowSocks？&quot; class=&quot;headerlink&quot; title=&quot;为什么选择ShadowSocks？&quot;&gt;&lt;/a&gt;为什么选择ShadowSocks？&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;便宜（8.95元/月，107.4每年）&lt;/li&gt;
+&lt;li&gt;不限流量（国内VPN限制流量）&lt;/li&gt;
+&lt;li&gt;网速快 （可看Youtube超清视频不卡顿）&lt;/li&gt;
+&lt;li&gt;稳定 （24H*7不断线）&lt;/li&gt;
+&lt;li&gt;安全&lt;/li&gt;
+&lt;li&gt;支持支付宝购买&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;免费的VPN存在什么风险？  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可能存在盗取你的账号等信息（因为你的流量都要经过他VPN，所以你的账号也会通过他的免费服务器）&lt;/li&gt;
+&lt;li&gt;天下没有免费的午餐&lt;/li&gt;
+&lt;li&gt;不稳定&lt;/li&gt;
+&lt;li&gt;限时&lt;/li&gt;
+&lt;li&gt;限制流量&lt;/li&gt;
+&lt;li&gt;网速慢&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;如何购买？&quot;&gt;&lt;a href=&quot;#如何购买？&quot; class=&quot;headerlink&quot; title=&quot;如何购买？&quot;&gt;&lt;/a&gt;如何购买？&lt;/h1&gt;&lt;p&gt;因为这个官网也是被墙的，所以，你可能需要先通过其他免费的VPN来打开购买链接；&lt;br&gt;免费的VPN在IOS下推荐使用，GreenVPN、赛风VPN、VPN Master等；&lt;br&gt;购买地址–&amp;gt;&lt;a href=&quot;https://portal.shadowsocks.com/aff.php?aff=6996&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点击购买&lt;/a&gt;&lt;br&gt;官网是这个样子–&amp;gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_14:54:48.jpg&quot; alt=&quot;ShadowSocks官网&quot;&gt;&lt;br&gt;点击订购服务–&amp;gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_14:58:29.jpg&quot; alt=&quot;订购服务&quot;&gt;&lt;br&gt;填写一些相关信息–&amp;gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_15:01:34.jpg&quot; alt=&quot;相关信息&quot;&gt;&lt;br&gt;完成订购–&amp;gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_15:02:14.jpg&quot; alt=&quot;完成订购&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;如何使用？&quot;&gt;&lt;a href=&quot;#如何使用？&quot; class=&quot;headerlink&quot; title=&quot;如何使用？&quot;&gt;&lt;/a&gt;如何使用？&lt;/h1&gt;&lt;p&gt;到官网网站–&amp;gt;&lt;a href=&quot;https://portal.shadowsocks.com/clientarea.php&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;打开官网&lt;/a&gt;&lt;br&gt;登录–&amp;gt;客户中心–&amp;gt;您的有效产品/服务–&amp;gt;最下面–&amp;gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_15:13:09.jpg&quot; alt=&quot;点击二维码&quot;&gt;&lt;br&gt;保存二维码图片到手机或者直接拿手机扫描&lt;br&gt;&lt;strong&gt;IOS用户：&lt;/strong&gt;&lt;br&gt;在App Store中搜索ShadowRocket–&amp;gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_15:06:38.jpg&quot; alt=&quot;ShadowRocket&quot;&gt;&lt;br&gt;售价6元&lt;br&gt;&lt;strong&gt;安卓用户在Play市场搜索ShadowSocks&lt;/strong&gt;&lt;br&gt;打开Shadowrocket，点击左上角扫描的按钮–&amp;gt;&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_15:18:42.jpg&quot; alt=&quot;扫描&quot;&gt;&lt;br&gt;打开VPN–&amp;gt;&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_15:26:22.jpg&quot; alt=&quot;打开VPN&quot;&gt;&lt;br&gt;大功告成！！！&lt;br&gt;&lt;a href=&quot;https://portal.shadowsocks.com/aff.php?aff=6996&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;strong&gt;购买链接&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;购买链接&quot;&gt;&lt;a href=&quot;#购买链接&quot; class=&quot;headerlink&quot; title=&quot;购买链接&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://portal.shadowsocks.com/aff.php?aff=6996&quot; target=&quot;_blank&quot; 
+    
+    </summary>
+    
+    
+      <category term="ShadowSocks" scheme="http://yoursite.com/tags/ShadowSocks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pokemon Go 攻略及一些常见问题详解</title>
+    <link href="http://yoursite.com/2016/07/13/Pokemon-Go-%E6%94%BB%E7%95%A5%E5%8F%8A%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://yoursite.com/2016/07/13/Pokemon-Go-攻略及一些常见问题详解/</id>
+    <published>2016-07-13T06:43:24.000Z</published>
+    <updated>2016-07-18T02:03:42.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;如何玩？&quot;&gt;&lt;a href=&quot;#如何玩？&quot; class=&quot;headerlink&quot; title=&quot;如何玩？&quot;&gt;&lt;/a&gt;如何玩？&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;你要有VPN&lt;/li&gt;
+&lt;li&gt;你要有Google账号&lt;/li&gt;
+&lt;li&gt;你要下载IOS GPS修改版客户端下载地址–&amp;gt; &lt;a href=&quot;http://pan.baidu.com/s/1i5HHFZB&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;strong&gt;点击下载&lt;/strong&gt;&lt;/a&gt; 密码：9ee5&lt;br&gt;通过电脑端同步助手或者itools安装，安装之后，在证书中点击信任就可以了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;GPS-signal-not-found&quot;&gt;&lt;a href=&quot;#GPS-signal-not-found&quot; class=&quot;headerlink&quot; title=&quot;GPS signal not found&quot;&gt;&lt;/a&gt;GPS signal not found&lt;/h1&gt;&lt;h2 id=&quot;中国地图锁区&quot;&gt;&lt;a href=&quot;#中国地图锁区&quot; class=&quot;headerlink&quot; title=&quot;中国地图锁区&quot;&gt;&lt;/a&gt;中国地图锁区&lt;/h2&gt;&lt;p&gt;因为Pokemon Go在中国地图锁区，如果是你自己的GPS信息的话，是会出现这个错误，并且打开软件一片荒芜  &lt;strong&gt;解决办法：&lt;/strong&gt;下载GPS修改版Pokemon Go, 下载地址–&amp;gt; &lt;a href=&quot;http://pan.baidu.com/s/1i5HHFZB&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;strong&gt;点击下载&lt;/strong&gt;&lt;/a&gt; 密码：9ee5  ，通过电脑端同步助手或者itools安装，安装之后，在证书中点击信任就可以了&lt;/p&gt;
+&lt;h2 id=&quot;在建筑物内&quot;&gt;&lt;a href=&quot;#在建筑物内&quot; class=&quot;headerlink&quot; title=&quot;在建筑物内&quot;&gt;&lt;/a&gt;在建筑物内&lt;/h2&gt;&lt;p&gt;在建筑物内，GPS信号会不好，可以出去走走，一会儿就有GPS信息了&lt;/p&gt;
+&lt;h1 id=&quot;没有精灵球怎么办？&quot;&gt;&lt;a href=&quot;#没有精灵球怎么办？&quot; class=&quot;headerlink&quot; title=&quot;没有精灵球怎么办？&quot;&gt;&lt;/a&gt;没有精灵球怎么办？&lt;/h1&gt;&lt;p&gt;没有球了 –&amp;gt; 去找PokeStop&lt;br&gt;什么是PokeStop？？？&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_16:13:27.jpg&quot; alt=&quot;PokeStop&quot;&gt;&lt;br&gt;走到附近，打开，疯狂转动坐标点的圆形图片&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_16:14:30.jpg&quot; alt=&quot;转这个！&quot;&gt;&lt;br&gt;然后就爆出来啦，每个点重置时间为10分钟左右，如果没有球，可以坐交通工具去刷街&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_16:15:30.jpg&quot; alt=&quot;刷出来的精灵球&quot;&gt;  &lt;/p&gt;
+&lt;h1 id=&quot;我想抓皮卡丘，哪里抓？&quot;&gt;&lt;a href=&quot;#我想抓皮卡丘，哪里抓？&quot; class=&quot;headerlink&quot; title=&quot;我想抓皮卡丘，哪里抓？&quot;&gt;&lt;/a&gt;我想抓皮卡丘，哪里抓？&lt;/h1&gt;&lt;p&gt;1）孵蛋&lt;br&gt;2）去盛产pikachu的地方抓&lt;br&gt;3）开始的时候给的3只不要抓，绕一绕，等一等，Pikachu就可能出来啦&lt;/p&gt;
+&lt;h1 id=&quot;连接不上服务器怎么办？&quot;&gt;&lt;a href=&quot;#连接不上服务器怎么办？&quot; class=&quot;headerlink&quot; title=&quot;连接不上服务器怎么办？&quot;&gt;&lt;/a&gt;连接不上服务器怎么办？&lt;/h1&gt;&lt;p&gt;遇到进不去的时候，就是遇到错误信息为”Our servers are experiencing issues. Please come back later”的时候有两种情况：&lt;br&gt;1)&lt;strong&gt;Pokemon Go服务器不堪重负&lt;/strong&gt;，太多人了，稍后再试&lt;br&gt;2)&lt;strong&gt;你的VPN服务很垃圾&lt;/strong&gt;，请更换稳定的VPN网络服务，推荐&lt;a href=&quot;https://portal.shadowsocks.com/aff.php?aff=6996&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ShadowSocks&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;如何玩？&quot;&gt;&lt;a href=&quot;#如何玩？&quot; class=&quot;headerlink&quot; title=&quot;如何玩？&quot;&gt;&lt;/a&gt;如何玩？&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;你要有VPN&lt;/li&gt;
+&lt;li&gt;你要有Google账号&lt;/li&gt;
+&lt;li&gt;你要下载IOS GPS修改版客户端下载
+    
+    </summary>
+    
+    
+      <category term="PokemonGo" scheme="http://yoursite.com/tags/PokemonGo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pokemon Go 1.0.1更新内容介绍</title>
+    <link href="http://yoursite.com/2016/07/13/Pokemon-Go-1-0-1%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://yoursite.com/2016/07/13/Pokemon-Go-1-0-1更新内容介绍/</id>
+    <published>2016-07-13T01:57:36.000Z</published>
+    <updated>2016-07-13T02:09:20.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Pokemon Go更新：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当强退之后不用再次输入用户名和密码&lt;/li&gt;
+&lt;li&gt;增强了Pokemon训练师阵营账户登录进程稳定性&lt;/li&gt;
+&lt;li&gt;改进闪退问题&lt;/li&gt;
+&lt;li&gt;不必在需要Google账户的所有权限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;App Store更新内容为：&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_09:49:41.jpg&quot; alt=&quot;Pokemon Go更新内容&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Pokemon Go更新：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当强退之后不用再次输入用户名和密码&lt;/li&gt;
+&lt;li&gt;增强了Pokemon训练师阵营账户登录进程稳定性&lt;/li&gt;
+&lt;li&gt;改进闪退问题&lt;/li&gt;
+&lt;li&gt;不必在需要Google账户的所有权限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    
+    </summary>
+    
+    
+      <category term="PokemonGO" scheme="http://yoursite.com/tags/PokemonGO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IBM DS5300 Impending Drive Failure报错</title>
+    <link href="http://yoursite.com/2016/07/13/IBM-DS5300-Impending-Drive-Failure%E6%8A%A5%E9%94%99/"/>
+    <id>http://yoursite.com/2016/07/13/IBM-DS5300-Impending-Drive-Failure报错/</id>
+    <published>2016-07-13T00:36:27.000Z</published>
+    <updated>2016-07-13T00:38:33.000Z</updated>
+    
+    <content type="html">&lt;p&gt;报错内容： &lt;strong&gt;Impending Drive Failure&lt;/strong&gt;&lt;br&gt;报错现象：&lt;strong&gt; 存储亮黄灯警告&lt;/strong&gt;⚠️&lt;br&gt;管理软件查看内容：&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_08:36:52.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;解决办法：&lt;strong&gt;更换即将损坏位置的硬盘&lt;/strong&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;报错内容： &lt;strong&gt;Impending Drive Failure&lt;/strong&gt;&lt;br&gt;报错现象：&lt;strong&gt; 存储亮黄灯警告&lt;/strong&gt;⚠️&lt;br&gt;管理软件查看内容：&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.cl
+    
+    </summary>
+    
+    
+      <category term="IBM" scheme="http://yoursite.com/tags/IBM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pokemon锁区如何玩</title>
+    <link href="http://yoursite.com/2016/07/11/Pokemon%E9%94%81%E5%8C%BA%E5%A6%82%E4%BD%95%E7%8E%A9/"/>
+    <id>http://yoursite.com/2016/07/11/Pokemon锁区如何玩/</id>
+    <published>2016-07-11T12:34:12.000Z</published>
+    <updated>2016-07-15T09:59:56.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;此教程仅适用于IOS客户端&lt;/strong&gt;&lt;br&gt;众所周知，Pokemon Go大中华区被锁，无法玩到，很多玩家都要翻墙才能玩到，那么现在讲解一下如何才能玩到Pokemon Go&lt;/p&gt;
+&lt;p&gt;首先准备工具和材料：&lt;br&gt;&lt;strong&gt;1）VPN&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;我在使用的是surge+ShadowSocks，当然也可以使用其他的VPN&lt;/strong&gt;&lt;br&gt;使用翻墙工具 Surge –&amp;gt;app store下载 648￥ 或者 Shadowrocket 6￥&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-12_11:47:38.jpg&quot; alt=&quot;&quot;&gt;+ vpn服务器–&amp;gt; &lt;a href=&quot;https://portal.shadowsocks.com/aff.php?aff=6996&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点击购买ShadowSocks&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-13_09:02:46.jpg&quot; alt=&quot;ShadowSocks套餐&quot;&gt;&lt;/p&gt;
+&lt;p&gt;或者&lt;strong&gt;其他VPN&lt;/strong&gt;，最好选择连接点VPN，避免代理地址经常变动，可能存在被封号的风险&lt;/p&gt;
+&lt;p&gt;————&amp;gt; &lt;a href=&quot;http://profeel.github.io/2016/07/13/ShadowSocks%E6%B3%A8%E5%86%8C%E8%AF%A6%E8%A7%A3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;strong&gt;ShadowSocks购买注册详解&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2）&lt;a href=&quot;http://profeel.github.io/2016/07/11/%E5%A6%82%E4%BD%95%E6%B3%A8%E5%86%8CGoogle%E8%B4%A6%E6%88%B7/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;strong&gt;Google账户注册&lt;/strong&gt;&lt;/a&gt;，已有用户请跳过&lt;/p&gt;
+&lt;p&gt;3) 在电脑上下载Pokemon客户端–&amp;gt;&lt;a href=&quot;http://pan.baidu.com/s/1i5HHFZB&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;strong&gt;点击下载&lt;/strong&gt;&lt;/a&gt; 密码：9ee5&lt;br&gt;（此客户端经过破解，不需要再修改GPS）&lt;br&gt;这个定位会在每次打开的时候都会定位到旧金山联合广场北，问题就是官方可能会封号，所以，不怕封号的就来玩吧，毕竟国内不能玩和封号没有什么区别~&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4).使用同步助手或者iTools电脑客户端安装Pokemon Go&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-12_14:18:24.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在证书(设置—&amp;gt;通用-&amp;gt;描述文件与设备管理)中添加信任：&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-12_14:18:58.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5).打开surge 选择us线路&lt;/strong&gt;&lt;br&gt;—–&amp;gt;&lt;a href=&quot;http://profeel.github.io/2016/07/01/Surge%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Surges配置方法&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-12_11:52:43.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6).打开Pokemon Go输入Google账户即可畅玩&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-12_11:50:27.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不懂的可以留言交流或者加我微信交流，有一个微信群，群人数已经超过100+，要加群的先加我微信，备注Pokemon Go&lt;/strong&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;此教程仅适用于IOS客户端&lt;/strong&gt;&lt;br&gt;众所周知，Pokemon Go大中华区被锁，无法玩到，很多玩家都要翻墙才能玩到，那么现在讲解一下如何才能玩到Pokemon Go&lt;/p&gt;
+&lt;p&gt;首先准备工具和材料：&lt;br&gt;&lt;strong&gt;1）VPN&lt;/st
+    
+    </summary>
+    
+    
+      <category term="PokemonGo" scheme="http://yoursite.com/tags/PokemonGo/"/>
+    
+      <category term="锁区如何玩" scheme="http://yoursite.com/tags/%E9%94%81%E5%8C%BA%E5%A6%82%E4%BD%95%E7%8E%A9/"/>
+    
+      <category term="如何解决" scheme="http://yoursite.com/tags/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3/"/>
+    
+      <category term="Pokemon" scheme="http://yoursite.com/tags/Pokemon/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何注册Google账户</title>
+    <link href="http://yoursite.com/2016/07/11/%E5%A6%82%E4%BD%95%E6%B3%A8%E5%86%8CGoogle%E8%B4%A6%E6%88%B7/"/>
+    <id>http://yoursite.com/2016/07/11/如何注册Google账户/</id>
+    <published>2016-07-11T11:17:25.000Z</published>
+    <updated>2016-07-11T11:21:55.000Z</updated>
+    
+    <content type="html">&lt;p&gt;如何注册呢？&lt;br&gt;首先你需要翻墙，推荐使用&lt;a href=&quot;https://portal.shadowsocks.com/aff.php?aff=6996&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ShadowSocks翻墙&lt;/a&gt;，所有平台通用，速度稳定&lt;/p&gt;
+&lt;p&gt;注册步骤如下：&lt;br&gt;第一步：打开google页面&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-11_19:14:54.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;第二步：选择添加账户或者注册账户&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-11_19:15:50.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;第三步：选择创建账号&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-11_19:16:13.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;第四步：填写相关信息和号码&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-11_19:16:35.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;大功告成！！！&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如何注册呢？&lt;br&gt;首先你需要翻墙，推荐使用&lt;a href=&quot;https://portal.shadowsocks.com/aff.php?aff=6996&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ShadowSocks翻墙&lt;/a&gt;，所有平台通用，速
+    
+    </summary>
+    
+    
+      <category term="tools" scheme="http://yoursite.com/tags/tools/"/>
+    
+      <category term="tips" scheme="http://yoursite.com/tags/tips/"/>
+    
+      <category term="google" scheme="http://yoursite.com/tags/google/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Surge2.0配置教程</title>
+    <link href="http://yoursite.com/2016/07/01/Surge%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2016/07/01/Surge相关配置/</id>
+    <published>2016-07-01T02:51:30.000Z</published>
+    <updated>2016-07-01T03:36:49.000Z</updated>
+    
+    <content type="html">&lt;p&gt;没有APP的朋友，可以加我微信Profeel 15元提供下载包更新&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 如何配置Surge2.0版本&lt;/strong&gt;&lt;br&gt;打开Surge&lt;br&gt;1)点击config–&amp;gt;&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-01_11:10:18.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;2)下载配置–&amp;gt;将配置的URL链接复制进去就可以&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-01_10:56:11.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;分享几个配置：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;去视频广告配置：&lt;code&gt;http://abclite.cn/Abclite_ADB.conf&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Hosts 列表，按照 Surge 的配置文件规则生成的，每3天更新一次，欢迎使用！无需再配置代理服务器，支持 Wikipedia、Google、Facebook、Twitter、Instagram等–&amp;gt;&lt;br&gt;&lt;code&gt;https://coding.net/u/ifyour/p/hosts-for-Surge/git/raw/master/hosts.conf&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;3)打开VPN–&amp;gt;&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1.z0.glb.clouddn.com/2016-07-01_10:56:21.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;没有APP的朋友，可以加我微信Profeel 15元提供下载包更新&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 如何配置Surge2.0版本&lt;/strong&gt;&lt;br&gt;打开Surge&lt;br&gt;1)点击config–&amp;gt;&lt;br&gt;&lt;img src=&quot;http://7xr6vh.com1
+    
+    </summary>
+    
+    
+      <category term="surge" scheme="http://yoursite.com/tags/surge/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NodeBB安装（1）</title>
+    <link href="http://yoursite.com/2016/06/28/NodeBB%E5%AE%89%E8%A3%85%EF%BC%881%EF%BC%89/"/>
+    <id>http://yoursite.com/2016/06/28/NodeBB安装（1）/</id>
+    <published>2016-06-28T00:58:51.000Z</published>
+    <updated>2016-06-28T00:58:51.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Surge低价购买 配置详解 去广告</title>
+    <link href="http://yoursite.com/2016/06/26/Surge%E4%BD%8E%E4%BB%B7%E8%B4%AD%E4%B9%B0-%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3-%E5%8E%BB%E5%B9%BF%E5%91%8A/"/>
+    <id>http://yoursite.com/2016/06/26/Surge低价购买-配置详解-去广告/</id>
+    <published>2016-06-26T01:19:17.000Z</published>
+    <updated>2016-06-26T02:53:22.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Surge 在App Store 原价￥648&lt;br&gt;现在分享给大家 ￥15 （提供下载）&lt;br&gt;&lt;img src=&quot;http://two.yt/images/2016/06/25/mgwm.png&quot; alt=&quot;Surge原价648&quot;&gt;&lt;/p&gt;
+&lt;p&gt;下载Surge能干嘛？&lt;br&gt;最简单的功能就是：&lt;strong&gt;作为VPN工具，屏蔽视频广告（各大视频网站，如优酷、爱奇艺、乐视广告都可以被屏蔽）&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://two.yt/images/2016/06/25/6397.png&quot; alt=&quot;屏蔽各大app视频广告&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如何购买？&lt;/strong&gt;&lt;br&gt;购买链接：&lt;br&gt;&lt;a href=&quot;http://weidian.com/item.html?itemID=1888881468&amp;amp;code=04155ina1Zvm0V1YClma18gana155inC&amp;amp;state=H5WXshare&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Surge购买&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如何使用？&lt;/strong&gt;&lt;br&gt;购买安装好surge之后，打开左上角按钮，点击download configuration from URL&lt;br&gt;&lt;img src=&quot;http://two.yt/images/2016/06/25/4LRp.jpg&quot; alt=&quot;下载配置&quot;&gt;&lt;/p&gt;
+&lt;p&gt;复制粘贴以下链接：&lt;br&gt;&lt;code&gt;http://abclite.cn/Abclite_ADB.conf&lt;/code&gt;&lt;br&gt;不需要任何修改，直接可以去除APP中各种广告，例如腾讯视频中播放电影、电视剧等视频前的广告，方法很简单直接参照最后一步操作即可。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果需要翻墙，怎么做？  &lt;/strong&gt;&lt;br&gt;可能需要购买ShadowSocks账号，以下简称ss&lt;br&gt;&lt;a href=&quot;https://portal.shadowsocks.com/aff.php?aff=6996&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ShadowSocks购买链接&lt;/a&gt;&lt;br&gt;普通单用户：不限流量，单用户，10条线路可选 转为RMB大约是107元/年，比国内大多VPN要便宜，看youtube完全不会卡，速度很快&lt;br&gt;&lt;img src=&quot;http://two.yt/images/2016/06/25/oKwG.png&quot; alt=&quot;ShadowSocks价格&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;更多Surge功能： &lt;/strong&gt;&lt;br&gt;截获 iOS 上的所有应用程序的 HTTP/HTTPS/TCP 流量，将其重定向到 HTTP/HTTPS/SOCK5 代理服务器转发。&lt;br&gt;重载 iOS 蜂窝网络下的 DNS 服务器配置，使得 iOS 设备工作在蜂窝网络之下时，开发者也能够配置 DNS 服务器。记录设备所发出/接收的 HTTP 请求/应答首部信息。&lt;br&gt;配置基于 domain, domain suffix, domain keyword, CIDR IP 以及 GeoIP 的过滤规则。对设备上 WIFI、蜂窝网络以及代理连接会话的流量进行统计以及测速。&lt;br&gt;从 URL 或 iTunes 导入/导出配置文件。重度使用场景下有很高的性能以及适应性。&lt;br&gt;基于 domain 规则屏蔽广告。完全兼容蜂窝网络。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Surge 在App Store 原价￥648&lt;br&gt;现在分享给大家 ￥15 （提供下载）&lt;br&gt;&lt;img src=&quot;http://two.yt/images/2016/06/25/mgwm.png&quot; alt=&quot;Surge原价648&quot;&gt;&lt;/p&gt;
+&lt;p&gt;下载Surge能干嘛？
+    
+    </summary>
+    
+    
+      <category term="tools" scheme="http://yoursite.com/tags/tools/"/>
+    
+      <category term="视频广告屏蔽" scheme="http://yoursite.com/tags/%E8%A7%86%E9%A2%91%E5%B9%BF%E5%91%8A%E5%B1%8F%E8%94%BD/"/>
+    
+      <category term="surge" scheme="http://yoursite.com/tags/surge/"/>
+    
+      <category term="优酷广告" scheme="http://yoursite.com/tags/%E4%BC%98%E9%85%B7%E5%B9%BF%E5%91%8A/"/>
+    
+      <category term="乐视广告" scheme="http://yoursite.com/tags/%E4%B9%90%E8%A7%86%E5%B9%BF%E5%91%8A/"/>
+    
+      <category term="土豆广告" scheme="http://yoursite.com/tags/%E5%9C%9F%E8%B1%86%E5%B9%BF%E5%91%8A/"/>
+    
+      <category term="爱奇艺广告" scheme="http://yoursite.com/tags/%E7%88%B1%E5%A5%87%E8%89%BA%E5%B9%BF%E5%91%8A/"/>
+    
+      <category term="ku6广告" scheme="http://yoursite.com/tags/ku6%E5%B9%BF%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MongoDB2.75之后删除冗余文档</title>
+    <link href="http://yoursite.com/2016/06/24/MongoDB2-75%E4%B9%8B%E5%90%8E%E5%88%A0%E9%99%A4%E5%86%97%E4%BD%99%E6%96%87%E6%A1%A3/"/>
+    <id>http://yoursite.com/2016/06/24/MongoDB2-75之后删除冗余文档/</id>
+    <published>2016-06-24T03:33:39.000Z</published>
+    <updated>2016-06-24T03:36:14.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;strong&gt;遇到的问题：&lt;/strong&gt;MongoDB3删除冗余的documents&lt;br&gt;&lt;strong&gt;解决方法：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建集合，选择超过1个的文档&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;var cur = db.questions.aggregate([&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; $group: &amp;#123; _id: &amp;#123; qid: &amp;quot;$qid&amp;quot; &amp;#125;, uniqueIds: &amp;#123; $addToSet: &amp;quot;$_id&amp;quot; &amp;#125;, count: &amp;#123; $sum: 1 &amp;#125; &amp;#125; &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; $match: &amp;#123; count: &amp;#123; $gt: 1 &amp;#125; &amp;#125; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;]);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;通过迭代的方式，将上面选择出来的冗余的集合中的文档在之前的集合中进行删除&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;while (cur.hasNext()) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var doc = cur.next();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var index = 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;while (index &amp;lt; doc.uniqueIds.length) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;db.questions.remove(doc.uniqueIds[index]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;index = index + 1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;参考文章：&lt;/strong&gt;&lt;a href=&quot;http://stackoverflow.com/questions/30187688/mongo-3-duplicates-on-unique-index-dropdups&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Stackoverflow-Mongo 3 duplicates on unique in index -dropDups&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;遇到的问题：&lt;/strong&gt;MongoDB3删除冗余的documents&lt;br&gt;&lt;strong&gt;解决方法：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建集合，选择超过1个的文档&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight p
+    
+    </summary>
+    
+    
+      <category term="MongoDB" scheme="http://yoursite.com/tags/MongoDB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一些后悔没有早点懂的道理</title>
+    <link href="http://yoursite.com/2016/06/06/%E4%B8%80%E4%BA%9B%E5%90%8E%E6%82%94%E6%B2%A1%E6%9C%89%E6%97%A9%E7%82%B9%E6%87%82%E7%9A%84%E9%81%93%E7%90%86/"/>
+    <id>http://yoursite.com/2016/06/06/一些后悔没有早点懂的道理/</id>
+    <published>2016-06-06T03:05:06.000Z</published>
+    <updated>2016-06-06T03:05:06.000Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HPUX宕机差错步骤</title>
+    <link href="http://yoursite.com/2016/06/01/HPUX%E5%AE%95%E6%9C%BA%E5%B7%AE%E9%94%99%E6%AD%A5%E9%AA%A4/"/>
+    <id>http://yoursite.com/2016/06/01/HPUX宕机差错步骤/</id>
+    <published>2016-06-01T02:32:42.000Z</published>
+    <updated>2016-06-01T02:42:17.000Z</updated>
+    
+    <content type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;查看有没有coredump&lt;br&gt; /etc/adm/crash&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;查看syslog&lt;br&gt;/etc/adm/syslog/syslog.log&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;查看关机日志&lt;br&gt;/etc/shutdownlog&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;查看集群日志&lt;br&gt;cmviewcl -v&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;查看硬件相关&lt;br&gt;ioscan -fn&lt;br&gt;armdsp -a &amp;lt;阵列标识号 - ArrayID&amp;gt;&lt;br&gt;&lt;code&gt;# logprn –t all –v –a &amp;lt;阵列标识号 - ArrayID&amp;gt; -s mmddhhmmyy&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;查看系统启动日志&lt;br&gt;/etc/rc.log&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;查看有没有coredump&lt;br&gt; /etc/adm/crash&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;查看syslog&lt;br&gt;/etc/adm/syslog/syslog.log&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;查看关机日志&lt;br&gt;/etc/shutdow
+    
+    </summary>
+    
+    
+      <category term="error" scheme="http://yoursite.com/tags/error/"/>
+    
+      <category term="hpux" scheme="http://yoursite.com/tags/hpux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Monogdb update更新数据</title>
+    <link href="http://yoursite.com/2016/05/31/Monogdb-update%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE/"/>
+    <id>http://yoursite.com/2016/05/31/Monogdb-update更新数据/</id>
+    <published>2016-05-31T08:42:10.000Z</published>
+    <updated>2016-05-31T08:45:39.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;code&gt;&amp;gt; db.books.update({&amp;quot;download_links&amp;quot; : &amp;quot;http://file.allitebooks.com/20160514/Moodle%20E-Learning%20Course%20Development.pdf&amp;quot;},{$set:{has_download:0}});&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;第一个：为条件&lt;br&gt;第二个：为变更的值&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;from bson.objectid import ObjectId&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;import pymongo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;client = pymongo.MongoClient(&amp;quot;localhost&amp;quot;, 27017)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;db = client.mydbname&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;db.ProductData.update_one(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;apos;_id&amp;apos;: ObjectId(p[&amp;apos;_id&amp;apos;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;,&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;apos;$set&amp;apos;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;apos;d.a&amp;apos;: existing + 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;, upsert=False)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;&amp;gt; db.books.update({&amp;quot;download_links&amp;quot; : &amp;quot;http://file.allitebooks.com/20160514/Moodle%20E-Learning%20Course%20Develo
+    
+    </summary>
+    
+    
+      <category term="MongoDB" scheme="http://yoursite.com/tags/MongoDB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MongoDB 查询返回某一列的值</title>
+    <link href="http://yoursite.com/2016/05/25/MongoDB-%E6%9F%A5%E8%AF%A2%E8%BF%94%E5%9B%9E%E6%9F%90%E4%B8%80%E5%88%97%E7%9A%84%E5%80%BC/"/>
+    <id>http://yoursite.com/2016/05/25/MongoDB-查询返回某一列的值/</id>
+    <published>2016-05-25T02:47:37.000Z</published>
+    <updated>2016-05-25T02:49:42.000Z</updated>
+    
+    <content type="html">&lt;p&gt;参数中，第一个&lt;code&gt;{}&lt;/code&gt;表示返回所有，第二个表示选择的列，1表示选择,0表示禁止输出&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; db.urls.find(&amp;#123;&amp;#125;, &amp;#123;&amp;apos;Url&amp;apos;:1, &amp;apos;_id&amp;apos;:0&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; &amp;quot;Url&amp;quot; : &amp;quot;http://www.allitebooks.com/object-oriented-programming-with-c-2nd-edition/&amp;quot; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; &amp;quot;Url&amp;quot; : &amp;quot;http://www.allitebooks.com/algorithms-design-and-analysis/&amp;quot; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; &amp;quot;Url&amp;quot; : &amp;quot;http://www.allitebooks.com/data-structures-using-c-2nd-edition/&amp;quot; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Type &amp;quot;it&amp;quot; for more&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;参数中，第一个&lt;code&gt;{}&lt;/code&gt;表示返回所有，第二个表示选择的列，1表示选择,0表示禁止输出&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;
+    
+    </summary>
+    
+    
+      <category term="MongoDB" scheme="http://yoursite.com/tags/MongoDB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Virtualenv的使用方法</title>
+    <link href="http://yoursite.com/2016/05/24/Virtualenv%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2016/05/24/Virtualenv的使用方法/</id>
+    <published>2016-05-24T00:11:35.000Z</published>
+    <updated>2016-05-24T00:21:32.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;virtualenv is a tool to create isolated Python environments.&lt;/p&gt;
+&lt;h1 id=&quot;为什么要使用virtualenv？&quot;&gt;&lt;a href=&quot;#为什么要使用virtualenv？&quot; class=&quot;headerlink&quot; title=&quot;为什么要使用virtualenv？&quot;&gt;&lt;/a&gt;为什么要使用virtualenv？&lt;/h1&gt;&lt;p&gt;virtualenv通过创建独立Python开发环境的工具, 来解决依赖、版本以及间接权限&lt;br&gt;问题. 比如一个项目依赖Django1.3 而当前全局开发环境为Django1.7, 版本跨度过大, 导致不兼容使项目无法正在运行, 使用virtualenv可以解决这些问题.&lt;br&gt;在windows下，可以方便的使用virtualenv来解决因为路径以及windows下编程的一些问题&lt;br&gt;virtualenv创建一个拥有自己安装目录的环境, 这个环境不与其他虚拟环境共享库, 能够方便的管理python版本和管理python库&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;安装Virutalenv&quot;&gt;&lt;a href=&quot;#安装Virutalenv&quot; class=&quot;headerlink&quot; title=&quot;安装Virutalenv&quot;&gt;&lt;/a&gt;安装Virutalenv&lt;/h1&gt;&lt;p&gt;前提是你已经安装了pip&lt;br&gt;&lt;code&gt;pip install virtualenv&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&quot;使用virtualenv&quot;&gt;&lt;a href=&quot;#使用virtualenv&quot; class=&quot;headerlink&quot; title=&quot;使用virtualenv&quot;&gt;&lt;/a&gt;使用virtualenv&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 创建虚拟环境&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ProfeelsMacBook-Pro:virtualenv wangqi$ virtualenv env&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;New python executable &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; env/bin/python&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Installing setuptools, pip, wheel...done.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ProfeelsMacBook-Pro:virtualenv wangqi$ cd env/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ProfeelsMacBook-Pro:env wangqi$ ls&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bin	include	lib&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 激活虚拟环境&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ProfeelsMacBook-Pro:env wangqi$ source bin/activate &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(env)ProfeelsMacBook-Pro:env wangqi$ python&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Python &lt;span class=&quot;number&quot;&gt;2.7&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.10&lt;/span&gt; (default, Oct &lt;span class=&quot;number&quot;&gt;23&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;2015&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;05&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;06&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[GCC &lt;span class=&quot;number&quot;&gt;4.2&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.1&lt;/span&gt; Compatible Apple LLVM &lt;span class=&quot;number&quot;&gt;7.0&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.0&lt;/span&gt; (clang&lt;span class=&quot;number&quot;&gt;-700.0&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.59&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.5&lt;/span&gt;)] on darwin&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Type &lt;span class=&quot;string&quot;&gt;&quot;help&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;copyright&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;credits&quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;license&quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; more information.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;KeyboardInterrupt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;^D&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(env)ProfeelsMacBook-Pro:env wangqi$ pip list&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pip (&lt;span class=&quot;number&quot;&gt;7.1&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;setuptools (&lt;span class=&quot;number&quot;&gt;18.2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wheel (&lt;span class=&quot;number&quot;&gt;0.24&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;You are using pip version &lt;span class=&quot;number&quot;&gt;7.1&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.2&lt;/span&gt;, however version &lt;span class=&quot;number&quot;&gt;8.1&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.2&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;is&lt;/span&gt; available.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;You should consider upgrading via the &lt;span class=&quot;string&quot;&gt;&#39;pip install --upgrade pip&#39;&lt;/span&gt; command.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(env)ProfeelsMacBook-Pro:env wangqi$&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;virtualenv is a tool to create isolated Python environments.&lt;/p&gt;
+&lt;h1 id=&quot;为什么要使用virtualenv？&quot;&gt;&lt;a href=&quot;#为什么要使用virtualenv？&quot; cla
+    
+    </summary>
+    
+    
+      <category term="tools" scheme="http://yoursite.com/tags/tools/"/>
+    
+      <category term="virtualenv" scheme="http://yoursite.com/tags/virtualenv/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+</feed>
