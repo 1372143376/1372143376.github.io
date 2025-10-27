@@ -1,0 +1,32 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Json2Any工具 - 在线工具箱</title><link rel="stylesheet" href="../css/tool.css?v=1.21"><style>/* 调整按钮组样式 */
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .button-group .btn {
+            margin-bottom: 0;
+        }
+        
+        /* 结果标题样式调整 */
+        .result-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .result-title-text {
+            flex-grow: 1;
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        
+        .result-title .copy-btn {
+            margin-left: 10px;
+            flex-shrink: 0;
+            align-self: flex-start;
+        }</style></head><body><div class="container"><header><h1>Json2Any工具</h1><p class="subtitle">JSON转Go结构体、Protobuf消息定义、PHP数组，YAML转Protobuf，SQL转GORM</p></header><div class="form-group"><label for="input-text">输入JSON、YAML或SQL：</label> <textarea id="input-text" placeholder="请输入要转换的JSON、YAML或SQL语句"></textarea></div><div class="button-group"><button class="btn" onclick="jsonToGoStruct()">JSON转Go结构体</button> <button class="btn" onclick="sqlToGorm()">SQL转GORM</button> <button class="btn" onclick="jsonToProtobuf()">JSON转Protobuf</button> <button class="btn" onclick="yamlToProtobuf()">YAML转Protobuf</button> <button class="btn" onclick="jsonToPhpArray()">JSON转PHP数组</button> <button class="btn" onclick="clearInput()">清空</button></div><div class="result" id="json2go-result"></div><a href="../index.html" class="back-link">← 返回工具箱首页</a></div><script src="../js/lib/js-yaml.min.js"></script><script src="../js/json2any.js?v=1.14"></script><script src="../js/nav.js?v=1.10"></script><script defer="defer" src="/main.81c82d2b696a8b782794.js"></script></body></html>

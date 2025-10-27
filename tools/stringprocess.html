@@ -1,0 +1,218 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>字符串文本处理 - 在线工具箱</title><link rel="stylesheet" href="../css/tool.css?v=1.21"><style>/* Tab切换样式 */
+        .tab-container {
+            margin-bottom: 20px;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+        
+        .tab-button {
+            padding: 12px 20px;
+            background: #f5f5f5;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            border-radius: 6px 6px 0 0;
+            margin-right: 5px;
+        }
+        
+        .tab-button:hover {
+            background: #e0e0e0;
+        }
+        
+        .tab-button.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* 字符串截取工具特定样式 */
+        .substring-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .control-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .control-group label {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .control-group input, .control-group select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .example-text {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        
+        /* 文本截取工具特定样式 */
+        .text-substring-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        /* 正则替换工具特定样式 */
+        .regex-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .regex-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .regex-toggle input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .suffix-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .suffix-group input {
+            flex: 1;
+        }
+        
+        .suffix-group button {
+            padding: 10px 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .suffix-group button:hover {
+            background: #5a67d8;
+        }
+        
+        /* 行号工具特定样式 */
+        .line-number-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        /* 差异对比工具特定样式 */
+        .diff-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .diff-panel {
+            flex: 1;
+        }
+        
+        .diff-panel textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: monospace;
+            resize: vertical;
+        }
+        
+        .diff-controls {
+            display: flex;
+            gap: 15px;
+            align-items: end;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .diff-controls .control-group {
+            margin-bottom: 0;
+        }
+        
+        .diff-result-container {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .diff-result-panel {
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .diff-result-header {
+            background: #f5f5f5;
+            padding: 10px;
+            font-weight: 500;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .diff-result-content {
+            height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            white-space: pre;
+            padding: 10px;
+        }
+        
+        .diff-line {
+            line-height: 1.5;
+        }
+        
+        .diff-line-added {
+            background-color: #e6ffec;
+        }
+        
+        .diff-line-removed {
+            background-color: #ffebe9;
+        }
+        
+        .diff-line-unchanged {
+            background-color: #f8f8f8;
+        }
+        
+        /* 确保结果区域初始隐藏 */
+        #substring-result, #text-substring-result, #regex-result, #line-number-result {
+            display: none;
+        }</style></head><body><div class="container"><header><h1>字符串文本处理</h1><p class="subtitle">提供多种字符串处理功能</p></header><div class="tab-container"><div class="tab-buttons"><button class="tab-button active" data-tab="substring">多行字符串批量按索引截取</button> <button class="tab-button" data-tab="text-substring">多行字符串批量按文本截取</button> <button class="tab-button" data-tab="regex">多行文本正则替换添加后缀</button> <button class="tab-button" data-tab="line-number">在线文本列表批量添加行号</button> <button class="tab-button" data-tab="loop-string">循环生成字符串</button> <button class="tab-button" data-tab="batch-replace">文本字符串批量替换工具</button> <button class="tab-button" data-tab="diff">文本代码差异对比</button></div><div id="substring" class="tab-content active"><div class="form-group"><label for="input-text">输入文本（每行一个字符串）：</label> <textarea id="input-text" placeholder="请输入要处理的文本，每行一个字符串">hello world
+test string
+example text</textarea></div><div class="substring-controls"><div class="control-group"><label for="start-position">起始位置：</label> <input type="number" id="start-position" value="0" min="0"><div class="example-text">从0开始计数</div></div><div class="control-group"><label for="end-position">结束位置：</label> <input type="number" id="end-position" value="" min="0"><div class="example-text">留空表示截取到末尾</div></div><div class="control-group"><label for="substring-length">截取长度：</label> <input type="number" id="substring-length" value="" min="1"><div class="example-text">优先于结束位置</div></div><div class="control-group"><label for="position-type">位置类型：</label> <select id="position-type"><option value="character">按字符</option><option value="byte">按字节</option></select></div></div><button class="btn" onclick="processSubstring()">批量截取</button> <button class="btn" onclick="clearSubstringInput()">清空</button><div class="result" id="substring-result"></div></div><div id="text-substring" class="tab-content"><div class="form-group"><label for="text-input-text">输入文本（每行一个字符串）：</label> <textarea id="text-input-text" placeholder="请输入要处理的文本，每行一个字符串">hello world
+test string
+example text</textarea></div><div class="text-substring-controls"><div class="control-group"><label for="start-text">起始文本：</label> <input id="start-text" placeholder="输入起始文本"><div class="example-text">留空表示从开头截取</div></div><div class="control-group"><label for="end-text">结束文本：</label> <input id="end-text" placeholder="输入结束文本"><div class="example-text">留空表示截取到末尾</div></div><div class="control-group"><label for="include-start">包含起始文本：</label> <select id="include-start"><option value="false">不包含</option><option value="true">包含</option></select></div><div class="control-group"><label for="include-end">包含结束文本：</label> <select id="include-end"><option value="false">不包含</option><option value="true">包含</option></select></div></div><button class="btn" onclick="processTextSubstring()">批量按文本截取</button> <button class="btn" onclick="clearTextSubstringInput()">清空</button><div class="result" id="text-substring-result"></div></div><div id="regex" class="tab-content"><div class="form-group"><label for="regex-input-text">输入文本（每行一个字符串）：</label> <textarea id="regex-input-text" placeholder="1
+12
+123
+1234
+12345"></textarea></div><div class="regex-controls"><div class="control-group"><label for="enable-replace">开启替换：</label><div class="regex-toggle"><input type="checkbox" id="enable-replace" checked="checked"> <label for="enable-replace">启用</label></div></div><div class="control-group"><label for="search-text">将字符（支持正则表达式）：</label> <input id="search-text" placeholder="\d{1}"></div><div class="control-group"><label for="replace-text">替换成：</label> <input id="replace-text" placeholder="要替换成什么字符串"></div><div class="control-group"><label>添加后缀：</label><div class="suffix-group"><input id="suffix-text" placeholder=".jpg"> <button onclick="addSuffix()">添加后缀</button></div></div></div><button class="btn" onclick="processRegexReplace()">批量正则替换</button> <button class="btn" onclick="clearRegexInput()">清空</button><div class="result" id="regex-result"></div></div><div id="line-number" class="tab-content"><div class="form-group"><label for="line-number-input-text">输入文本（每行一个字符串）：</label> <textarea id="line-number-input-text" placeholder="DownloadKittens
+DownloadPuppies
+DownloadBunnies"></textarea></div><div class="line-number-controls"><div class="control-group"><label for="line-number-start">起始行号：</label> <input type="number" id="line-number-start" value="1" min="0"></div><div class="control-group"><label for="line-number-separator">分隔符：</label> <input id="line-number-separator" value=". "></div><div class="control-group"><label for="line-number-skip-empty">跳过空行：</label> <select id="line-number-skip-empty"><option value="true">是</option><option value="false">否</option></select></div></div><button class="btn" onclick="processLineNumber()">批量添加行号</button> <button class="btn" onclick="clearLineNumberInput()">清空</button><div class="result" id="line-number-result"></div><div class="example"><h4>使用示例：</h4><p>输入文本：<br>DownloadKittens<br>DownloadPuppies<br>DownloadBunnies</p><p>起始行号：1<br>分隔符：.<br>跳过空行：是</p><p>结果：<br>1. DownloadKittens<br>2. DownloadPuppies<br>3. DownloadBunnies</p></div></div><div id="loop-string" class="tab-content"><div class="form-group"><label for="loop-input-text">操作文本（使用 %d 作为占位符）：</label> <textarea id="loop-input-text" placeholder="select * from table_%d where id=%d;">select * from table_%d where id=%d;</textarea></div><div class="regex-controls"><div class="control-group"><label for="loop-count">循环次数：</label> <input type="number" id="loop-count" value="10" min="1" max="1000"></div></div><button class="btn" onclick="processLoopString()">生成字符串</button> <button class="btn" onclick="clearLoopStringInput()">清空</button><div class="result" id="loop-string-result"></div></div><div id="batch-replace" class="tab-content"><div class="form-group"><label for="batch-replace-input-text">输入文本（每行一个字符串）：</label> <textarea id="batch-replace-input-text" placeholder="请输入要处理的文本，每行一个字符串"></textarea></div><div class="regex-controls"><div class="control-group"><label for="search-string">查找文本：</label> <input id="search-string" placeholder="请输入要查找的文本"></div><div class="control-group"><label for="replace-string">替换文本：</label> <input id="replace-string" placeholder="请输入替换后的文本"></div><div class="control-group"><label for="replace-mode">替换模式：</label> <select id="replace-mode"><option value="normal">普通替换</option><option value="regex">正则表达式</option></select></div><div class="control-group"><label for="case-sensitive">大小写敏感：</label> <select id="case-sensitive"><option value="true">是</option><option value="false">否</option></select></div></div><button class="btn" onclick="processBatchReplace()">批量替换</button> <button class="btn" onclick="clearBatchReplaceInput()">清空</button><div class="result" id="batch-replace-result"></div></div><div id="diff" class="tab-content"><div class="diff-container"><div class="diff-panel"><div class="form-group"><label for="original-text">原始文本：</label> <textarea id="original-text" placeholder="请输入原始文本"></textarea></div></div><div class="diff-panel"><div class="form-group"><label for="modified-text">修改后文本：</label> <textarea id="modified-text" placeholder="请输入修改后的文本"></textarea></div></div></div><div class="diff-controls"><div class="control-group"><label for="diff-mode">对比模式：</label> <select id="diff-mode"><option value="line">按行对比</option><option value="word">按单词对比</option><option value="char">按字符对比</option></select></div><div class="control-group"><label for="ignore-whitespace">忽略空白字符：</label> <select id="ignore-whitespace"><option value="false">否</option><option value="true">是</option></select></div><button class="btn" onclick="processDiff()">对比差异</button> <button class="btn" onclick="clearDiffInput()">清空</button></div><div class="diff-result-container"><div class="diff-result-panel"><div class="diff-result-header">原始文本</div><div class="diff-result-content" id="original-diff-result"></div></div><div class="diff-result-panel"><div class="diff-result-header">修改后文本</div><div class="diff-result-content" id="modified-diff-result"></div></div></div></div></div><a href="../index.html" class="back-link">← 返回工具箱首页</a></div><script src="../js/stringprocess.js?v=1.12"></script><script src="../js/nav.js?v=1.10"></script><script defer="defer" src="/main.81c82d2b696a8b782794.js"></script></body></html>

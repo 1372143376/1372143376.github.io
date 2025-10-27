@@ -1,0 +1,31 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>curl命令转代码 - 在线工具箱</title><link rel="stylesheet" href="../css/tool.css?v=1.21"><style>/* 添加一些自定义样式 */
+        .example-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .example-btn {
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .example-btn:hover {
+            background: #e0e0e0;
+            transform: translateY(-2px);
+        }
+        
+        select {
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            background: white;
+            min-width: 200px;
+        }</style></head><body><div class="container"><header><h1>curl命令转代码</h1><p class="subtitle">将curl命令转换为多种编程语言的HTTP请求代码</p></header><div class="form-group"><label for="curl-input">curl命令：</label> <textarea id="curl-input" placeholder="请输入curl命令，例如：curl -X GET https://www.baidu.com">curl -X GET "https://www.baidu.com"</textarea></div><div class="form-group"><label for="language-select">编程语言：</label> <select id="language-select"><option value="go">Go</option><option value="python">Python</option><option value="javascript">JavaScript (Node.js)</option><option value="php">PHP</option><option value="java">Java</option><option value="csharp">C#</option><option value="c">C</option><option value="wget">Wget</option><option value="rust">Rust</option></select></div><div class="form-group"><label>常用示例：</label><div class="example-buttons"><div class="example-btn" data-example="get">GET请求</div><div class="example-btn" data-example="post">POST请求</div><div class="example-btn" data-example="basic_auth">Basic Auth认证</div><div class="example-btn" data-example="wget">Wget示例</div></div></div><button class="btn" onclick="convertCurl()">转换代码</button> <button class="btn" onclick="clearInput()">清空</button><div class="result" id="curl-result" style="display: none;"></div><a href="../index.html" class="back-link">← 返回工具箱首页</a></div><script src="../js/curl.js?v=1.2"></script><script src="../js/nav.js?v=1.10"></script><script defer="defer" src="/main.81c82d2b696a8b782794.js"></script></body></html>
