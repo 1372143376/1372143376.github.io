@@ -1,0 +1,90 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>模拟Crontab表达式执行时间 - 在线工具箱</title><link rel="stylesheet" href="../css/tool.css?v=1.21"><style>.crontab-info {
+            background: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .crontab-info h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .crontab-info ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        
+        .crontab-info li {
+            margin-bottom: 8px;
+        }
+        
+        .crontab-format {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .crontab-field {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 0 5px;
+            background: #f8f9fa;
+        }
+        
+        .crontab-field-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .example-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .example-table th,
+        .example-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .example-table th {
+            background: #f5f5f5;
+        }
+        
+        .result-list {
+            margin-top: 20px;
+        }
+        
+        .result-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .result-item:last-child {
+            border-bottom: none;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: end;
+        }
+        
+        .form-group-inline {
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+            }
+        }</style></head><body><div class="container"><header><h1>模拟Crontab表达式执行时间</h1><p class="subtitle">在线模拟Crontab表达式的执行时间，帮助判断表达式的正确性</p></header><div class="crontab-info"><h3>Crontab表达式规则：</h3><p>注：Linux中没有second，最小是minute。</p><div class="crontab-format"><div class="crontab-field"><div class="crontab-field-label">*</div><div>分钟<br>(0 - 59)</div></div><div class="crontab-field"><div class="crontab-field-label">*</div><div>小时<br>(0 - 23)</div></div><div class="crontab-field"><div class="crontab-field-label">*</div><div>一个月中的第几天<br>(1 - 31)</div></div><div class="crontab-field"><div class="crontab-field-label">*</div><div>月份<br>(1 - 12)</div></div><div class="crontab-field"><div class="crontab-field-label">*</div><div>星期几<br>(0 - 6)</div></div></div><p>例：<code>30 21 * * *</code> 表示每晚21:30分执行</p></div><div class="form-group"><label for="cron-expression">Crontab表达式：</label> <input id="cron-expression" placeholder="请输入Crontab表达式，例如：*/5 * * * *" value="*/5 * * * *"></div><div class="form-row"><div class="form-group-inline"><label for="result-count">显示执行次数：</label> <input type="number" id="result-count" value="10" min="1" max="100"></div><div class="form-group-inline"><label for="start-date">起始日期：</label> <input type="date" id="start-date"></div></div><button class="btn" onclick="parseCronExpression()">解析执行时间</button> <button class="btn" onclick="clearInput()">清空</button><div class="result" id="crontab-result" style="display: none;"></div><div class="example"><h3>常用Crontab表达式示例：</h3><table class="example-table"><thead><tr><th>描述</th><th>表达式</th></tr></thead><tbody><tr><td>每1分钟执行一次</td><td><code>* * * * *</code></td></tr><tr><td>每小时的第3和第15分钟执行</td><td><code>3,15 * * * *</code></td></tr><tr><td>每晚的21:30执行</td><td><code>30 21 * * *</code></td></tr><tr><td>每月1,10,22日的4:45执行</td><td><code>45 4 1,10,22 * *</code></td></tr><tr><td>每个星期一的上午8点到11点的第3和第15分钟执行</td><td><code>3,15 8-11 * * 1</code></td></tr><tr><td>每15分钟执行一次</td><td><code>*/15 * * * *</code></td></tr><tr><td>每天凌晨1点执行一次</td><td><code>0 1 * * *</code></td></tr><tr><td>每周日凌晨4:22执行</td><td><code>22 4 * * 0</code></td></tr></tbody></table></div><a href="../index.html" class="back-link">← 返回工具箱首页</a></div><script src="../js/crontab.js?v=1.0"></script><script src="../js/nav.js?v=1.12"></script><script defer="defer" src="/main.dad899375fdceee63af7.js"></script></body></html>

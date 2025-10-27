@@ -9,11 +9,18 @@ function initNavMenu() {
     createNavMenu();
 }
 
+// 获取nav.js版本号的函数
+function getNavJsVersion() {
+    // 如果配置文件中定义了版本号，则使用配置文件中的版本号
+    if (typeof TOOL_CONFIG !== 'undefined' && TOOL_CONFIG.NAV_JS_VERSION) {
+        return TOOL_CONFIG.NAV_JS_VERSION;
+    }
+    // 默认版本号
+    return '1.12';
+}
+
 // 创建导航菜单
 function createNavMenu() {
-    // 获取当前页面的文件名
-    const currentPage = window.location.pathname.split('/').pop();
-    
     // 创建导航图标
     const navIcon = document.createElement('div');
     navIcon.className = 'nav-icon';
@@ -22,64 +29,25 @@ function createNavMenu() {
     const toolsMenu = document.createElement('div');
     toolsMenu.className = 'tools-menu';
     
-    // 根据当前页面调整链接
+    // 构建菜单HTML - 包含所有工具，不再根据当前页面进行条件判断
     let menuHTML = '<a href="../index.html">🏠 返回首页</a>';
     
-    if (currentPage !== 'timestamp.html') {
-        menuHTML += '<a href="timestamp.html">⏱️ 时间戳转换</a>';
-    }
-    
-    if (currentPage !== 'md5.html') {
-        menuHTML += '<a href="md5.html">🔐 MD5加密</a>';
-    }
-    
-    if (currentPage !== 'camel.html') {
-        menuHTML += '<a href="camel.html">🔤 下划线驼峰互转</a>';
-    }
-    
-    if (currentPage !== 'json.html') {
-        menuHTML += '<a href="json.html">📋 JSON格式化</a>';
-    }
-    
-    if (currentPage !== 'calculator.html') {
-        menuHTML += '<a href="calculator.html">🧮 高级计算器</a>';
-    }
-    
-    if (currentPage !== 'urlencode.html') {
-        menuHTML += '<a href="urlencode.html">🔗 URL编码解码</a>';
-    }
-    
-    if (currentPage !== 'sql.html') {
-        menuHTML += '<a href="sql.html">🗄️ SQL格式化</a>';
-    }
-    
-    if (currentPage !== 'base64.html') {
-        menuHTML += '<a href="base64.html">🔒 Base64加解密</a>';
-    }
-    
-    if (currentPage !== 'json2any.html') {
-        menuHTML += '<a href="json2any.html">🔄 Json2Any</a>';
-    }
-    
-    if (currentPage !== 'curl.html') {
-        menuHTML += '<a href="curl.html">🌐 curl转代码</a>';
-    }
-    
-    if (currentPage !== 'image2base64.html') {
-        menuHTML += '<a href="image2base64.html">🖼️ 图片转Base64</a>';
-    }
-    
-    if (currentPage !== 'colorpicker.html') {
-        menuHTML += '<a href="colorpicker.html">🎨 颜色拾取器</a>';
-    }
-    
-    if (currentPage !== 'qr.html') {
-        menuHTML += '<a href="qr.html">📱 二维码工具</a>';
-    }
-    
-    if (currentPage !== 'stringprocess.html') {
-        menuHTML += '<a href="stringprocess.html">✂️ 字符串文本处理</a>';
-    }
+    menuHTML += '<a href="timestamp.html">⏱️ 时间戳转换</a>';
+    menuHTML += '<a href="md5.html">🔐 MD5加密</a>';
+    menuHTML += '<a href="camel.html">🔤 下划线驼峰互转</a>';
+    menuHTML += '<a href="json.html">📋 JSON格式化</a>';
+    menuHTML += '<a href="calculator.html">🧮 高级计算器</a>';
+    menuHTML += '<a href="urlencode.html">🔗 URL编码解码</a>';
+    menuHTML += '<a href="sql.html">🗄️ SQL格式化</a>';
+    menuHTML += '<a href="base64.html">🔒 Base64加解密</a>';
+    menuHTML += '<a href="json2any.html">🔄 Json2Any</a>';
+    menuHTML += '<a href="curl.html">🌐 curl转代码</a>';
+    menuHTML += '<a href="image2base64.html">🖼️ 图片转Base64</a>';
+    menuHTML += '<a href="colorpicker.html">🎨 颜色拾取器</a>';
+    menuHTML += '<a href="qr.html">📱 二维码工具</a>';
+    menuHTML += '<a href="stringprocess.html">✂️ 字符串文本处理</a>';
+    menuHTML += '<a href="crontab.html">⏰ 模拟Crontab执行时间</a>';
+    menuHTML += '<a href="watermark.html">💧 在线图片添加水印</a>';
     
     toolsMenu.innerHTML = menuHTML;
     
@@ -107,7 +75,7 @@ function bindNavEvents(navIcon, toolsMenu) {
             }, 300);
         };
         
-        navIcon.addEventListener('mouseleave', hideMenu);
+        navIcon.addEventListener('mouseleave', hideTimeout);
         toolsMenu.addEventListener('mouseleave', hideMenu);
         
         // 鼠标进入菜单时取消隐藏
