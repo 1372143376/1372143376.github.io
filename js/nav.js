@@ -48,6 +48,7 @@ function createNavMenu() {
     menuHTML += '<a href="stringprocess.html">✂️ 字符串文本处理</a>';
     menuHTML += '<a href="crontab.html">⏰ 模拟Crontab执行时间</a>';
     menuHTML += '<a href="watermark.html">💧 在线图片添加水印</a>';
+    menuHTML += '<a href="pdf.html">📄 PDF工具</a>';
     
     toolsMenu.innerHTML = menuHTML;
     

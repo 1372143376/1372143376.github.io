@@ -1,0 +1,243 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PDF工具 - 在线工具箱</title><link rel="stylesheet" href="../css/tool.css?v=1.21"><style>.pdf-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .pdf-tool-card {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+        }
+        
+        .pdf-tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-color: #4CAF50;
+        }
+        
+        .pdf-tool-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .pdf-tool-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+        
+        .pdf-tools-section {
+            margin-bottom: 40px;
+        }
+        
+        .pdf-tools-section h2 {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #4CAF50;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            transition: border-color 0.3s;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 60px;
+            color: #999;
+            display: none;
+            font-size: 18px;
+        }
+        
+        .tool-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow: auto;
+        }
+        
+        .tool-modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        .tool-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .tool-modal-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+        
+        .close-modal {
+            font-size: 32px;
+            font-weight: bold;
+            color: #999;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: #333;
+        }
+        
+        .file-upload-area {
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .file-upload-area:hover {
+            border-color: #4CAF50;
+            background-color: #f9f9f9;
+        }
+        
+        .file-upload-area.dragover {
+            border-color: #4CAF50;
+            background-color: #f0f8f0;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .file-list {
+            margin-top: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+        
+        .file-name {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .file-remove {
+            color: #f44336;
+            cursor: pointer;
+            margin-left: 10px;
+            padding: 5px 10px;
+        }
+        
+        .process-btn {
+            width: 100%;
+            padding: 14px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        
+        .process-btn:hover {
+            background: #45a049;
+        }
+        
+        .process-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #f0f0f0;
+            border-radius: 3px;
+            margin-top: 15px;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #4CAF50;
+            width: 0%;
+            transition: width 0.3s;
+        }
+        
+        .result-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f0f8f0;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+            display: none;
+        }</style></head><body><div class="container"><header><h1>PDF工具集合</h1><p class="subtitle">丰富的PDF处理工具，全部在浏览器本地处理，保护您的隐私</p></header><div class="form-group"><input id="search-input" class="search-box" placeholder="🔍 搜索PDF工具..."></div><div class="pdf-tools-section" data-category="basic"><h2>📄 基础工具</h2><div class="pdf-tools-grid"><div class="pdf-tool-card" data-tool="merge" onclick="openToolModal('merge')"><div class="pdf-tool-icon">📚</div><div class="pdf-tool-title">合并PDF</div></div><div class="pdf-tool-card" data-tool="split" onclick="openToolModal('split')"><div class="pdf-tool-icon">✂️</div><div class="pdf-tool-title">拆分PDF</div></div><div class="pdf-tool-card" data-tool="compress" onclick="openToolModal('compress')"><div class="pdf-tool-icon">📦</div><div class="pdf-tool-title">压缩PDF</div></div><div class="pdf-tool-card" data-tool="edit" onclick="openToolModal('edit')"><div class="pdf-tool-icon">✏️</div><div class="pdf-tool-title">编辑PDF</div></div><div class="pdf-tool-card" data-tool="sign" onclick="openToolModal('sign')"><div class="pdf-tool-icon">✍️</div><div class="pdf-tool-title">签署PDF</div></div></div></div><div class="pdf-tools-section" data-category="pages"><h2>📑 页面操作</h2><div class="pdf-tools-grid"><div class="pdf-tool-card" data-tool="rotate" onclick="openToolModal('rotate')"><div class="pdf-tool-icon">🔄</div><div class="pdf-tool-title">旋转PDF页面</div></div><div class="pdf-tool-card" data-tool="delete" onclick="openToolModal('delete')"><div class="pdf-tool-icon">🗑️</div><div class="pdf-tool-title">删除PDF页面</div></div><div class="pdf-tool-card" data-tool="extract" onclick="openToolModal('extract')"><div class="pdf-tool-icon">📄</div><div class="pdf-tool-title">提取PDF页面</div></div><div class="pdf-tool-card" data-tool="reorder" onclick="openToolModal('reorder')"><div class="pdf-tool-icon">📋</div><div class="pdf-tool-title">重新排列页面</div></div><div class="pdf-tool-card" data-tool="crop" onclick="openToolModal('crop')"><div class="pdf-tool-icon">✂️</div><div class="pdf-tool-title">裁剪PDF</div></div></div></div><div class="pdf-tools-section" data-category="image"><h2>🖼️ 图片相关</h2><div class="pdf-tools-grid"><div class="pdf-tool-card" data-tool="images2pdf" onclick="openToolModal('images2pdf')"><div class="pdf-tool-icon">📷</div><div class="pdf-tool-title">图片转PDF</div></div><div class="pdf-tool-card" data-tool="pdf2images" onclick="openToolModal('pdf2images')"><div class="pdf-tool-icon">🖼️</div><div class="pdf-tool-title">PDF转图片</div></div><div class="pdf-tool-card" data-tool="extract-images" onclick="openToolModal('extract-images')"><div class="pdf-tool-icon">🖼️</div><div class="pdf-tool-title">从PDF提取图片</div></div><div class="pdf-tool-card" data-tool="ocr" onclick="openToolModal('ocr')"><div class="pdf-tool-icon">🔍</div><div class="pdf-tool-title">PDF文本识别</div></div></div></div><div class="pdf-tools-section" data-category="other"><h2>🛠️ 其他工具</h2><div class="pdf-tools-grid"><div class="pdf-tool-card" data-tool="watermark" onclick="openToolModal('watermark')"><div class="pdf-tool-icon">💧</div><div class="pdf-tool-title">添加水印</div></div><div class="pdf-tool-card" data-tool="pagenumbers" onclick="openToolModal('pagenumbers')"><div class="pdf-tool-icon">🔢</div><div class="pdf-tool-title">添加页码</div></div><div class="pdf-tool-card" data-tool="overlay" onclick="openToolModal('overlay')"><div class="pdf-tool-icon">📄</div><div class="pdf-tool-title">PDF叠加</div></div><div class="pdf-tool-card" data-tool="annotate" onclick="openToolModal('annotate')"><div class="pdf-tool-icon">📝</div><div class="pdf-tool-title">注释PDF</div></div><div class="pdf-tool-card" data-tool="pdf-to-word" onclick="openToolModal('pdf-to-word')"><div class="pdf-tool-icon">📄</div><div class="pdf-tool-title">PDF转Word</div></div></div></div><div class="no-results" id="no-results"><p>未找到匹配的工具</p></div><a href="../index.html" class="back-link">← 返回工具箱首页</a></div><div id="tool-modal" class="tool-modal"><div class="tool-modal-content"><div class="tool-modal-header"><h3 class="tool-modal-title" id="modal-title">PDF工具</h3><span class="close-modal" onclick="closeToolModal()">&times;</span></div><div id="modal-content"></div></div></div><script src="../js/lib/pdf-lib.min.js"></script><script src="../js/lib/pdfjs.min.js"></script><script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script><script>// 配置PDF.js worker路径
+        if (typeof pdfjsLib !== 'undefined') {
+            // 尝试使用本地worker文件
+            const workerPath = '../js/lib/pdf.worker.min.js';
+            pdfjsLib.GlobalWorkerOptions.workerSrc = workerPath;
+            
+            // 如果本地worker加载失败，尝试使用CDN
+            fetch(workerPath).catch(() => {
+                console.warn('本地worker文件未找到，使用CDN');
+                pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+            });
+        }</script><script src="../js/pdf.js?v=3.0"></script><script src="../js/nav.js?v=1.12"></script><script>// 调试：检查页面是否加载完成
+        window.addEventListener('load', function() {
+            console.log('PDF工具页面加载完成');
+            const cards = document.querySelectorAll('.pdf-tool-card');
+            console.log('找到工具卡片数量:', cards.length);
+        });</script><script defer="defer" src="/main.1f943af991545e0265c9.js"></script></body></html>
