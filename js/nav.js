@@ -29,28 +29,8 @@ function createNavMenu() {
     const toolsMenu = document.createElement('div');
     toolsMenu.className = 'tools-menu';
     
-    // 构建菜单HTML - 包含所有工具，不再根据当前页面进行条件判断
-    let menuHTML = '<a href="../index.html">🏠 返回首页</a>';
-    
-    menuHTML += '<a href="timestamp.html">⏱️ 时间戳转换</a>';
-    menuHTML += '<a href="md5.html">🔐 MD5加密</a>';
-    menuHTML += '<a href="camel.html">🔤 下划线驼峰互转</a>';
-    menuHTML += '<a href="json.html">📋 JSON格式化</a>';
-    menuHTML += '<a href="calculator.html">🧮 高级计算器</a>';
-    menuHTML += '<a href="urlencode.html">🔗 URL编码解码</a>';
-    menuHTML += '<a href="sql.html">🗄️ SQL格式化</a>';
-    menuHTML += '<a href="base64.html">🔒 Base64加解密</a>';
-    menuHTML += '<a href="json2any.html">🔄 Json2Any</a>';
-    menuHTML += '<a href="curl.html">🌐 curl转代码</a>';
-    menuHTML += '<a href="image2base64.html">🖼️ 图片转Base64</a>';
-    menuHTML += '<a href="colorpicker.html">🎨 颜色拾取器</a>';
-    menuHTML += '<a href="qr.html">📱 二维码工具</a>';
-    menuHTML += '<a href="stringprocess.html">✂️ 字符串文本处理</a>';
-    menuHTML += '<a href="crontab.html">⏰ 模拟Crontab执行时间</a>';
-    menuHTML += '<a href="watermark.html">💧 在线图片添加水印</a>';
-    menuHTML += '<a href="pdf.html">📄 PDF工具</a>';
-    
-    toolsMenu.innerHTML = menuHTML;
+    // 更新菜单内容
+    updateNavMenu(toolsMenu);
     
     // 添加到页面body
     document.body.appendChild(navIcon);
@@ -58,6 +38,46 @@ function createNavMenu() {
     
     // 绑定事件监听器
     bindNavEvents(navIcon, toolsMenu);
+    
+    // 监听语言切换事件，更新菜单
+    window.addEventListener('languageChanged', function() {
+        updateNavMenu(toolsMenu);
+    });
+}
+
+// 更新导航菜单内容
+function updateNavMenu(toolsMenu) {
+    // 获取翻译函数（如果i18n已加载）
+    const t = (typeof i18n !== 'undefined' && i18n.t) ? function(key) { return i18n.t(key); } : function(key) { return key; };
+    
+    // 构建菜单HTML - 包含所有工具，使用多语言支持
+    let menuHTML = '<a href="/index.html" data-i18n="back-home-menu">🏠 返回首页</a>';
+    
+    menuHTML += '<a href="/tools/timestamp.html" data-i18n="nav-timestamp">⏱️ 时间戳转换</a>';
+    menuHTML += '<a href="/tools/md5.html" data-i18n="nav-md5">🔐 MD5加密</a>';
+    menuHTML += '<a href="/tools/camel.html" data-i18n="nav-camel">🔤 下划线驼峰互转</a>';
+    menuHTML += '<a href="/tools/json.html" data-i18n="nav-json">📋 JSON格式化</a>';
+    menuHTML += '<a href="/tools/calculator.html" data-i18n="nav-calculator">🧮 高级计算器</a>';
+    menuHTML += '<a href="/tools/urlencode.html" data-i18n="nav-urlencode">🔗 URL编码解码</a>';
+    menuHTML += '<a href="/tools/sql.html" data-i18n="nav-sql">🗄️ SQL格式化</a>';
+    menuHTML += '<a href="/tools/base64.html" data-i18n="nav-base64">🔒 Base64加解密</a>';
+    menuHTML += '<a href="/tools/json2any.html" data-i18n="nav-json2any">🔄 Json2Any</a>';
+    menuHTML += '<a href="/tools/curl.html" data-i18n="nav-curl">🌐 curl转代码</a>';
+    menuHTML += '<a href="/tools/image2base64.html" data-i18n="nav-image2base64">🖼️ 图片转Base64</a>';
+    menuHTML += '<a href="/tools/colorpicker.html" data-i18n="nav-colorpicker">🎨 颜色拾取器</a>';
+    menuHTML += '<a href="/tools/qr.html" data-i18n="nav-qr">📱 二维码工具</a>';
+    menuHTML += '<a href="/tools/stringprocess.html" data-i18n="nav-stringprocess">✂️ 字符串文本处理</a>';
+    menuHTML += '<a href="/tools/crontab.html" data-i18n="nav-crontab">⏰ 模拟Crontab执行时间</a>';
+    menuHTML += '<a href="/tools/watermark.html" data-i18n="nav-watermark">💧 在线图片添加水印</a>';
+    menuHTML += '<a href="/tools/pdf.html" data-i18n="nav-pdf">📄 PDF工具</a>';
+    
+    toolsMenu.innerHTML = menuHTML;
+    
+    // 更新所有链接的文本
+    toolsMenu.querySelectorAll('[data-i18n]').forEach(function(link) {
+        const key = link.getAttribute('data-i18n');
+        link.textContent = t(key);
+    });
 }
 
 // 绑定导航事件
@@ -87,18 +107,27 @@ function bindNavEvents(navIcon, toolsMenu) {
 }
 
 // 页面加载完成后初始化导航菜单
+function initNavWhenReady() {
+    // 确保body和header元素都已存在
+    if (!document.body || !document.querySelector('header')) {
+        setTimeout(initNavWhenReady, 50);
+        return;
+    }
+    initNavMenu();
+}
+
 if (document.readyState === 'loading') {
     // 页面仍在加载中
-    document.addEventListener('DOMContentLoaded', initNavMenu);
+    document.addEventListener('DOMContentLoaded', initNavWhenReady);
 } else {
-    // 页面已经加载完成
-    initNavMenu();
+    // 页面已经加载完成，延迟一点确保所有元素都准备好
+    setTimeout(initNavWhenReady, 100);
 }
 
 // 如果DOMContentLoaded事件已经错过了，使用window.onload
 window.addEventListener('load', function() {
     // 检查是否已经创建了导航菜单
     if (!document.querySelector('.nav-icon')) {
-        initNavMenu();
+        initNavWhenReady();
     }
 });

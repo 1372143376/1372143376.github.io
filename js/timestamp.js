@@ -1,5 +1,14 @@
 // 初始化日期时间输入框为当前时间
 document.addEventListener('DOMContentLoaded', function() {
+    // 检查元素是否存在（只在timestamp.html页面初始化）
+    const datetimeInput = document.getElementById('datetime-input');
+    const timestampInput = document.getElementById('timestamp-input');
+    
+    if (!datetimeInput || !timestampInput) {
+        // 如果不是timestamp页面，直接返回
+        return;
+    }
+    
     const now = new Date();
     const year = now.getFullYear();
     const month = String(now.getMonth() + 1).padStart(2, '0');
@@ -8,11 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const seconds = String(now.getSeconds()).padStart(2, '0');
     
-    document.getElementById('datetime-input').value = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    datetimeInput.value = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
     
     // 同时显示当前时间戳
     const timestamp = Math.floor(now.getTime() / 1000);
-    document.getElementById('timestamp-input').value = timestamp;
+    timestampInput.value = timestamp;
 });
 
 // 时间戳转换相关函数

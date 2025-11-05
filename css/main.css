@@ -20,6 +20,46 @@ header {
     text-align: center;
     padding: 40px 0;
     color: #333; /* 修改为深色文字，提高可读性 */
+    position: relative;
+}
+
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.language-switcher button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.language-switcher button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.language-switcher button.active {
+    background: #5568d3;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 768px) {
+    .language-switcher {
+        position: static;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
 }
 
 h1 {
@@ -85,6 +125,18 @@ footer {
     margin-top: 30px;
     font-size: 0.9rem;
     opacity: 0.8;
+}
+
+footer a {
+    color: #4a90e2;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #357abd;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {

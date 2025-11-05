@@ -1,1 +1,229 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>二维码工具 - 在线工具箱</title><link rel="stylesheet" href="../css/tool.css?v=1.21"></head><body><div class="container"><header><h1>二维码工具</h1><p class="subtitle">二维码生成和解析工具</p></header><div class="qr-section"><h2>生成二维码</h2><div class="form-group"><label for="qr-text">输入内容：</label> <textarea id="qr-text" placeholder="请输入要生成二维码的文本内容"></textarea></div><div class="form-group"><label for="qr-size">二维码尺寸：</label> <select id="qr-size"><option value="200">200x200</option><option value="300" selected="selected">300x300</option><option value="400">400x400</option><option value="500">500x500</option></select></div><button class="btn" onclick="generateQR()">生成二维码</button> <button class="btn" onclick="clearQRInput()">清空</button><div class="qr-result" id="qr-generate-result"></div></div><div class="qr-section"><h2>解析二维码</h2><div class="form-group"><label for="qr-file">上传二维码图片：</label> <input type="file" id="qr-file" accept="image/*"></div><div class="qr-result" id="qr-decode-result"></div></div><a href="../index.html" class="back-link">← 返回工具箱首页</a></div><script src="../js/lib/qrious.min.js"></script><script src="../js/lib/jsQR.js"></script><script src="../js/qr.js?v=1.2"></script><script src="../js/nav.js?v=1.12"></script><script defer="defer" src="/main.1f943af991545e0265c9.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="tool-qr">二维码工具 - 在线工具箱</title>
+    <link rel="stylesheet" href="/css/tool.css?v=1.21">
+    <script>
+        // 在页面加载的最早时机就设置语言
+        (function() {
+            const savedLang = localStorage.getItem('language');
+            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+            }
+        })();
+    </script>
+    <script>
+        // 备用加载方案
+        function loadI18nFallback() {
+            console.warn('Trying to load i18n.js with fallback method...');
+            const script = document.createElement('script');
+            script.src = '/js/i18n.js?v=' + Date.now(); // 添加时间戳避免缓存
+            script.onerror = function() {
+                console.error('Failed to load i18n.js even with fallback method');
+            };
+            script.onload = function() {
+                console.log('i18n.js loaded successfully with fallback method');
+                setTimeout(initI18n, 50);
+            };
+            document.head.appendChild(script);
+        }
+        
+        // i18n.js 加载后立即初始化
+        function initI18n() {
+            if (typeof i18n === 'undefined') {
+                // 如果i18n还没定义，等待一下再试（最多等待5秒）
+                if (typeof initI18n.attempts === 'undefined') {
+                    initI18n.attempts = 0;
+                }
+                initI18n.attempts++;
+                if (initI18n.attempts < 100) { // 最多尝试100次，约5秒
+                    setTimeout(initI18n, 50);
+                } else {
+                    // 如果5秒后还没加载成功，尝试备用方案
+                    console.error('i18n is still undefined after 5 seconds, trying fallback...');
+                    if (!document.querySelector('script[src*="i18n.js"][data-fallback="true"]')) {
+                        loadI18nFallback();
+                    }
+                }
+                return;
+            }
+            
+            console.log('i18n object found, currentLang:', i18n.currentLang);
+            
+            const savedLang = localStorage.getItem('language');
+            console.log('localStorage language:', savedLang);
+            
+            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                i18n.currentLang = savedLang;
+                document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+                console.log('Language set to:', savedLang);
+            }
+            
+            // 立即尝试初始化，不等待DOM
+            if (document.body) {
+                console.log('Body exists, calling i18n.init()');
+                i18n.init();
+            } else {
+                // 如果body还没准备好，等待DOMContentLoaded
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', function() {
+                        console.log('DOMContentLoaded, calling i18n.init()');
+                        i18n.init();
+                    });
+                } else {
+                    setTimeout(function() { 
+                        console.log('Document ready, calling i18n.init()');
+                        i18n.init(); 
+                    }, 0);
+                }
+            }
+        }
+    </script>
+    <script src="/js/i18n.js" onerror="console.error('Failed to load i18n.js'); loadI18nFallback();" onload="setTimeout(initI18n, 50);"></script>
+    <script>
+        // 额外检查：如果脚本加载完成但i18n仍未定义，重试
+        setTimeout(function() {
+            if (typeof i18n === 'undefined') {
+                console.warn('i18n still undefined after script load, retrying...');
+                initI18n();
+            }
+        }, 200);
+    </script>
+    <script src="/js/lang-switcher.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 data-i18n="tool-qr">二维码工具</h1>
+            <p class="subtitle" data-i18n="tool-qr-desc">二维码生成和解析工具</p>
+        </header>
+        
+        <!-- 二维码生成区域 -->
+        <div class="qr-section">
+            <h2 data-i18n="qr-generate-title">生成二维码</h2>
+            <div class="form-group">
+                <label for="qr-text" data-i18n="qr-input-label">输入内容：</label>
+                <textarea id="qr-text" data-i18n="qr-input-placeholder" placeholder="请输入要生成二维码的文本内容"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="qr-size" data-i18n="qr-size-label">二维码尺寸：</label>
+                <select id="qr-size">
+                    <option value="200">200x200</option>
+                    <option value="300" selected>300x300</option>
+                    <option value="400">400x400</option>
+                    <option value="500">500x500</option>
+                </select>
+            </div>
+            
+            <button class="btn" onclick="generateQR()" data-i18n="qr-generate-btn">生成二维码</button>
+            <button class="btn" onclick="clearQRInput()" data-i18n="btn-clear">清空</button>
+            
+            <div class="qr-result" id="qr-generate-result"></div>
+        </div>
+        
+        <!-- 二维码解析区域 -->
+        <div class="qr-section">
+            <h2 data-i18n="qr-decode-title">解析二维码</h2>
+            <div class="form-group">
+                <label for="qr-file" data-i18n="qr-upload-label">上传二维码图片：</label>
+                <input type="file" id="qr-file" accept="image/*">
+            </div>
+            
+            <div class="qr-result" id="qr-decode-result"></div>
+        </div>
+        
+        <a href="/index.html" class="back-link" data-i18n="back-home-link">← 返回工具箱首页</a>
+
+        <footer>
+            <p data-i18n="footer-text">© 在线工具箱 - 实用工具集合</p>
+            <p><a href="/contact.html" data-i18n="footer-contact">联系我们</a></p>
+        </footer>
+    </div>
+    
+    <!-- 引入二维码库 -->
+    <script src="/js/lib/qrious.min.js"></script>
+    <script src="/js/lib/jsQR.js"></script>
+    <script src="/js/qr.js?v=1.2"></script>
+    <script src="/js/nav.js?v=1.12"></script>
+    <script>
+        // 强制应用语言设置 - 使用多种方式确保执行
+        function forceApplyLanguage() {
+            if (typeof i18n === 'undefined') {
+                setTimeout(forceApplyLanguage, 50);
+                return;
+            }
+            
+            const savedLang = localStorage.getItem('language');
+            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                i18n.currentLang = savedLang;
+                document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+                // 多次调用确保生效
+                i18n.updatePage();
+                setTimeout(function() { i18n.updatePage(); }, 50);
+                setTimeout(function() { i18n.updatePage(); }, 150);
+                setTimeout(function() { i18n.updatePage(); }, 300);
+            }
+        }
+        
+        // 立即执行一次（如果DOM已经准备好）
+        if (document.body && document.querySelectorAll('[data-i18n]').length > 0) {
+            setTimeout(forceApplyLanguage, 0);
+        }
+        
+        // DOMContentLoaded时执行
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(forceApplyLanguage, 50);
+                setTimeout(forceApplyLanguage, 200);
+                setTimeout(forceApplyLanguage, 500);
+            });
+        } else {
+            setTimeout(forceApplyLanguage, 50);
+            setTimeout(forceApplyLanguage, 200);
+            setTimeout(forceApplyLanguage, 500);
+        }
+        
+        // window.onload时再执行一次
+        window.addEventListener('load', function() {
+            setTimeout(forceApplyLanguage, 100);
+            setTimeout(forceApplyLanguage, 500);
+            setTimeout(forceApplyLanguage, 1000);
+        });
+        
+        // 使用MutationObserver监听DOM变化，确保动态添加的元素也被更新
+        if (typeof MutationObserver !== 'undefined') {
+            let observerTimeout;
+            const observer = new MutationObserver(function(mutations) {
+                clearTimeout(observerTimeout);
+                observerTimeout = setTimeout(function() {
+                    if (typeof i18n !== 'undefined') {
+                        const savedLang = localStorage.getItem('language');
+                        if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                            i18n.currentLang = savedLang;
+                            i18n.updatePage();
+                        }
+                    }
+                }, 150);
+            });
+            
+            if (document.body) {
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            } else {
+                document.addEventListener('DOMContentLoaded', function() {
+                    if (document.body) {
+                        observer.observe(document.body, {
+                            childList: true,
+                            subtree: true
+                        });
+                    }
+                });
+            }
+        }
+    </script>
+</body>
