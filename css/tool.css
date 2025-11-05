@@ -36,28 +36,31 @@ header {
     top: 0;
     right: 0;
     display: flex;
-    gap: 8px;
     align-items: center;
 }
 
-.language-switcher button {
+.language-switcher .lang-toggle-btn {
     background: #667eea;
     color: white;
     border: none;
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1;
     transition: all 0.3s;
+    min-width: 40px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5px;
 }
 
-.language-switcher button:hover {
+.language-switcher .lang-toggle-btn:hover {
     opacity: 0.9;
     transform: translateY(-2px);
-}
-
-.language-switcher button.active {
     background: #5568d3;
     box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
 }

@@ -17,10 +17,16 @@
         // 创建语言切换容器
         const switcher = document.createElement('div');
         switcher.className = 'language-switcher';
-        switcher.innerHTML = `
-            <button id="lang-zh" class="active">中文</button>
-            <button id="lang-en">English</button>
-        `;
+        const langBtn = document.createElement('button');
+        langBtn.id = 'lang-toggle';
+        langBtn.className = 'lang-toggle-btn';
+        
+        // 根据当前语言设置初始显示
+        const savedLang = localStorage.getItem('language') || 'zh';
+        langBtn.innerHTML = savedLang === 'zh' ? 'ZH' : 'EN';
+        langBtn.title = savedLang === 'zh' ? 'Switch to English' : '切换到中文';
+        
+        switcher.appendChild(langBtn);
         
         // 插入到header（确保header存在且已挂载到DOM）
         try {
@@ -51,33 +57,22 @@
     
     // 绑定语言切换按钮事件
     function bindLanguageButtons(switcher) {
-        const zhBtn = switcher.querySelector('#lang-zh');
-        const enBtn = switcher.querySelector('#lang-en');
+        const langBtn = switcher.querySelector('#lang-toggle');
         
-        if (zhBtn) {
-            zhBtn.addEventListener('click', function() {
+        if (langBtn) {
+            langBtn.addEventListener('click', function() {
                 if (typeof i18n !== 'undefined') {
-                    i18n.setLanguage('zh');
+                    // 切换语言：如果当前是中文，切换到英文；如果当前是英文，切换到中文
+                    const currentLang = i18n.currentLang || 'zh';
+                    const newLang = currentLang === 'zh' ? 'en' : 'zh';
+                    i18n.setLanguage(newLang);
                 } else {
                     // 如果i18n还没加载，等待一下再试
                     setTimeout(function() {
                         if (typeof i18n !== 'undefined') {
-                            i18n.setLanguage('zh');
-                        }
-                    }, 100);
-                }
-            });
-        }
-        
-        if (enBtn) {
-            enBtn.addEventListener('click', function() {
-                if (typeof i18n !== 'undefined') {
-                    i18n.setLanguage('en');
-                } else {
-                    // 如果i18n还没加载，等待一下再试
-                    setTimeout(function() {
-                        if (typeof i18n !== 'undefined') {
-                            i18n.setLanguage('en');
+                            const currentLang = i18n.currentLang || 'zh';
+                            const newLang = currentLang === 'zh' ? 'en' : 'zh';
+                            i18n.setLanguage(newLang);
                         }
                     }, 100);
                 }
@@ -90,11 +85,13 @@
         if (typeof i18n === 'undefined') {
             return;
         }
-        const lang = i18n.currentLang;
-        const zhBtn = document.getElementById('lang-zh');
-        const enBtn = document.getElementById('lang-en');
-        if (zhBtn) zhBtn.classList.toggle('active', lang === 'zh');
-        if (enBtn) enBtn.classList.toggle('active', lang === 'en');
+        const lang = i18n.currentLang || 'zh';
+        const langBtn = document.getElementById('lang-toggle');
+        if (langBtn) {
+            // 更新按钮显示：显示当前语言的缩写
+            langBtn.innerHTML = lang === 'zh' ? 'ZH' : 'EN';
+            langBtn.title = lang === 'zh' ? 'Switch to English' : '切换到中文';
+        }
     }
     
     // 初始化 - 等待i18n加载完成

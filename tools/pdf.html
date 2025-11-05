@@ -325,120 +325,120 @@
 <body>
     <div class="container">
         <header>
-            <h1>PDF工具集合</h1>
-            <p class="subtitle">丰富的PDF处理工具，全部在浏览器本地处理，保护您的隐私</p>
+            <h1 data-i18n="pdf-title">PDF工具集合</h1>
+            <p class="subtitle" data-i18n="pdf-subtitle">丰富的PDF处理工具，全部在浏览器本地处理，保护您的隐私</p>
         </header>
         
         <div class="form-group">
-            <input type="text" id="search-input" class="search-box" placeholder="🔍 搜索PDF工具...">
+            <input type="text" id="search-input" class="search-box" data-i18n="pdf-search-placeholder" placeholder="🔍 搜索PDF工具...">
         </div>
         
         <!-- PDF基础工具 -->
         <div class="pdf-tools-section" data-category="basic">
-            <h2>📄 基础工具</h2>
+            <h2 data-i18n="pdf-basic-tools">📄 基础工具</h2>
             <div class="pdf-tools-grid">
                 <div class="pdf-tool-card" data-tool="merge" onclick="openToolModal('merge')">
                     <div class="pdf-tool-icon">📚</div>
-                    <div class="pdf-tool-title">合并PDF</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-merge">合并PDF</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="split" onclick="openToolModal('split')">
                     <div class="pdf-tool-icon">✂️</div>
-                    <div class="pdf-tool-title">拆分PDF</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-split">拆分PDF</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="compress" onclick="openToolModal('compress')">
                     <div class="pdf-tool-icon">📦</div>
-                    <div class="pdf-tool-title">压缩PDF</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-compress">压缩PDF</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="edit" onclick="openToolModal('edit')">
                     <div class="pdf-tool-icon">✏️</div>
-                    <div class="pdf-tool-title">编辑PDF</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-edit">编辑PDF</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="sign" onclick="openToolModal('sign')">
                     <div class="pdf-tool-icon">✍️</div>
-                    <div class="pdf-tool-title">签署PDF</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-sign">签署PDF</div>
                 </div>
             </div>
         </div>
         
         <!-- 页面操作 -->
         <div class="pdf-tools-section" data-category="pages">
-            <h2>📑 页面操作</h2>
+            <h2 data-i18n="pdf-page-ops">📑 页面操作</h2>
             <div class="pdf-tools-grid">
                 <div class="pdf-tool-card" data-tool="rotate" onclick="openToolModal('rotate')">
                     <div class="pdf-tool-icon">🔄</div>
-                    <div class="pdf-tool-title">旋转PDF页面</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-rotate">旋转PDF页面</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="delete" onclick="openToolModal('delete')">
                     <div class="pdf-tool-icon">🗑️</div>
-                    <div class="pdf-tool-title">删除PDF页面</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-delete">删除PDF页面</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="extract" onclick="openToolModal('extract')">
                     <div class="pdf-tool-icon">📄</div>
-                    <div class="pdf-tool-title">提取PDF页面</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-extract">提取PDF页面</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="reorder" onclick="openToolModal('reorder')">
                     <div class="pdf-tool-icon">📋</div>
-                    <div class="pdf-tool-title">重新排列页面</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-reorder">重新排列页面</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="crop" onclick="openToolModal('crop')">
                     <div class="pdf-tool-icon">✂️</div>
-                    <div class="pdf-tool-title">裁剪PDF</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-crop">裁剪PDF</div>
                 </div>
             </div>
         </div>
         
         <!-- 图片相关 -->
         <div class="pdf-tools-section" data-category="image">
-            <h2>🖼️ 图片相关</h2>
+            <h2 data-i18n="pdf-image-tools">🖼️ 图片相关</h2>
             <div class="pdf-tools-grid">
                 <div class="pdf-tool-card" data-tool="images2pdf" onclick="openToolModal('images2pdf')">
                     <div class="pdf-tool-icon">📷</div>
-                    <div class="pdf-tool-title">图片转PDF</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-images2pdf">图片转PDF</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="pdf2images" onclick="openToolModal('pdf2images')">
                     <div class="pdf-tool-icon">🖼️</div>
-                    <div class="pdf-tool-title">PDF转图片</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-pdf2images">PDF转图片</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="extract-images" onclick="openToolModal('extract-images')">
                     <div class="pdf-tool-icon">🖼️</div>
-                    <div class="pdf-tool-title">从PDF提取图片</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-extract-images">从PDF提取图片</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="ocr" onclick="openToolModal('ocr')">
                     <div class="pdf-tool-icon">🔍</div>
-                    <div class="pdf-tool-title">PDF文本识别</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-ocr">PDF文本识别</div>
                 </div>
             </div>
         </div>
         
         <!-- 其他工具 -->
         <div class="pdf-tools-section" data-category="other">
-            <h2>🛠️ 其他工具</h2>
+            <h2 data-i18n="pdf-other-tools">🛠️ 其他工具</h2>
             <div class="pdf-tools-grid">
                 <div class="pdf-tool-card" data-tool="watermark" onclick="openToolModal('watermark')">
                     <div class="pdf-tool-icon">💧</div>
-                    <div class="pdf-tool-title">添加水印</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-watermark">添加水印</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="pagenumbers" onclick="openToolModal('pagenumbers')">
                     <div class="pdf-tool-icon">🔢</div>
-                    <div class="pdf-tool-title">添加页码</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-pagenumbers">添加页码</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="overlay" onclick="openToolModal('overlay')">
                     <div class="pdf-tool-icon">📄</div>
-                    <div class="pdf-tool-title">PDF叠加</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-overlay">PDF叠加</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="annotate" onclick="openToolModal('annotate')">
                     <div class="pdf-tool-icon">📝</div>
-                    <div class="pdf-tool-title">注释PDF</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-annotate">注释PDF</div>
                 </div>
                 <div class="pdf-tool-card" data-tool="pdf-to-word" onclick="openToolModal('pdf-to-word')">
                     <div class="pdf-tool-icon">📄</div>
-                    <div class="pdf-tool-title">PDF转Word</div>
+                    <div class="pdf-tool-title" data-i18n="pdf-to-word">PDF转Word</div>
                 </div>
             </div>
         </div>
         
         <div class="no-results" id="no-results">
-            <p>未找到匹配的工具</p>
+            <p data-i18n="pdf-no-results">未找到匹配的工具</p>
         </div>
         
         <a href="/index.html" class="back-link" data-i18n="back-home-link">← 返回工具箱首页</a>
@@ -453,7 +453,7 @@
     <div id="tool-modal" class="tool-modal">
         <div class="tool-modal-content">
             <div class="tool-modal-header">
-                <h3 class="tool-modal-title" id="modal-title">PDF工具</h3>
+                <h3 class="tool-modal-title" id="modal-title" data-i18n="pdf-modal-title">PDF工具</h3>
                 <span class="close-modal" onclick="closeToolModal()">&times;</span>
             </div>
             <div id="modal-content">

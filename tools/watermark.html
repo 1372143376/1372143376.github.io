@@ -225,39 +225,39 @@
 <body>
     <div class="container">
         <header>
-            <h1>在线图片添加水印</h1>
-            <p class="subtitle">给PNG、JPG、GIF图片添加文字水印，特别适合身份证、驾照、护照添加水印防盗用</p>
+            <h1 data-i18n="watermark-title">在线图片添加水印</h1>
+            <p class="subtitle" data-i18n="watermark-subtitle">给PNG、JPG、GIF图片添加文字水印，特别适合身份证、驾照、护照添加水印防盗用</p>
         </header>
         
         <div class="watermark-container">
             <!-- 第一步：上传图片 -->
             <div class="section">
-                <h2>第一步：上传一张图片</h2>
+                <h2 data-i18n="watermark-step1">第一步：上传一张图片</h2>
                 <div class="form-group">
                     <div class="upload-area" id="uploadArea">
                         <div class="upload-icon">📁</div>
-                        <p>点击选择图片或拖拽图片到此处</p>
-                        <p class="small">支持 JPG、PNG、GIF 等常见图片格式</p>
+                        <p data-i18n="watermark-upload-text">点击选择图片或拖拽图片到此处</p>
+                        <p class="small" data-i18n="watermark-upload-hint">支持 JPG、PNG、GIF 等常见图片格式</p>
                         <input type="file" id="fileInput" class="file-input" accept="image/*">
                     </div>
                 </div>
                 
                 <div class="preview-container hidden" id="previewContainer">
-                    <img id="previewImage" class="preview-image" alt="预览图片">
+                    <img id="previewImage" class="preview-image" alt="预览图片" data-i18n="watermark-preview">
                 </div>
             </div>
             
             <!-- 第二步：设置水印参数 -->
             <div class="section">
-                <h2>第二步：设置水印参数</h2>
+                <h2 data-i18n="watermark-step2">第二步：设置水印参数</h2>
                 <div class="watermark-controls">
                     <div class="control-group">
-                        <label for="watermark-text">水印文字：</label>
-                        <input type="text" id="watermark-text" placeholder="请输入水印文字" value="水印文字">
+                        <label for="watermark-text" data-i18n="watermark-watermark-text">水印文字：</label>
+                        <input type="text" id="watermark-text" data-i18n="watermark-watermark-text-placeholder" placeholder="请输入水印文字" value="水印文字">
                     </div>
                     
                     <div class="control-group">
-                        <label for="watermark-color">文字颜色：</label>
+                        <label for="watermark-color" data-i18n="watermark-text-color">文字颜色：</label>
                         <div class="color-picker">
                             <input type="color" id="watermark-color" value="#CCCCCC">
                             <input type="text" id="watermark-color-text" value="#CCCCCC" placeholder="#CCCCCC">
@@ -265,37 +265,37 @@
                     </div>
                     
                     <div class="control-group">
-                        <label for="watermark-opacity">透明度 (0-100)：</label>
+                        <label for="watermark-opacity" data-i18n="watermark-opacity">透明度 (0-100)：</label>
                         <input type="range" id="watermark-opacity" min="0" max="100" value="50">
                         <span id="opacity-value">50%</span>
                     </div>
                     
                     <div class="control-group">
-                        <label for="watermark-font-size">字体大小 (px)：</label>
+                        <label for="watermark-font-size" data-i18n="watermark-font-size">字体大小 (px)：</label>
                         <input type="number" id="watermark-font-size" min="10" max="100" value="30">
                     </div>
                     
                     <div class="control-group">
-                        <label for="watermark-spacing">文字间隔 (px)：</label>
+                        <label for="watermark-spacing" data-i18n="watermark-spacing">文字间隔 (px)：</label>
                         <input type="number" id="watermark-spacing" min="10" max="200" value="50">
                     </div>
                     
                     <div class="control-group">
-                        <label for="watermark-angle">旋转角度：</label>
+                        <label for="watermark-angle" data-i18n="watermark-angle">旋转角度：</label>
                         <input type="number" id="watermark-angle" min="0" max="360" value="45">
                     </div>
                 </div>
                 
-                <button class="btn" onclick="applyWatermark()">添加水印</button>
-                <button class="btn" onclick="clearWatermarkInput()">清空</button>
+                <button class="btn" onclick="applyWatermark()" data-i18n="watermark-apply-btn">添加水印</button>
+                <button class="btn" onclick="clearWatermarkInput()" data-i18n="watermark-clear-btn">清空</button>
             </div>
             
             <!-- 第三步：下载结果 -->
             <div class="section">
-                <h2>第三步：查看结果并下载</h2>
+                <h2 data-i18n="watermark-step3">第三步：查看结果并下载</h2>
                 <div class="result-container hidden" id="resultContainer">
-                    <img id="resultImage" class="result-image" alt="添加水印后的图片">
-                    <button class="download-btn" id="downloadBtn" onclick="downloadWatermarkImage()">下载图片</button>
+                    <img id="resultImage" class="result-image" alt="添加水印后的图片" data-i18n="watermark-result">
+                    <button class="download-btn" id="downloadBtn" onclick="downloadWatermarkImage()" data-i18n="watermark-download-btn">下载图片</button>
                 </div>
             </div>
         </div>
