@@ -14,19 +14,44 @@
             return;
         }
         
-        // 创建语言切换容器
+        // 创建语言切换容器 - 滑动开关样式
         const switcher = document.createElement('div');
         switcher.className = 'language-switcher';
-        const langBtn = document.createElement('button');
-        langBtn.id = 'lang-toggle';
-        langBtn.className = 'lang-toggle-btn';
         
-        // 根据当前语言设置初始显示
+        // 创建滑动开关容器
+        const toggleContainer = document.createElement('div');
+        toggleContainer.className = 'lang-toggle-container';
+        
+        // 创建滑动背景
+        const toggleBg = document.createElement('div');
+        toggleBg.className = 'lang-toggle-bg';
+        
+        // 创建滑动指示器
+        const toggleSlider = document.createElement('div');
+        toggleSlider.className = 'lang-toggle-slider';
+        
+        // 创建语言选项
+        const zhOption = document.createElement('span');
+        zhOption.className = 'lang-option lang-option-zh';
+        zhOption.textContent = '中文';
+        
+        const enOption = document.createElement('span');
+        enOption.className = 'lang-option lang-option-en';
+        enOption.textContent = 'English';
+        
+        // 根据当前语言设置初始状态
         const savedLang = localStorage.getItem('language') || 'zh';
-        langBtn.innerHTML = savedLang === 'zh' ? 'ZH' : 'EN';
-        langBtn.title = savedLang === 'zh' ? 'Switch to English' : '切换到中文';
+        if (savedLang === 'zh') {
+            toggleContainer.classList.add('lang-zh');
+        } else {
+            toggleContainer.classList.add('lang-en');
+        }
         
-        switcher.appendChild(langBtn);
+        toggleBg.appendChild(toggleSlider);
+        toggleContainer.appendChild(zhOption);
+        toggleContainer.appendChild(enOption);
+        toggleContainer.appendChild(toggleBg);
+        switcher.appendChild(toggleContainer);
         
         // 插入到header（确保header存在且已挂载到DOM）
         try {
@@ -57,17 +82,19 @@
     
     // 绑定语言切换按钮事件
     function bindLanguageButtons(switcher) {
-        const langBtn = switcher.querySelector('#lang-toggle');
+        const toggleContainer = switcher.querySelector('.lang-toggle-container');
+        const zhOption = switcher.querySelector('.lang-option-zh');
+        const enOption = switcher.querySelector('.lang-option-en');
         
-        if (langBtn) {
-            langBtn.addEventListener('click', function() {
+        if (toggleContainer) {
+            // 点击容器切换语言
+            toggleContainer.addEventListener('click', function(e) {
+                e.stopPropagation();
                 if (typeof i18n !== 'undefined') {
-                    // 切换语言：如果当前是中文，切换到英文；如果当前是英文，切换到中文
                     const currentLang = i18n.currentLang || 'zh';
                     const newLang = currentLang === 'zh' ? 'en' : 'zh';
                     i18n.setLanguage(newLang);
                 } else {
-                    // 如果i18n还没加载，等待一下再试
                     setTimeout(function() {
                         if (typeof i18n !== 'undefined') {
                             const currentLang = i18n.currentLang || 'zh';
@@ -77,6 +104,25 @@
                     }, 100);
                 }
             });
+            
+            // 为每个选项添加点击事件（可选，增强交互）
+            if (zhOption) {
+                zhOption.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (typeof i18n !== 'undefined' && i18n.currentLang !== 'zh') {
+                        i18n.setLanguage('zh');
+                    }
+                });
+            }
+            
+            if (enOption) {
+                enOption.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (typeof i18n !== 'undefined' && i18n.currentLang !== 'en') {
+                        i18n.setLanguage('en');
+                    }
+                });
+            }
         }
     }
     
@@ -86,11 +132,11 @@
             return;
         }
         const lang = i18n.currentLang || 'zh';
-        const langBtn = document.getElementById('lang-toggle');
-        if (langBtn) {
-            // 更新按钮显示：显示当前语言的缩写
-            langBtn.innerHTML = lang === 'zh' ? 'ZH' : 'EN';
-            langBtn.title = lang === 'zh' ? 'Switch to English' : '切换到中文';
+        const toggleContainer = document.querySelector('.lang-toggle-container');
+        if (toggleContainer) {
+            // 更新滑动开关状态
+            toggleContainer.classList.remove('lang-zh', 'lang-en');
+            toggleContainer.classList.add(lang === 'zh' ? 'lang-zh' : 'lang-en');
         }
     }
     

@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="site-title">在线工具箱 - 实用工具集合</title>
-    <link rel="stylesheet" href="css/main.css?v=1.2">
-    <script src="js/i18n.js" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=1.2">
+    <script src="/js/i18n.js"></script>
+    <script src="/js/lang-switcher.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="language-switcher">
-                <button id="lang-zh" class="active">中文</button>
-                <button id="lang-en">English</button>
-            </div>
             <h1 data-i18n="site-title">在线工具箱</h1>
             <p class="subtitle" data-i18n="site-subtitle">实用工具集合，提高工作效率</p>
         </header>
@@ -136,57 +133,5 @@
             <p><a href="./contact.html" data-i18n="footer-contact">联系我们</a></p>
         </footer>
     </div>
-    <script>
-        // 等待 i18n 加载完成后再绑定事件
-        function initLanguageSwitcher() {
-            if (typeof i18n === 'undefined') {
-                // 如果 i18n 还没加载，等待一下再试
-                setTimeout(initLanguageSwitcher, 100);
-                return;
-            }
-            
-            // 更新语言切换按钮状态
-            function updateLanguageButtons() {
-                const lang = i18n.currentLang;
-                const zhBtn = document.getElementById('lang-zh');
-                const enBtn = document.getElementById('lang-en');
-                if (zhBtn) zhBtn.classList.toggle('active', lang === 'zh');
-                if (enBtn) enBtn.classList.toggle('active', lang === 'en');
-            }
-            
-            // 绑定语言切换按钮事件
-            const zhBtn = document.getElementById('lang-zh');
-            const enBtn = document.getElementById('lang-en');
-            
-            if (zhBtn) {
-                zhBtn.addEventListener('click', function() {
-                    if (typeof i18n !== 'undefined') {
-                        i18n.setLanguage('zh');
-                    }
-                });
-            }
-            
-            if (enBtn) {
-                enBtn.addEventListener('click', function() {
-                    if (typeof i18n !== 'undefined') {
-                        i18n.setLanguage('en');
-                    }
-                });
-            }
-            
-            // 监听语言切换事件
-            window.addEventListener('languageChanged', updateLanguageButtons);
-            
-            // 初始化按钮状态
-            updateLanguageButtons();
-        }
-        
-        // 页面加载完成后初始化
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
-        } else {
-            initLanguageSwitcher();
-        }
-    </script>
 </body>
 </html>
