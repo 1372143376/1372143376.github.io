@@ -187,7 +187,7 @@
         
         <div class="contact-container">
             <div class="contact-form">
-                <form id="contact-form">
+                <form id="contact-form" action="javascript:void(0);" method="post">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name" data-i18n="contact-name">姓名：</label>
@@ -222,7 +222,7 @@
         </footer>
     </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="/js/lib/email.min.js"></script>
     <script>
         // EmailJS 配置
         const EMAILJS_PUBLIC_KEY = "IpPyw733tk95swl0J";  // EmailJS Public Key
@@ -230,12 +230,34 @@
         const EMAILJS_TEMPLATE_ID = "template_xmyuwka"; // EmailJS Template ID
         const TO_EMAIL = "1372143376@qq.com"; // 接收邮件的邮箱
         
-        // 初始化 EmailJS
-        (function() {
-            if (EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
-                emailjs.init(EMAILJS_PUBLIC_KEY);
+        // 初始化 EmailJS - 等待库加载完成
+        function initEmailJS() {
+            if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY") {
+                try {
+                    emailjs.init(EMAILJS_PUBLIC_KEY);
+                    console.log('EmailJS initialized successfully');
+                } catch (error) {
+                    console.error('EmailJS initialization error:', error);
+                }
+            } else if (typeof emailjs === 'undefined') {
+                // 如果 emailjs 还没加载，等待一下再试
+                setTimeout(initEmailJS, 100);
             }
-        })();
+        }
+        
+        // 页面加载完成后初始化
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(initEmailJS, 500);
+            });
+        } else {
+            setTimeout(initEmailJS, 500);
+        }
+        
+        // 额外检查：确保库加载后初始化
+        window.addEventListener('load', function() {
+            setTimeout(initEmailJS, 1000);
+        });
         
         // 检查是否已配置 EmailJS
         function isEmailJSConfigured() {
@@ -244,83 +266,172 @@
                    EMAILJS_TEMPLATE_ID !== "YOUR_TEMPLATE_ID";
         }
         
-        // 表单提交处理
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const submitBtn = document.querySelector('.submit-btn');
-            const messageDiv = document.getElementById('form-message');
-            const form = this;
-            
-            // 收集表单数据
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
-            
-            // 如果 EmailJS 未配置，使用 mailto 链接
-            if (!isEmailJSConfigured()) {
-                const mailtoLink = `mailto:${TO_EMAIL}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`姓名: ${formData.name}%0A邮箱: ${formData.email}%0A%0A${formData.message}`)}`;
-                window.location.href = mailtoLink;
-                
-                // 显示提示
-                messageDiv.className = 'message success';
-                messageDiv.textContent = typeof i18n !== 'undefined' && i18n.currentLang === 'en'
-                    ? 'Opening email client... If it doesn\'t open, please send email to: ' + TO_EMAIL
-                    : '正在打开邮件客户端... 如果未自动打开，请直接发送邮件至：' + TO_EMAIL;
-                messageDiv.style.display = 'block';
-                form.reset();
-                
-                setTimeout(function() {
-                    messageDiv.style.display = 'none';
-                }, 5000);
+        // 表单提交处理 - 确保 DOM 加载完成后再绑定事件
+        function initContactForm() {
+            const form = document.getElementById('contact-form');
+            if (!form) {
+                console.error('Contact form not found');
+                setTimeout(initContactForm, 100); // 重试
                 return;
             }
             
-            // 禁用提交按钮
-            submitBtn.disabled = true;
-            submitBtn.textContent = typeof i18n !== 'undefined' && i18n.currentLang === 'en' ? 'Sending...' : '发送中...';
-            messageDiv.style.display = 'none';
+            // 如果已经绑定过事件，先移除
+            if (form.hasAttribute('data-handler-bound')) {
+                return; // 已经绑定过了
+            }
             
-            // 使用 EmailJS 发送邮件
-            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-                from_name: formData.name,
-                from_email: formData.email,
-                subject: formData.subject,
-                message: formData.message,
-                to_email: TO_EMAIL
-            })
-            .then(function(response) {
-                // 成功
-                messageDiv.className = 'message success';
-                messageDiv.textContent = typeof i18n !== 'undefined' && i18n.currentLang === 'en' 
-                    ? 'Message sent successfully! We will reply to you soon.' 
-                    : '消息发送成功！我们会尽快回复您。';
-                messageDiv.style.display = 'block';
-                form.reset();
+            form.setAttribute('data-handler-bound', 'true');
+            
+            form.addEventListener('submit', function(e) {
+                console.log('Form submit event triggered');
+                e.preventDefault();
+                e.stopPropagation();
                 
-                // 5秒后隐藏消息
-                setTimeout(function() {
-                    messageDiv.style.display = 'none';
-                }, 5000);
-            }, function(error) {
-                // 失败 - 提供备用方案
-                console.error('EmailJS error:', error);
-                messageDiv.className = 'message error';
-                const errorMsg = typeof i18n !== 'undefined' && i18n.currentLang === 'en'
-                    ? `Failed to send message. Please contact us directly at ${TO_EMAIL}`
-                    : `消息发送失败。请直接联系我们：${TO_EMAIL}`;
-                messageDiv.innerHTML = errorMsg + '<br><a href="mailto:' + TO_EMAIL + '" style="color: #721c24; text-decoration: underline;">点击这里使用邮件客户端发送</a>';
-                messageDiv.style.display = 'block';
-            })
-            .finally(function() {
-                // 恢复提交按钮
-                const submitText = typeof i18n !== 'undefined' && i18n.currentLang === 'en' ? 'Submit' : '提交';
-                submitBtn.disabled = false;
-                submitBtn.textContent = submitText;
+                const submitBtn = document.querySelector('.submit-btn');
+                const messageDiv = document.getElementById('form-message');
+                
+                if (!submitBtn || !messageDiv) {
+                    console.error('Form elements not found', { submitBtn, messageDiv });
+                    alert('表单元素未找到，请刷新页面重试');
+                    return;
+                }
+                
+                console.log('Form submission handler executing');
+                
+                // 收集表单数据
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+                
+                // 如果 EmailJS 未配置，使用 mailto 链接
+                if (!isEmailJSConfigured()) {
+                    const mailtoBody = '姓名: ' + formData.name + '%0A邮箱: ' + formData.email + '%0A%0A' + formData.message;
+                    const mailtoLink = 'mailto:' + TO_EMAIL + '?subject=' + encodeURIComponent(formData.subject) + '&body=' + encodeURIComponent(mailtoBody);
+                    window.location.href = mailtoLink;
+                    
+                    // 显示提示
+                    messageDiv.className = 'message success';
+                    messageDiv.textContent = typeof i18n !== 'undefined' && i18n.currentLang === 'en'
+                        ? 'Opening email client... If it doesn\'t open, please send email to: ' + TO_EMAIL
+                        : '正在打开邮件客户端... 如果未自动打开，请直接发送邮件至：' + TO_EMAIL;
+                    messageDiv.style.display = 'block';
+                    form.reset();
+                    
+                    setTimeout(function() {
+                        messageDiv.style.display = 'none';
+                    }, 5000);
+                    return;
+                }
+                
+                // 检查 EmailJS 是否可用
+                if (typeof emailjs === 'undefined') {
+                    console.error('EmailJS is not defined');
+                    messageDiv.className = 'message error';
+                    messageDiv.textContent = typeof i18n !== 'undefined' && i18n.currentLang === 'en'
+                        ? 'Email service not loaded. Please refresh the page and try again.'
+                        : '邮件服务未加载。请刷新页面后重试。';
+                    messageDiv.style.display = 'block';
+                    return;
+                }
+                
+                // 禁用提交按钮
+                submitBtn.disabled = true;
+                submitBtn.textContent = typeof i18n !== 'undefined' && i18n.currentLang === 'en' ? 'Sending...' : '发送中...';
+                messageDiv.style.display = 'none';
+                
+                console.log('Sending email with:', {
+                    serviceId: EMAILJS_SERVICE_ID,
+                    templateId: EMAILJS_TEMPLATE_ID,
+                    publicKey: EMAILJS_PUBLIC_KEY.substring(0, 10) + '...'
+                });
+                
+                // 使用 EmailJS 发送邮件
+                emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                    to_email: TO_EMAIL
+                })
+                .then(function(response) {
+                    // 成功
+                    messageDiv.className = 'message success';
+                    messageDiv.textContent = typeof i18n !== 'undefined' && i18n.currentLang === 'en' 
+                        ? 'Message sent successfully! We will reply to you soon.' 
+                        : '消息发送成功！我们会尽快回复您。';
+                    messageDiv.style.display = 'block';
+                    form.reset();
+                    
+                    // 5秒后隐藏消息
+                    setTimeout(function() {
+                        messageDiv.style.display = 'none';
+                    }, 5000);
+                }, function(error) {
+                    // 失败 - 提供备用方案
+                    console.error('EmailJS error:', error);
+                    console.error('Error details:', {
+                        status: error.status,
+                        text: error.text,
+                        serviceId: EMAILJS_SERVICE_ID,
+                        templateId: EMAILJS_TEMPLATE_ID
+                    });
+                    
+                    messageDiv.className = 'message error';
+                    let errorMsg = typeof i18n !== 'undefined' && i18n.currentLang === 'en'
+                        ? `Failed to send message (Error: ${error.status || 'Unknown'}). Please contact us directly at ${TO_EMAIL}`
+                        : `消息发送失败（错误代码：${error.status || '未知'}）。请直接联系我们：${TO_EMAIL}`;
+                    
+                    // 如果是配置错误，提供更详细的提示
+                    if (error.status === 400) {
+                        errorMsg += typeof i18n !== 'undefined' && i18n.currentLang === 'en'
+                            ? '<br><small>Check EmailJS service and template configuration.</small>'
+                            : '<br><small>请检查 EmailJS 服务和模板配置。</small>';
+                    }
+                    
+                    messageDiv.innerHTML = errorMsg + '<br><a href="mailto:' + TO_EMAIL + '" style="color: #721c24; text-decoration: underline;">点击这里使用邮件客户端发送</a>';
+                    messageDiv.style.display = 'block';
+                })
+                .finally(function() {
+                    // 恢复提交按钮
+                    const submitText = typeof i18n !== 'undefined' && i18n.currentLang === 'en' ? 'Submit' : '提交';
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = submitText;
+                });
             });
+            
+            console.log('Contact form event handler bound successfully');
+        }
+        
+        // 确保 DOM 加载完成后再初始化表单 - 使用多种方式确保执行
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(initContactForm, 100);
+                setTimeout(initContactForm, 500); // 双重保险
+            });
+        } else {
+            setTimeout(initContactForm, 100);
+            setTimeout(initContactForm, 500); // 双重保险
+        }
+        
+        // window.onload 时再试一次
+        window.addEventListener('load', function() {
+            setTimeout(initContactForm, 200);
+        });
+        
+        // 额外检查：如果 EmailJS 库未加载，显示警告
+        window.addEventListener('load', function() {
+            if (typeof emailjs === 'undefined') {
+                console.error('EmailJS library not loaded!');
+                const messageDiv = document.getElementById('form-message');
+                if (messageDiv) {
+                    messageDiv.className = 'message error';
+                    messageDiv.textContent = '邮件发送服务加载失败，请刷新页面重试。';
+                    messageDiv.style.display = 'block';
+                }
+            }
         });
         
         // 强制应用语言设置
