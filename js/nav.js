@@ -53,6 +53,8 @@ function updateNavMenu(toolsMenu) {
     // 构建菜单HTML - 包含所有工具，使用多语言支持
     let menuHTML = '<a href="/index.html" data-i18n="back-home-menu">🏠 返回首页</a>';
     
+    menuHTML += '<a href="/tools/pdf.html" data-i18n="nav-pdf">📄 PDF工具</a>';
+    menuHTML += '<a href="/tools/imageedit.html" data-i18n="nav-imageedit">🖼️ 编辑图片</a>';
     menuHTML += '<a href="/tools/timestamp.html" data-i18n="nav-timestamp">⏱️ 时间戳转换</a>';
     menuHTML += '<a href="/tools/md5.html" data-i18n="nav-md5">🔐 MD5加密</a>';
     menuHTML += '<a href="/tools/camel.html" data-i18n="nav-camel">🔤 下划线驼峰互转</a>';
@@ -68,8 +70,8 @@ function updateNavMenu(toolsMenu) {
     menuHTML += '<a href="/tools/qr.html" data-i18n="nav-qr">📱 二维码工具</a>';
     menuHTML += '<a href="/tools/stringprocess.html" data-i18n="nav-stringprocess">✂️ 字符串文本处理</a>';
     menuHTML += '<a href="/tools/crontab.html" data-i18n="nav-crontab">⏰ 模拟Crontab执行时间</a>';
-    menuHTML += '<a href="/tools/watermark.html" data-i18n="nav-watermark">💧 在线图片添加水印</a>';
-    menuHTML += '<a href="/tools/pdf.html" data-i18n="nav-pdf">📄 PDF工具</a>';
+    // 已隐藏：在线图片添加水印功能
+    // menuHTML += '<a href="/tools/watermark.html" data-i18n="nav-watermark">💧 在线图片添加水印</a>';
     
     toolsMenu.innerHTML = menuHTML;
     

@@ -45,6 +45,8 @@ const i18n = {
             'tool-watermark-desc': '给PNG、JPG、GIF图片添加文字水印，特别适合身份证、驾照、护照添加水印防盗用',
             'tool-pdf': 'PDF工具',
             'tool-pdf-desc': '丰富的PDF处理工具集合，支持合并、拆分、转换、编辑、签名等多种功能',
+            'tool-imageedit': '编辑图片',
+            'tool-imageedit-desc': '丰富的图片处理工具集合，支持压缩、调整大小、裁剪、转换、添加水印等多种功能',
             'tool-more': '更多工具',
             'tool-more-desc': '敬请期待更多实用工具',
             'footer-text': '© 在线工具箱 - 实用工具集合',
@@ -83,6 +85,7 @@ const i18n = {
             'nav-crontab': '⏰ 模拟Crontab执行时间',
             'nav-watermark': '💧 在线图片添加水印',
             'nav-pdf': '📄 PDF工具',
+            'nav-imageedit': '🖼️ 编辑图片',
             
             // 时间戳工具
             'timestamp-title': '时间戳转换工具',
@@ -356,6 +359,28 @@ const i18n = {
             'pdf-to-word': 'PDF转Word',
             'pdf-no-results': '未找到匹配的工具',
             'pdf-modal-title': 'PDF工具',
+            
+            // 图片编辑工具
+            'imageedit-title': '图片编辑工具集合',
+            'imageedit-subtitle': '丰富的图片处理工具，全部在浏览器本地处理，保护您的隐私',
+            'imageedit-search-placeholder': '🔍 搜索图片工具...',
+            'imageedit-optimize-tools': '⚡ 优化工具',
+            'imageedit-edit-tools': '✏️ 编辑工具',
+            'imageedit-convert-tools': '🔄 转换工具',
+            'imageedit-compress': '压缩图像文件',
+            'imageedit-resize': '调整图像大小',
+            'imageedit-enhance': '提升图片质量',
+            'imageedit-crop': '裁剪图片',
+            'imageedit-rotate': '旋转图片',
+            'imageedit-editor': '照片编辑器',
+            'imageedit-watermark': '给图片加水印',
+            'imageedit-blur': '模糊面部/区域',
+            'imageedit-remove-bg': '去除背景',
+            'imageedit-to-jpg': '转换至JPG',
+            'imageedit-from-jpg': 'JPG转其他格式',
+            'imageedit-html-to-image': 'HTML转图片',
+            'imageedit-no-results': '未找到匹配的工具',
+            'imageedit-modal-title': '图片工具',
         },
         en: {
             // Homepage
@@ -395,6 +420,8 @@ const i18n = {
             'tool-watermark-desc': 'Add text watermarks to PNG, JPG, GIF images, especially suitable for ID cards, driver licenses, passports to prevent misuse',
             'tool-pdf': 'PDF Tools',
             'tool-pdf-desc': 'Rich PDF processing tool collection, support merge, split, convert, edit, sign and other functions',
+            'tool-imageedit': 'Edit Images',
+            'tool-imageedit-desc': 'Rich image processing tool collection, support compress, resize, crop, convert, add watermark and other functions',
             'tool-more': 'More Tools',
             'tool-more-desc': 'More practical tools coming soon',
             'footer-text': '© Online Toolbox - Practical Tools Collection',
@@ -433,6 +460,7 @@ const i18n = {
             'nav-crontab': '⏰ Crontab Simulator',
             'nav-watermark': '💧 Image Watermark',
             'nav-pdf': '📄 PDF Tools',
+            'nav-imageedit': '🖼️ Edit Images',
             
             // Timestamp tool
             'timestamp-title': 'Timestamp Converter',
@@ -706,6 +734,28 @@ const i18n = {
             'pdf-to-word': 'PDF to Word',
             'pdf-no-results': 'No matching tools found',
             'pdf-modal-title': 'PDF Tool',
+            
+            // Image Edit Tools
+            'imageedit-title': 'Image Edit Tools Collection',
+            'imageedit-subtitle': 'Rich image processing tools, all processed locally in browser, protecting your privacy',
+            'imageedit-search-placeholder': '🔍 Search image tools...',
+            'imageedit-optimize-tools': '⚡ Optimize Tools',
+            'imageedit-edit-tools': '✏️ Edit Tools',
+            'imageedit-convert-tools': '🔄 Convert Tools',
+            'imageedit-compress': 'Compress Image File',
+            'imageedit-resize': 'Adjust Image Size',
+            'imageedit-enhance': 'Enhance Image Quality',
+            'imageedit-crop': 'Crop Image',
+            'imageedit-rotate': 'Rotate Image',
+            'imageedit-editor': 'Photo Editor',
+            'imageedit-watermark': 'Add Watermark to Image',
+            'imageedit-blur': 'Blur Face/Area',
+            'imageedit-remove-bg': 'Remove Background',
+            'imageedit-to-jpg': 'Convert to JPG',
+            'imageedit-from-jpg': 'Convert JPG to Other Formats',
+            'imageedit-html-to-image': 'HTML to Image',
+            'imageedit-no-results': 'No matching tools found',
+            'imageedit-modal-title': 'Image Tool',
         }
     },
     
