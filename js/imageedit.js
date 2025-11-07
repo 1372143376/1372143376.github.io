@@ -75,6 +75,12 @@
             description: '轻松模糊照片中的面部。此外，允许模糊车牌或其他物体以隐藏私人信息',
             multiple: false,
             accept: 'image/*'
+        },
+        'image2base64': {
+            title: '图片转Base64',
+            description: '将图片转换为Base64编码，支持CSS和HTML使用方式',
+            multiple: false,
+            accept: 'image/*'
         }
     };
     
@@ -632,6 +638,50 @@
             `;
         }
         
+        if (toolType === 'image2base64') {
+            html += `
+                <div style="margin-top: 20px;">
+                    <div id="image2base64-preview-container" style="display: none; margin-bottom: 20px;">
+                        <div style="text-align: center; margin-bottom: 15px;">
+                            <img id="image2base64-preview-image" style="max-width: 100%; max-height: 300px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                    </div>
+                    
+                    <div id="image2base64-results" style="display: none;">
+                        <div class="form-group" style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 500;">Base64编码：</label>
+                            <textarea id="image2base64-base64-result" readonly 
+                                      style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: monospace; font-size: 12px; min-height: 100px; resize: vertical;"></textarea>
+                            <button type="button" onclick="copyImage2Base64('base64')" 
+                                    style="margin-top: 8px; padding: 8px 16px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+                                复制Base64
+                            </button>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 500;">CSS使用：</label>
+                            <textarea id="image2base64-css-result" readonly 
+                                      style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: monospace; font-size: 12px; min-height: 60px; resize: vertical;"></textarea>
+                            <button type="button" onclick="copyImage2Base64('css')" 
+                                    style="margin-top: 8px; padding: 8px 16px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+                                复制CSS
+                            </button>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="display: block; margin-bottom: 8px; font-weight: 500;">HTML使用：</label>
+                            <textarea id="image2base64-html-result" readonly 
+                                      style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: monospace; font-size: 12px; min-height: 60px; resize: vertical;"></textarea>
+                            <button type="button" onclick="copyImage2Base64('html')" 
+                                    style="margin-top: 8px; padding: 8px 16px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+                                复制HTML
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        
         if (toolType === 'blur') {
             html += `
                 <div class="form-group" style="margin-top: 20px;">
@@ -831,6 +881,17 @@
                             updateCropPreview();
                         }
                     });
+                    
+                    // 单位变化时，更新预览
+                    const cropUnit = document.getElementById('crop-unit');
+                    if (cropUnit) {
+                        cropUnit.addEventListener('change', function() {
+                            // 重置偏移
+                            window.cropImageOffsetX = 0;
+                            window.cropImageOffsetY = 0;
+                            updateCropPreview();
+                        });
+                    }
                 }
             }, 200);
         }
@@ -1035,7 +1096,7 @@
             displayFileList();
             
             // 显示预览（裁剪工具不在上传区域显示预览）
-            if (files.length > 0 && toolType !== 'html-to-image' && toolType !== 'crop') {
+            if (files.length > 0 && toolType !== 'html-to-image' && toolType !== 'crop' && toolType !== 'image2base64') {
                 const file = files[0];
                 const reader = new FileReader();
                 reader.onload = function(e) {
@@ -1045,6 +1106,17 @@
                     previewContainer.innerHTML = '';
                     previewContainer.appendChild(img);
                     currentImage = img;
+                };
+                reader.readAsDataURL(file);
+            }
+            
+            // image2base64工具：文件上传后自动转换
+            if (files.length > 0 && toolType === 'image2base64') {
+                const file = files[0];
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imageData = e.target.result;
+                    convertImageToBase64(imageData, file);
                 };
                 reader.readAsDataURL(file);
             }
@@ -1139,8 +1211,20 @@
         const img = new Image();
         img.onload = function() {
             // 获取目标裁剪尺寸
-            const targetWidth = parseInt(cropWidth.value || img.width);
-            const targetHeight = parseInt(cropHeight.value || img.height);
+            const cropUnit = document.getElementById('crop-unit');
+            const unit = cropUnit?.value || 'px';
+            
+            let targetWidth = parseInt(cropWidth.value || img.width);
+            let targetHeight = parseInt(cropHeight.value || img.height);
+            
+            // 如果是毫米单位，转换为像素（96 DPI）
+            if (unit === 'mm') {
+                targetWidth = Math.round(targetWidth * 96 / 25.4);
+                targetHeight = Math.round(targetHeight * 96 / 25.4);
+            }
+            
+            // 允许裁剪框尺寸超过图片尺寸，用户可以通过拖动图片来调整位置
+            // 不限制裁剪尺寸，严格按照用户选择的尺寸来设置裁剪框
             
             // ========== 左侧：裁剪预览 ==========
             // 计算画布尺寸（以裁剪框为中心，留出足够空间显示图片）
@@ -1325,19 +1409,26 @@
         // 限制偏移范围（确保裁剪框内始终有图片内容）
         const cropWidth = document.getElementById('crop-width');
         const cropHeight = document.getElementById('crop-height');
+        const cropUnit = document.getElementById('crop-unit');
         if (cropWidth && cropHeight && currentImage) {
-            const targetWidth = parseInt(cropWidth.value);
-            const targetHeight = parseInt(cropHeight.value);
+            const unit = cropUnit?.value || 'px';
+            let targetWidth = parseInt(cropWidth.value);
+            let targetHeight = parseInt(cropHeight.value);
+            
+            // 如果是毫米单位，转换为像素（96 DPI）
+            if (unit === 'mm') {
+                targetWidth = Math.round(targetWidth * 96 / 25.4);
+                targetHeight = Math.round(targetHeight * 96 / 25.4);
+            }
             
             // 直接使用已加载的图片尺寸，避免重复加载
             const imgWidth = currentImage.width;
             const imgHeight = currentImage.height;
             
-            // 限制偏移：裁剪框不能超出图片范围
-            const maxOffsetX = Math.max(0, imgWidth - targetWidth);
-            const maxOffsetY = Math.max(0, imgHeight - targetHeight);
-            window.cropImageOffsetX = Math.max(-maxOffsetX, Math.min(0, window.cropImageOffsetX));
-            window.cropImageOffsetY = Math.max(-maxOffsetY, Math.min(0, window.cropImageOffsetY));
+            // 允许图片拖动到任意位置，不限制偏移范围
+            // 这样用户可以将图片的任意部分移动到裁剪框内
+            // 如果裁剪框大于图片，图片可以完全移出裁剪框（会显示空白区域）
+            // 如果裁剪框小于图片，图片可以移动到任意位置
         }
         
         // 重绘
@@ -1371,8 +1462,14 @@
     // 处理图片
     window.processImage = async function() {
         // HTML转图片工具不需要文件，只需要URL
-        if (currentTool !== 'html-to-image' && uploadedFiles.length === 0) {
+        // image2base64工具在文件上传时自动处理，不需要点击处理按钮
+        if (currentTool !== 'html-to-image' && currentTool !== 'image2base64' && uploadedFiles.length === 0) {
             alert('请先选择文件');
+            return;
+        }
+        
+        // image2base64工具在文件上传时已自动处理，直接返回
+        if (currentTool === 'image2base64') {
             return;
         }
         
@@ -1433,6 +1530,10 @@
                     break;
                 case 'blur':
                     result = await blurImage();
+                    break;
+                case 'image2base64':
+                    // image2base64在文件上传时自动处理，不需要在这里处理
+                    result = true;
                     break;
                 default:
                     throw new Error('未知的工具类型');
@@ -1578,62 +1679,70 @@
                     targetHeight = Math.round(targetHeight * 96 / 25.4);
                 }
                 
-                // 限制在图片范围内
-                targetWidth = Math.min(targetWidth, img.width);
-                targetHeight = Math.min(targetHeight, img.height);
-                
                 // 计算裁剪位置（根据图片偏移）
                 // 图片偏移是相对于裁剪框左上角的偏移（负值表示图片向左/上移动）
                 let x = -window.cropImageOffsetX || 0;
                 let y = -window.cropImageOffsetY || 0;
                 
-                // 确保在图片范围内
-                x = Math.max(0, Math.min(x, img.width - targetWidth));
-                y = Math.max(0, Math.min(y, img.height - targetHeight));
-                targetWidth = Math.min(targetWidth, img.width - x);
-                targetHeight = Math.min(targetHeight, img.height - y);
+                // 计算实际从图片中裁剪的区域
+                // 如果裁剪框超出图片范围，只裁剪图片内的部分
+                const sourceX = Math.max(0, x);
+                const sourceY = Math.max(0, y);
+                const sourceWidth = Math.min(img.width - sourceX, targetWidth - Math.max(0, -x));
+                const sourceHeight = Math.min(img.height - sourceY, targetHeight - Math.max(0, -y));
+                
+                // 计算在目标画布上的绘制位置（如果图片偏移为负，需要在画布上留出空白）
+                const destX = Math.max(0, -x);
+                const destY = Math.max(0, -y);
                 
                 updateProgress(60);
                 
-                // 创建画布
+                // 创建画布（严格按照用户选择的尺寸）
                 const canvas = document.createElement('canvas');
                 canvas.width = targetWidth;
                 canvas.height = targetHeight;
                 const ctx = canvas.getContext('2d');
                 
+                // 填充白色背景（用于超出图片范围的部分）
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
                 // 应用旋转和翻转
                 let rotation = window.cropRotation || 0;
                 let flip = window.cropFlip || { h: false, v: false };
                 
-                if (rotation !== 0 || flip.h || flip.v) {
-                    // 需要旋转或翻转，创建临时画布
-                    const tempCanvas = document.createElement('canvas');
-                    tempCanvas.width = img.width;
-                    tempCanvas.height = img.height;
-                    const tempCtx = tempCanvas.getContext('2d');
-                    
-                    tempCtx.save();
-                    tempCtx.translate(tempCanvas.width / 2, tempCanvas.height / 2);
-                    
-                    if (rotation !== 0) {
-                        tempCtx.rotate(rotation * Math.PI / 180);
+                // 只有在有有效区域时才绘制图片
+                if (sourceWidth > 0 && sourceHeight > 0) {
+                    if (rotation !== 0 || flip.h || flip.v) {
+                        // 需要旋转或翻转，创建临时画布
+                        const tempCanvas = document.createElement('canvas');
+                        tempCanvas.width = img.width;
+                        tempCanvas.height = img.height;
+                        const tempCtx = tempCanvas.getContext('2d');
+                        
+                        tempCtx.save();
+                        tempCtx.translate(tempCanvas.width / 2, tempCanvas.height / 2);
+                        
+                        if (rotation !== 0) {
+                            tempCtx.rotate(rotation * Math.PI / 180);
+                        }
+                        
+                        if (flip.h) {
+                            tempCtx.scale(-1, 1);
+                        }
+                        if (flip.v) {
+                            tempCtx.scale(1, -1);
+                        }
+                        
+                        tempCtx.drawImage(img, -img.width / 2, -img.height / 2);
+                        tempCtx.restore();
+                        
+                        // 从临时画布裁剪到目标位置
+                        ctx.drawImage(tempCanvas, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, sourceWidth, sourceHeight);
+                    } else {
+                        // 直接裁剪到目标位置
+                        ctx.drawImage(img, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, sourceWidth, sourceHeight);
                     }
-                    
-                    if (flip.h) {
-                        tempCtx.scale(-1, 1);
-                    }
-                    if (flip.v) {
-                        tempCtx.scale(1, -1);
-                    }
-                    
-                    tempCtx.drawImage(img, -img.width / 2, -img.height / 2);
-                    tempCtx.restore();
-                    
-                    // 从临时画布裁剪
-                    ctx.drawImage(tempCanvas, x, y, targetWidth, targetHeight, 0, 0, targetWidth, targetHeight);
-                } else {
-                    // 直接裁剪
-                    ctx.drawImage(img, x, y, targetWidth, targetHeight, 0, 0, targetWidth, targetHeight);
                 }
                 
                 updateProgress(80);
@@ -2603,6 +2712,88 @@
         const downloadAllBtn = document.getElementById('download-all-btn');
         if (downloadAllBtn) {
             downloadAllBtn.style.display = 'none';
+        }
+    };
+    
+    // 图片转Base64功能
+    function convertImageToBase64(imageData, file) {
+        // 显示预览
+        const previewContainer = document.getElementById('image2base64-preview-container');
+        const previewImage = document.getElementById('image2base64-preview-image');
+        if (previewContainer && previewImage) {
+            previewImage.src = imageData;
+            previewContainer.style.display = 'block';
+        }
+        
+        // 显示结果
+        const resultsContainer = document.getElementById('image2base64-results');
+        if (resultsContainer) {
+            resultsContainer.style.display = 'block';
+        }
+        
+        // 显示Base64内容
+        const base64Result = document.getElementById('image2base64-base64-result');
+        if (base64Result) {
+            base64Result.value = imageData;
+        }
+        
+        // 显示CSS使用方式
+        const cssResult = document.getElementById('image2base64-css-result');
+        if (cssResult) {
+            cssResult.value = `.test {\n    background-image: url("${imageData}");\n}`;
+        }
+        
+        // 显示HTML使用方式
+        const htmlResult = document.getElementById('image2base64-html-result');
+        if (htmlResult) {
+            htmlResult.value = `<img src="${imageData}" alt="${file.name}">`;
+        }
+    }
+    
+    // 复制Base64内容
+    window.copyImage2Base64 = function(type) {
+        let text = '';
+        if (type === 'base64') {
+            const base64Result = document.getElementById('image2base64-base64-result');
+            if (base64Result) {
+                text = base64Result.value;
+            }
+        } else if (type === 'css') {
+            const cssResult = document.getElementById('image2base64-css-result');
+            if (cssResult) {
+                text = cssResult.value;
+            }
+        } else if (type === 'html') {
+            const htmlResult = document.getElementById('image2base64-html-result');
+            if (htmlResult) {
+                text = htmlResult.value;
+            }
+        }
+        
+        if (text) {
+            // 创建临时文本区域
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.top = '0';
+            textArea.style.left = '0';
+            textArea.style.opacity = '0';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    alert('已复制到剪贴板');
+                } else {
+                    alert('复制失败');
+                }
+            } catch (err) {
+                alert('复制失败: ' + err);
+            }
+            
+            document.body.removeChild(textArea);
         }
     };
     
