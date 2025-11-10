@@ -202,6 +202,9 @@ textarea {
     overflow-x: auto; /* 添加横向滚动条以防万一 */
     clear: both; /* 确保在按钮下方显示 */
     display: block; /* 确保独占一行 */
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .copy-btn {
@@ -382,4 +385,246 @@ input[type="file"] {
     font-size: 1rem;
     font-family: inherit;
     background: white;
+}
+
+/* 带宽计算器特定样式 */
+.bandwidth-calculator {
+    margin-bottom: 30px;
+}
+
+.mode-selector {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mode-btn {
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+    color: #667eea;
+    border-bottom-color: #667eea;
+}
+
+.mode-btn:hover {
+    color: #667eea;
+    background-color: #f8f9fa;
+}
+
+.mode-content {
+    display: none;
+}
+
+.mode-content.active {
+    display: block;
+}
+
+.mode-content h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.mode-description {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.input-with-unit {
+    display: flex;
+    gap: 10px;
+}
+
+.input-with-unit input {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.input-with-unit select {
+    width: 150px;
+    min-width: 120px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.calculate-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.result h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.result-output {
+    background: white;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    font-weight: 500;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.result-value {
+    font-weight: 600;
+    color: #667eea;
+    font-size: 1rem;
+}
+
+.result-detail {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.result-detail p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.error {
+    color: #e74c3c;
+    font-weight: 500;
+    background: #ffeaea;
+    padding: 10px;
+    border-radius: 4px;
+    border-left: 4px solid #e74c3c;
+}
+
+.reference-section {
+    margin-top: 40px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.reference-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.reference-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.reference-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 6px;
+    border-left: 3px solid #667eea;
+}
+
+.reference-item span:first-child {
+    font-weight: 500;
+    color: #555;
+}
+
+.reference-item span:last-child {
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .mode-selector {
+        flex-direction: column;
+    }
+    
+    .mode-btn {
+        text-align: center;
+        border-bottom: none;
+        border-left: 3px solid transparent;
+    }
+    
+    .mode-btn.active {
+        border-left-color: #667eea;
+        border-bottom-color: transparent;
+    }
+    
+    .input-with-unit {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .input-with-unit select {
+        width: 100%;
+    }
+    
+    .reference-grid {
+        grid-template-columns: 1fr;
+    }
 }

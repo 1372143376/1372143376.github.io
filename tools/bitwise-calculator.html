@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="tool-bitwise">按位与计算器 - 在线工具箱</title>
+    <link rel="stylesheet" href="../css/tool.css?v=1.21">
+    <script src="../js/i18n.js"></script>
+    <script src="../js/lang-switcher.js"></script>
+    <style>
+        .bitwise-calculator {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .calculator-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .calculator-header h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .calculator-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .input-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .input-group {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 20px;
+            align-items: end;
+            margin-bottom: 20px;
+        }
+
+        .input-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-item label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .input-with-base {
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-with-base input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: 'Courier New', monospace;
+            background: white;
+        }
+
+        .input-with-base select {
+            width: 80px;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            background: white;
+        }
+
+        .operator-section {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .operator-select {
+            padding: 8px 15px;
+            border: 2px solid #667eea;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #667eea;
+            background: white;
+            cursor: pointer;
+        }
+
+        .buttons-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-calculate {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-calculate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-reset {
+            background: #f8f9fa;
+            color: #666;
+            border: 2px solid #ddd;
+        }
+
+        .btn-reset:hover {
+            background: #e9ecef;
+            border-color: #999;
+        }
+
+        .result-section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+
+        .result-section h3 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .result-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .result-label {
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .result-value {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            color: #333;
+            word-break: break-all;
+        }
+
+        .binary-visualization {
+            background: #f0f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .binary-visualization h4 {
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .binary-row {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .bit {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .bit-1 {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .bit-0 {
+            background: #f5f5f5;
+            color: #666;
+            border: 1px solid #ddd;
+        }
+
+        .explanation-section {
+            background: #fff8e1;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin-top: 25px;
+        }
+
+        .explanation-section h4 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .operation-rules {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .operation-rules h4 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .rule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .rule-table th,
+        .rule-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .rule-table th {
+            background: #f5f5f5;
+            font-weight: 600;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .input-group {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .operator-section {
+                margin: 10px 0;
+            }
+
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .buttons-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .bit {
+                width: 25px;
+                height: 25px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* 输入框焦点样式 */
+        .input-with-base input:focus {
+            border-color: #667eea;
+            outline: none;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        }
+
+        .input-with-base select:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+
+        /* 错误状态 */
+        .input-error {
+            border-color: #e74c3c !important;
+            background: #ffeaea;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 data-i18n="tool-bitwise">按位与计算器</h1>
+            <p class="subtitle" data-i18n="tool-bitwise-desc">支持二进制、十进制、十六进制的位运算计算</p>
+        </header>
+        
+        <div class="bitwise-calculator">
+            <!-- 输入区域 -->
+            <div class="input-section">
+                <div class="input-group">
+                    <!-- 第一个输入框 -->
+                    <div class="input-item">
+                        <label data-i18n="bitwise-first-number">第一个数字</label>
+                        <div class="input-with-base">
+                            <input type="text" id="number1" placeholder="输入数字" value="10">
+                            <select id="base1">
+                                <option value="2">二进制</option>
+                                <option value="10" selected>十进制</option>
+                                <option value="16">十六进制</option>
+                            </select>
+                        </div>
+                        <div class="error-message" id="error1"></div>
+                    </div>
+
+                    <!-- 运算符 -->
+                    <div class="operator-section">
+                        <select id="operator" class="operator-select">
+                            <option value="&">按位与 (&)</option>
+                            <option value="|">按位或 (|)</option>
+                            <option value="^">按位异或 (^)</option>
+                            <option value="~">按位取反 (~)</option>
+                            <option value="<<">左移 (<<)</option>
+                            <option value=">>">右移 (>>)</option>
+                        </select>
+                    </div>
+
+                    <!-- 第二个输入框 -->
+                    <div class="input-item">
+                        <label data-i18n="bitwise-second-number">第二个数字</label>
+                        <div class="input-with-base">
+                            <input type="text" id="number2" placeholder="输入数字" value="3">
+                            <select id="base2">
+                                <option value="2">二进制</option>
+                                <option value="10" selected>十进制</option>
+                                <option value="16">十六进制</option>
+                            </select>
+                        </div>
+                        <div class="error-message" id="error2"></div>
+                    </div>
+                </div>
+
+                <div class="buttons-group">
+                    <button id="calculateBtn" class="btn btn-calculate" data-i18n="bitwise-calculate">计算</button>
+                    <button id="resetBtn" class="btn btn-reset" data-i18n="bitwise-reset">重置</button>
+                </div>
+            </div>
+
+            <!-- 结果显示区域 -->
+            <div class="result-section">
+                <h3 data-i18n="bitwise-result">计算结果</h3>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <div class="result-label" data-i18n="bitwise-binary">二进制</div>
+                        <div class="result-value" id="resultBinary">-</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label" data-i18n="bitwise-decimal">十进制</div>
+                        <div class="result-value" id="resultDecimal">-</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label" data-i18n="bitwise-hex">十六进制</div>
+                        <div class="result-value" id="resultHex">-</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label" data-i18n="bitwise-octal">八进制</div>
+                        <div class="result-value" id="resultOctal">-</div>
+                    </div>
+                </div>
+
+                <!-- 二进制可视化 -->
+                <div class="binary-visualization">
+                    <h4 data-i18n="bitwise-binary-visual">二进制可视化</h4>
+                    <div id="binaryVisual">
+                        <p style="text-align: center; color: #666;" data-i18n="bitwise-binary-visual-desc">计算后显示二进制位可视化</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 运算规则说明 -->
+            <div class="operation-rules">
+                <h4 data-i18n="bitwise-operation-rules">位运算规则</h4>
+                <table class="rule-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="bitwise-operator">运算符</th>
+                            <th data-i18n="bitwise-name">名称</th>
+                            <th data-i18n="bitwise-description">描述</th>
+                            <th data-i18n="bitwise-example">示例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&</td>
+                            <td data-i18n="bitwise-and">按位与</td>
+                            <td data-i18n="bitwise-and-desc">两个位都为1时结果为1</td>
+                            <td>1 & 1 = 1</td>
+                        </tr>
+                        <tr>
+                            <td>|</td>
+                            <td data-i18n="bitwise-or">按位或</td>
+                            <td data-i18n="bitwise-or-desc">任一为1时结果为1</td>
+                            <td>1 | 0 = 1</td>
+                        </tr>
+                        <tr>
+                            <td>^</td>
+                            <td data-i18n="bitwise-xor">按位异或</td>
+                            <td data-i18n="bitwise-xor-desc">不同时为1</td>
+                            <td>1 ^ 1 = 0</td>
+                        </tr>
+                        <tr>
+                            <td>~</td>
+                            <td data-i18n="bitwise-not">按位取反</td>
+                            <td data-i18n="bitwise-not-desc">0变1，1变0</td>
+                            <td>~1 = 0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 使用说明 -->
+            <div class="explanation-section">
+                <h4 data-i18n="bitwise-usage">使用说明</h4>
+                <p data-i18n="bitwise-usage-desc">• 支持二进制、十进制、十六进制输入</p>
+                <p data-i18n="bitwise-usage-desc2">• 自动转换为32位有符号整数进行计算</p>
+                <p data-i18n="bitwise-usage-desc3">• 结果显示多种进制格式</p>
+                <p data-i18n="bitwise-usage-desc4">• 提供二进制位可视化展示</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/bitwise-calculator.js"></script>
+</body>
+</html>
