@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="tool-bitwise">按位与计算器 - 在线工具箱</title>
-    <link rel="stylesheet" href="../css/tool.css?v=1.21">
+    <link rel="stylesheet" href="/css/tool.css?v=1.21">
     <script src="../js/i18n.js"></script>
     <script src="../js/lang-switcher.js"></script>
     <style>
@@ -456,8 +456,94 @@
                 <p data-i18n="bitwise-usage-desc4">• 提供二进制位可视化展示</p>
             </div>
         </div>
+        
+        <a href="/index.html" class="back-link" data-i18n="back-home-link">← 返回工具箱首页</a>
+
+        <footer>
+            <p data-i18n="footer-text">© 在线工具箱 - 实用工具集合</p>
+            <p><a href="/contact.html" data-i18n="footer-contact">联系我们</a></p>
+        </footer>
     </div>
 
     <script src="../js/bitwise-calculator.js"></script>
+    <script src="../js/nav.js?v=1.12"></script>
+    <script>
+        // 强制应用语言设置 - 使用多种方式确保执行
+        function forceApplyLanguage() {
+            if (typeof i18n === 'undefined') {
+                setTimeout(forceApplyLanguage, 50);
+                return;
+            }
+            
+            const savedLang = localStorage.getItem('language');
+            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                i18n.currentLang = savedLang;
+                document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+                // 多次调用确保生效
+                i18n.updatePage();
+                setTimeout(function() { i18n.updatePage(); }, 50);
+                setTimeout(function() { i18n.updatePage(); }, 150);
+                setTimeout(function() { i18n.updatePage(); }, 300);
+            }
+        }
+        
+        // 立即执行一次（如果DOM已经准备好）
+        if (document.body && document.querySelectorAll('[data-i18n]').length > 0) {
+            setTimeout(forceApplyLanguage, 0);
+        }
+        
+        // DOMContentLoaded时执行
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(forceApplyLanguage, 50);
+                setTimeout(forceApplyLanguage, 200);
+                setTimeout(forceApplyLanguage, 500);
+            });
+        } else {
+            setTimeout(forceApplyLanguage, 50);
+            setTimeout(forceApplyLanguage, 200);
+            setTimeout(forceApplyLanguage, 500);
+        }
+        
+        // window.onload时再执行一次
+        window.addEventListener('load', function() {
+            setTimeout(forceApplyLanguage, 100);
+            setTimeout(forceApplyLanguage, 500);
+            setTimeout(forceApplyLanguage, 1000);
+        });
+        
+        // 使用MutationObserver监听DOM变化，确保动态添加的元素也被更新
+        if (typeof MutationObserver !== 'undefined') {
+            let observerTimeout;
+            const observer = new MutationObserver(function(mutations) {
+                clearTimeout(observerTimeout);
+                observerTimeout = setTimeout(function() {
+                    if (typeof i18n !== 'undefined') {
+                        const savedLang = localStorage.getItem('language');
+                        if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                            i18n.currentLang = savedLang;
+                            i18n.updatePage();
+                        }
+                    }
+                }, 150);
+            });
+            
+            if (document.body) {
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            } else {
+                document.addEventListener('DOMContentLoaded', function() {
+                    if (document.body) {
+                        observer.observe(document.body, {
+                            childList: true,
+                            subtree: true
+                        });
+                    }
+                });
+            }
+        }
+    </script>
 </body>
 </html>

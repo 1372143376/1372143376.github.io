@@ -24,6 +24,7 @@ function createNavMenu() {
     // 创建导航图标
     const navIcon = document.createElement('div');
     navIcon.className = 'nav-icon';
+    navIcon.title = '点击打开快捷导航';
     
     // 创建工具菜单
     const toolsMenu = document.createElement('div');
@@ -39,10 +40,29 @@ function createNavMenu() {
     // 绑定事件监听器
     bindNavEvents(navIcon, toolsMenu);
     
+    // 显示导航提示（5秒后自动消失）
+    showNavHint();
+    
     // 监听语言切换事件，更新菜单
     window.addEventListener('languageChanged', function() {
         updateNavMenu(toolsMenu);
     });
+}
+
+// 显示导航提示
+function showNavHint() {
+    const hint = document.createElement('div');
+    hint.className = 'nav-hint';
+    hint.textContent = '快捷导航';
+    
+    document.body.appendChild(hint);
+    
+    // 5秒后自动消失
+    setTimeout(function() {
+        if (hint.parentNode) {
+            hint.parentNode.removeChild(hint);
+        }
+    }, 5000);
 }
 
 // 更新导航菜单内容
@@ -72,6 +92,11 @@ function updateNavMenu(toolsMenu) {
     menuHTML += '<a href="/tools/crontab.html" data-i18n="nav-crontab">⏰ 模拟Crontab执行时间</a>';
     // 已隐藏：在线图片添加水印功能
     // menuHTML += '<a href="/tools/watermark.html" data-i18n="nav-watermark">💧 在线图片添加水印</a>';
+    
+    // 新增工具
+    menuHTML += '<a href="/tools/bandwidth.html" data-i18n="nav-bandwidth">🌐 网络带宽计算</a>';
+    menuHTML += '<a href="/tools/bitwise-calculator.html" data-i18n="nav-bitwise">🔢 按位与计算器</a>';
+    menuHTML += '<a href="/tools/browser-fingerprint.html" data-i18n="nav-browser-fingerprint">🔍 浏览器指纹检测</a>';
     
     toolsMenu.innerHTML = menuHTML;
     
