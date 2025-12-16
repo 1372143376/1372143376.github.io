@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="tool-base64">Base64加解密工具 - 在线工具箱</title>
+    <title data-i18n="tool-camel">下划线驼峰互转工具 - 在线工具箱</title>
     <link rel="stylesheet" href="/css/tool.css?v=1.21">
     <script>
         // 在页面加载的最早时机就设置语言
@@ -96,20 +96,20 @@
 <body>
     <div class="container">
         <header>
-            <h1 data-i18n="tool-base64">Base64加解密工具</h1>
-            <p class="subtitle" data-i18n="tool-base64-desc">在线Base64编码和解码工具</p>
+            <h1 data-i18n="tool-camel">下划线驼峰互转工具</h1>
+            <p class="subtitle" data-i18n="tool-camel-desc">下划线命名与驼峰命名相互转换</p>
         </header>
         
         <div class="form-group">
-            <label for="input-text" data-i18n="base64-input-label">输入文本：</label>
-            <textarea id="input-text" data-i18n="base64-input-placeholder" placeholder="请输入要编码或解码的文本"></textarea>
+            <label for="input-text" data-i18n="camel-input-label">输入文本：</label>
+            <textarea id="input-text" data-i18n="camel-input-placeholder" placeholder="请输入要转换的文本&#10;例如：hello_world 或 helloWorld"></textarea>
         </div>
         
-        <button class="btn" onclick="encodeBase64()" data-i18n="base64-encode">Base64编码</button>
-        <button class="btn" onclick="decodeBase64()" data-i18n="base64-decode">Base64解码</button>
+        <button class="btn" onclick="convertToCamel()" data-i18n="camel-to-camel">下划线转驼峰</button>
+        <button class="btn" onclick="convertToUnderline()" data-i18n="camel-to-underline">驼峰转下划线</button>
         <button class="btn" onclick="clearInput()" data-i18n="btn-clear">清空</button>
         
-        <div class="result" id="base64-result"></div>
+        <div class="result" id="camel-result"></div>
         
         <a href="/index.html" class="back-link" data-i18n="back-home-link">← 返回工具箱首页</a>
 
@@ -119,8 +119,7 @@
         </footer>
     </div>
     
-    <script src="/js/utils.js?v=2.0"></script>
-    <script src="/js/base64.js?v=1.1"></script>
+    <script src="/js/camel.js?v=1.9"></script>
     <script src="/js/nav.js?v=1.12"></script>
     <script>
         // 强制应用语言设置 - 使用多种方式确保执行

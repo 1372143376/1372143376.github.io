@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="tool-watermark">在线图片添加水印 - 在线工具箱</title>
+    <link rel="stylesheet" href="/css/tool.css?v=1.21">
+    <script>
+        // 在页面加载的最早时机就设置语言
+        (function() {
+            const savedLang = localStorage.getItem('language');
+            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+            }
+        })();
+    </script>
+    <script>
+        // 备用加载方案
+        function loadI18nFallback() {
+            console.warn('Trying to load i18n.js with fallback method...');
+            const script = document.createElement('script');
+            script.src = '/js/i18n.js?v=' + Date.now(); // 添加时间戳避免缓存
+            script.onerror = function() {
+                console.error('Failed to load i18n.js even with fallback method');
+            };
+            script.onload = function() {
+                console.log('i18n.js loaded successfully with fallback method');
+                setTimeout(initI18n, 50);
+            };
+            document.head.appendChild(script);
+        }
+        
+        // i18n.js 加载后立即初始化
+        function initI18n() {
+            if (typeof i18n === 'undefined') {
+                // 如果i18n还没定义，等待一下再试（最多等待5秒）
+                if (typeof initI18n.attempts === 'undefined') {
+                    initI18n.attempts = 0;
+                }
+                initI18n.attempts++;
+                if (initI18n.attempts < 100) { // 最多尝试100次，约5秒
+                    setTimeout(initI18n, 50);
+                } else {
+                    // 如果5秒后还没加载成功，尝试备用方案
+                    console.error('i18n is still undefined after 5 seconds, trying fallback...');
+                    if (!document.querySelector('script[src*="i18n.js"][data-fallback="true"]')) {
+                        loadI18nFallback();
+                    }
+                }
+                return;
+            }
+            
+            console.log('i18n object found, currentLang:', i18n.currentLang);
+            
+            const savedLang = localStorage.getItem('language');
+            console.log('localStorage language:', savedLang);
+            
+            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                i18n.currentLang = savedLang;
+                document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+                console.log('Language set to:', savedLang);
+            }
+            
+            // 立即尝试初始化，不等待DOM
+            if (document.body) {
+                console.log('Body exists, calling i18n.init()');
+                i18n.init();
+            } else {
+                // 如果body还没准备好，等待DOMContentLoaded
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', function() {
+                        console.log('DOMContentLoaded, calling i18n.init()');
+                        i18n.init();
+                    });
+                } else {
+                    setTimeout(function() { 
+                        console.log('Document ready, calling i18n.init()');
+                        i18n.init(); 
+                    }, 0);
+                }
+            }
+        }
+    </script>
+    <script src="/js/i18n.js" onerror="console.error('Failed to load i18n.js'); loadI18nFallback();" onload="setTimeout(initI18n, 50);"></script>
+    <script>
+        // 额外检查：如果脚本加载完成但i18n仍未定义，重试
+        setTimeout(function() {
+            if (typeof i18n === 'undefined') {
+                console.warn('i18n still undefined after script load, retrying...');
+                initI18n();
+            }
+        }, 200);
+    </script>
+    <script src="/js/lang-switcher.js" defer></script>
+    <style>
+        .watermark-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .upload-area {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+            cursor: pointer;
+        }
+        
+        .upload-area:hover {
+            border-color: #667eea;
+        }
+        
+        .upload-area.dragover {
+            border-color: #667eea;
+            background-color: #f0f8ff;
+        }
+        
+        .upload-icon {
+            font-size: 48px;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .preview-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .preview-image {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+        
+        .watermark-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .control-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .control-group label {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .control-group input, .control-group select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .color-picker {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .color-picker input[type="color"] {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .result-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .result-image {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+        
+        .download-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        
+        .download-btn:hover {
+            background-color: #218838;
+        }
+        
+        .download-btn:before {
+            content: "⬇ ";
+        }
+        
+        @media (max-width: 768px) {
+            .watermark-controls {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 data-i18n="watermark-title">在线图片添加水印</h1>
+            <p class="subtitle" data-i18n="watermark-subtitle">给PNG、JPG、GIF图片添加文字水印，特别适合身份证、驾照、护照添加水印防盗用</p>
+        </header>
+        
+        <div class="watermark-container">
+            <!-- 第一步：上传图片 -->
+            <div class="section">
+                <h2 data-i18n="watermark-step1">第一步：上传一张图片</h2>
+                <div class="form-group">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">📁</div>
+                        <p data-i18n="watermark-upload-text">点击选择图片或拖拽图片到此处</p>
+                        <p class="small" data-i18n="watermark-upload-hint">支持 JPG、PNG、GIF 等常见图片格式</p>
+                        <input type="file" id="fileInput" class="file-input" accept="image/*">
+                    </div>
+                </div>
+                
+                <div class="preview-container hidden" id="previewContainer">
+                    <img id="previewImage" class="preview-image" alt="预览图片" data-i18n="watermark-preview">
+                </div>
+            </div>
+            
+            <!-- 第二步：设置水印参数 -->
+            <div class="section">
+                <h2 data-i18n="watermark-step2">第二步：设置水印参数</h2>
+                <div class="watermark-controls">
+                    <div class="control-group">
+                        <label for="watermark-text" data-i18n="watermark-watermark-text">水印文字：</label>
+                        <input type="text" id="watermark-text" data-i18n="watermark-watermark-text-placeholder" placeholder="请输入水印文字" value="水印文字">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="watermark-color" data-i18n="watermark-text-color">文字颜色：</label>
+                        <div class="color-picker">
+                            <input type="color" id="watermark-color" value="#CCCCCC">
+                            <input type="text" id="watermark-color-text" value="#CCCCCC" placeholder="#CCCCCC">
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="watermark-opacity" data-i18n="watermark-opacity">透明度 (0-100)：</label>
+                        <input type="range" id="watermark-opacity" min="0" max="100" value="50">
+                        <span id="opacity-value">50%</span>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="watermark-font-size" data-i18n="watermark-font-size">字体大小 (px)：</label>
+                        <input type="number" id="watermark-font-size" min="10" max="100" value="30">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="watermark-spacing" data-i18n="watermark-spacing">文字间隔 (px)：</label>
+                        <input type="number" id="watermark-spacing" min="10" max="200" value="50">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="watermark-angle" data-i18n="watermark-angle">旋转角度：</label>
+                        <input type="number" id="watermark-angle" min="0" max="360" value="45">
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="applyWatermark()" data-i18n="watermark-apply-btn">添加水印</button>
+                <button class="btn" onclick="clearWatermarkInput()" data-i18n="watermark-clear-btn">清空</button>
+            </div>
+            
+            <!-- 第三步：下载结果 -->
+            <div class="section">
+                <h2 data-i18n="watermark-step3">第三步：查看结果并下载</h2>
+                <div class="result-container hidden" id="resultContainer">
+                    <img id="resultImage" class="result-image" alt="添加水印后的图片" data-i18n="watermark-result">
+                    <button class="download-btn" id="downloadBtn" onclick="downloadWatermarkImage()" data-i18n="watermark-download-btn">下载图片</button>
+                </div>
+            </div>
+        </div>
+        
+        <a href="/index.html" class="back-link" data-i18n="back-home-link">← 返回工具箱首页</a>
+
+        <footer>
+            <p data-i18n="footer-text">© 在线工具箱 - 实用工具集合</p>
+            <p><a href="/contact.html" data-i18n="footer-contact">联系我们</a></p>
+        </footer>
+    </div>
+    
+    <script src="/js/config.js?v=1.0"></script>
+    <script src="/js/watermark.js?v=1.0"></script>
+    <script src="/js/nav.js?v=1.12"></script>
+    <script>
+        // 强制应用语言设置 - 使用多种方式确保执行
+        function forceApplyLanguage() {
+            if (typeof i18n === 'undefined') {
+                setTimeout(forceApplyLanguage, 50);
+                return;
+            }
+            
+            const savedLang = localStorage.getItem('language');
+            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                i18n.currentLang = savedLang;
+                document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+                // 多次调用确保生效
+                i18n.updatePage();
+                setTimeout(function() { i18n.updatePage(); }, 50);
+                setTimeout(function() { i18n.updatePage(); }, 150);
+                setTimeout(function() { i18n.updatePage(); }, 300);
+            }
+        }
+        
+        // 立即执行一次（如果DOM已经准备好）
+        if (document.body && document.querySelectorAll('[data-i18n]').length > 0) {
+            setTimeout(forceApplyLanguage, 0);
+        }
+        
+        // DOMContentLoaded时执行
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(forceApplyLanguage, 50);
+                setTimeout(forceApplyLanguage, 200);
+                setTimeout(forceApplyLanguage, 500);
+            });
+        } else {
+            setTimeout(forceApplyLanguage, 50);
+            setTimeout(forceApplyLanguage, 200);
+            setTimeout(forceApplyLanguage, 500);
+        }
+        
+        // window.onload时再执行一次
+        window.addEventListener('load', function() {
+            setTimeout(forceApplyLanguage, 100);
+            setTimeout(forceApplyLanguage, 500);
+            setTimeout(forceApplyLanguage, 1000);
+        });
+        
+        // 使用MutationObserver监听DOM变化，确保动态添加的元素也被更新
+        if (typeof MutationObserver !== 'undefined') {
+            let observerTimeout;
+            const observer = new MutationObserver(function(mutations) {
+                clearTimeout(observerTimeout);
+                observerTimeout = setTimeout(function() {
+                    if (typeof i18n !== 'undefined') {
+                        const savedLang = localStorage.getItem('language');
+                        if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                            i18n.currentLang = savedLang;
+                            i18n.updatePage();
+                        }
+                    }
+                }, 150);
+            });
+            
+            if (document.body) {
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            } else {
+                document.addEventListener('DOMContentLoaded', function() {
+                    if (document.body) {
+                        observer.observe(document.body, {
+                            childList: true,
+                            subtree: true
+                        });
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="tool-base64">Base64加解密工具 - 在线工具箱</title>
+    <title data-i18n="tool-browser-fingerprint">浏览器指纹检测 - 在线工具箱</title>
     <link rel="stylesheet" href="/css/tool.css?v=1.21">
     <script>
         // 在页面加载的最早时机就设置语言
@@ -96,20 +96,127 @@
 <body>
     <div class="container">
         <header>
-            <h1 data-i18n="tool-base64">Base64加解密工具</h1>
-            <p class="subtitle" data-i18n="tool-base64-desc">在线Base64编码和解码工具</p>
+            <h1 data-i18n="tool-browser-fingerprint">浏览器指纹检测</h1>
+            <p class="subtitle" data-i18n="tool-browser-fingerprint-desc">检测浏览器的各种特征信息，用于浏览器指纹识别</p>
         </header>
         
-        <div class="form-group">
-            <label for="input-text" data-i18n="base64-input-label">输入文本：</label>
-            <textarea id="input-text" data-i18n="base64-input-placeholder" placeholder="请输入要编码或解码的文本"></textarea>
+        <div class="browser-info">
+            <div class="info-section">
+                <h3 data-i18n="browser-basic-info">基础信息</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span data-i18n="browser-user-agent">User Agent:</span>
+                        <span id="user-agent" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span data-i18n="browser-language">语言:</span>
+                        <span id="language" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span data-i18n="browser-platform">平台:</span>
+                        <span id="platform" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span data-i18n="browser-screen">屏幕分辨率:</span>
+                        <span id="screen-resolution" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span data-i18n="browser-color-depth">颜色深度:</span>
+                        <span id="color-depth" class="info-value"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3 data-i18n="browser-time-info">时区信息</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span data-i18n="browser-timezone">时区:</span>
+                        <span id="timezone" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span data-i18n="browser-timezone-offset">时区偏移:</span>
+                        <span id="timezone-offset" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span data-i18n="browser-date-time">当前时间:</span>
+                        <span id="date-time" class="info-value"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3 data-i18n="browser-webgl-info">WebGL 信息</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span data-i18n="browser-webgl-renderer">渲染器:</span>
+                        <span id="webgl-renderer" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span data-i18n="browser-webgl-vendor">厂商:</span>
+                        <span id="webgl-vendor" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span data-i18n="browser-webgl-version">版本:</span>
+                        <span id="webgl-version" class="info-value"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3 data-i18n="browser-canvas-info">Canvas 指纹</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span data-i18n="browser-canvas-fingerprint">Canvas指纹:</span>
+                        <span id="canvas-fingerprint" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span data-i18n="browser-canvas-hash">Canvas哈希:</span>
+                        <span id="canvas-hash" class="info-value"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3 data-i18n="browser-fonts-info">字体信息</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span data-i18n="browser-fonts-list">字体列表:</span>
+                        <span id="fonts-list" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span data-i18n="browser-fonts-count">字体数量:</span>
+                        <span id="fonts-count" class="info-value"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3 data-i18n="browser-plugins-info">插件信息</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span data-i18n="browser-plugins-list">插件列表:</span>
+                        <span id="plugins-list" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span data-i18n="browser-plugins-count">插件数量:</span>
+                        <span id="plugins-count" class="info-value"></span>
+                    </div>
+                </div>
+            </div>
         </div>
         
-        <button class="btn" onclick="encodeBase64()" data-i18n="base64-encode">Base64编码</button>
-        <button class="btn" onclick="decodeBase64()" data-i18n="base64-decode">Base64解码</button>
-        <button class="btn" onclick="clearInput()" data-i18n="btn-clear">清空</button>
+        <div class="actions">
+            <button class="btn" onclick="detectBrowserFingerprint()" data-i18n="browser-detect">检测浏览器指纹</button>
+            <button class="btn" onclick="copyAllInfo()" data-i18n="browser-copy-all">复制所有信息</button>
+            <button class="btn" onclick="generateFingerprintHash()" data-i18n="browser-generate-hash">生成指纹哈希</button>
+            <button class="btn" onclick="clearAll()" data-i18n="btn-clear">清空</button>
+        </div>
         
-        <div class="result" id="base64-result"></div>
+        <div class="result" id="fingerprint-result">
+            <h3 data-i18n="browser-fingerprint-hash">浏览器指纹哈希:</h3>
+            <div id="fingerprint-hash" class="hash-value"></div>
+        </div>
         
         <a href="/index.html" class="back-link" data-i18n="back-home-link">← 返回工具箱首页</a>
 
@@ -119,8 +226,7 @@
         </footer>
     </div>
     
-    <script src="/js/utils.js?v=2.0"></script>
-    <script src="/js/base64.js?v=1.1"></script>
+    <script src="/js/browser-fingerprint.js?v=1.0"></script>
     <script src="/js/nav.js?v=1.12"></script>
     <script>
         // 强制应用语言设置 - 使用多种方式确保执行

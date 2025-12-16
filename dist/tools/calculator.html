@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="tool-base64">Base64加解密工具 - 在线工具箱</title>
+    <title data-i18n="tool-calculator">高级计算器 - 在线工具箱</title>
     <link rel="stylesheet" href="/css/tool.css?v=1.21">
     <script>
         // 在页面加载的最早时机就设置语言
@@ -92,24 +92,78 @@
         }, 200);
     </script>
     <script src="/js/lang-switcher.js" defer></script>
+    <style>
+        /* 添加自定义样式 */
+        .input-group {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .input-group input {
+            flex: 1;
+            margin-right: 10px;
+        }
+        
+        .input-group button {
+            width: 10%;
+            min-width: 60px;
+            padding: 12px;
+        }
+        
+        /* 调整操作按钮宽度为原来的十分之一 */
+        .operation-btn {
+            padding: 12px 24px; /* 恢复原来的高度 */
+            font-size: 1rem; /* 恢复原来的字体大小 */
+            margin-bottom: 10px; /* 恢复原来的间距 */
+            width: 10%; /* 宽度调整为原来的十分之一 */
+            min-width: 60px; /* 保持最小宽度 */
+        }
+        
+        /* 调整计算器结果样式，使字号更大、颜色更鲜明 */
+        #calculator-result .result-value {
+            font-size: 1.8rem; /* 增大字体 */
+            color: #667eea; /* 使用鲜明的蓝色 */
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1 data-i18n="tool-base64">Base64加解密工具</h1>
-            <p class="subtitle" data-i18n="tool-base64-desc">在线Base64编码和解码工具</p>
+            <h1 data-i18n="tool-calculator">高级计算器</h1>
+            <p class="subtitle" data-i18n="tool-calculator-desc">支持取余运算和进制转换</p>
         </header>
         
         <div class="form-group">
-            <label for="input-text" data-i18n="base64-input-label">输入文本：</label>
-            <textarea id="input-text" data-i18n="base64-input-placeholder" placeholder="请输入要编码或解码的文本"></textarea>
+            <label for="input-number" data-i18n="calculator-input-label">输入数字：</label>
+            <div class="input-group">
+                <input type="text" id="input-number" data-i18n="calculator-input-placeholder" placeholder="请输入数字">
+                <button class="btn" onclick="clearInput()" data-i18n="btn-clear">清空</button>
+            </div>
         </div>
         
-        <button class="btn" onclick="encodeBase64()" data-i18n="base64-encode">Base64编码</button>
-        <button class="btn" onclick="decodeBase64()" data-i18n="base64-decode">Base64解码</button>
-        <button class="btn" onclick="clearInput()" data-i18n="btn-clear">清空</button>
+        <!-- 取余运算专用输入 -->
+        <div class="form-group" id="modulo-input">
+            <label for="modulo-divisor" data-i18n="calculator-modulo-divisor">除数：</label>
+            <input type="number" id="modulo-divisor" data-i18n="calculator-modulo-divisor-placeholder" placeholder="请输入除数">
+        </div>
         
-        <div class="result" id="base64-result"></div>
+        <!-- 所有计算按钮 -->
+        <div class="form-group">
+            <button class="btn operation-btn" onclick="calculateModulo()" data-i18n="calculator-modulo">取余运算</button>
+            <button class="btn operation-btn" onclick="calculateBinToDec()" data-i18n="calculator-bin-to-dec">二进制转十进制</button>
+            <button class="btn operation-btn" onclick="calculateDecToBin()" data-i18n="calculator-dec-to-bin">十进制转二进制</button>
+            <button class="btn operation-btn" onclick="calculateDecToHex()" data-i18n="calculator-dec-to-hex">十进制转十六进制</button>
+            <button class="btn operation-btn" onclick="calculateHexToDec()" data-i18n="calculator-hex-to-dec">十六进制转十进制</button>
+        </div>
+        
+        <div class="result" id="calculator-result"></div>
         
         <a href="/index.html" class="back-link" data-i18n="back-home-link">← 返回工具箱首页</a>
 
@@ -119,8 +173,7 @@
         </footer>
     </div>
     
-    <script src="/js/utils.js?v=2.0"></script>
-    <script src="/js/base64.js?v=1.1"></script>
+    <script src="/js/calculator.js?v=1.10"></script>
     <script src="/js/nav.js?v=1.12"></script>
     <script>
         // 强制应用语言设置 - 使用多种方式确保执行

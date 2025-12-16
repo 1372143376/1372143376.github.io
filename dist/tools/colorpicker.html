@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="tool-base64">Base64加解密工具 - 在线工具箱</title>
+    <title data-i18n="tool-colorpicker">HTML颜色拾取器 - 在线工具箱</title>
     <link rel="stylesheet" href="/css/tool.css?v=1.21">
     <script>
         // 在页面加载的最早时机就设置语言
@@ -92,24 +92,165 @@
         }, 200);
     </script>
     <script src="/js/lang-switcher.js" defer></script>
+    <style>
+        .color-picker-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .color-preview {
+            width: 100%;
+            height: 150px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+        }
+        
+        .color-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .color-input {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .color-input label {
+            min-width: 120px;
+            font-weight: 500;
+        }
+        
+        .color-input input[type="color"] {
+            width: 60px;
+            height: 40px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .color-input input[type="text"] {
+            flex: 1;
+            font-family: monospace;
+        }
+        
+        .color-formats {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .format-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .format-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        
+        .format-value {
+            font-family: monospace;
+            word-break: break-all;
+            white-space: pre-wrap;
+            color: #555;
+            font-size: 0.9rem;
+            padding: 12px;
+            background: white;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            margin-bottom: 15px;
+            min-height: 24px;
+        }
+        
+        @media (max-width: 768px) {
+            .color-formats {
+                grid-template-columns: 1fr;
+            }
+            
+            .color-input {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .color-input label {
+                min-width: auto;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1 data-i18n="tool-base64">Base64加解密工具</h1>
-            <p class="subtitle" data-i18n="tool-base64-desc">在线Base64编码和解码工具</p>
+            <h1 data-i18n="tool-colorpicker">HTML颜色拾取器</h1>
+            <p class="subtitle" data-i18n="tool-colorpicker-desc">选择颜色并获取不同格式的颜色代码</p>
         </header>
         
-        <div class="form-group">
-            <label for="input-text" data-i18n="base64-input-label">输入文本：</label>
-            <textarea id="input-text" data-i18n="base64-input-placeholder" placeholder="请输入要编码或解码的文本"></textarea>
+        <div class="color-picker-container">
+            <div class="form-group">
+                <label data-i18n="colorpicker-select-label">选择颜色：</label>
+                <div class="color-input-group">
+                    <div class="color-input">
+                        <label for="colorPicker" data-i18n="colorpicker-color-picker-label">颜色选择器：</label>
+                        <input type="color" id="colorPicker" value="#667eea">
+                        <input type="text" id="hexInput" value="#667eea" placeholder="#667eea">
+                    </div>
+                    
+                    <div class="color-input">
+                        <label for="rgbInput" data-i18n="colorpicker-rgb-label">RGB值：</label>
+                        <input type="text" id="rgbInput" placeholder="rgb(102, 126, 234)">
+                    </div>
+                    
+                    <div class="color-input">
+                        <label for="hslInput" data-i18n="colorpicker-hsl-label">HSL值：</label>
+                        <input type="text" id="hslInput" placeholder="hsl(229, 58%, 66%)">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label data-i18n="colorpicker-preview-label">颜色预览：</label>
+                <div class="color-preview" id="colorPreview"></div>
+            </div>
         </div>
         
-        <button class="btn" onclick="encodeBase64()" data-i18n="base64-encode">Base64编码</button>
-        <button class="btn" onclick="decodeBase64()" data-i18n="base64-decode">Base64解码</button>
-        <button class="btn" onclick="clearInput()" data-i18n="btn-clear">清空</button>
-        
-        <div class="result" id="base64-result"></div>
+        <div class="color-formats">
+            <div class="format-card">
+                <div class="format-title" data-i18n="colorpicker-hex-format">HEX格式</div>
+                <div class="format-value" id="hexResult">#667eea</div>
+                <button class="copy-btn" onclick="copyToClipboard('hexResult')" data-i18n="colorpicker-copy-hex">复制HEX</button>
+            </div>
+            
+            <div class="format-card">
+                <div class="format-title" data-i18n="colorpicker-rgb-format">RGB格式</div>
+                <div class="format-value" id="rgbResult">rgb(102, 126, 234)</div>
+                <button class="copy-btn" onclick="copyToClipboard('rgbResult')" data-i18n="colorpicker-copy-rgb">复制RGB</button>
+            </div>
+            
+            <div class="format-card">
+                <div class="format-title" data-i18n="colorpicker-hsl-format">HSL格式</div>
+                <div class="format-value" id="hslResult">hsl(229, 58%, 66%)</div>
+                <button class="copy-btn" onclick="copyToClipboard('hslResult')" data-i18n="colorpicker-copy-hsl">复制HSL</button>
+            </div>
+            
+            <div class="format-card">
+                <div class="format-title" data-i18n="colorpicker-css-usage">CSS使用</div>
+                <div class="format-value" id="cssResult">color: #667eea;</div>
+                <button class="copy-btn" onclick="copyToClipboard('cssResult')" data-i18n="colorpicker-copy-css">复制CSS</button>
+            </div>
+        </div>
         
         <a href="/index.html" class="back-link" data-i18n="back-home-link">← 返回工具箱首页</a>
 
@@ -119,8 +260,7 @@
         </footer>
     </div>
     
-    <script src="/js/utils.js?v=2.0"></script>
-    <script src="/js/base64.js?v=1.1"></script>
+    <script src="/js/colorpicker.js?v=1.0"></script>
     <script src="/js/nav.js?v=1.12"></script>
     <script>
         // 强制应用语言设置 - 使用多种方式确保执行

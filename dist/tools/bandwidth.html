@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="tool-bandwidth">网络带宽计算 - 在线工具箱</title>
+    <link rel="stylesheet" href="/css/tool.css?v=1.21">
+    <script>
+        // 在页面加载的最早时机就设置语言
+        (function() {
+            const savedLang = localStorage.getItem('language');
+            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+            }
+        })();
+    </script>
+    <script>
+        // 备用加载方案
+        function loadI18nFallback() {
+            console.warn('Trying to load i18n.js with fallback method...');
+            const script = document.createElement('script');
+            script.src = '/js/i18n.js?v=' + Date.now(); // 添加时间戳避免缓存
+            script.onerror = function() {
+                console.error('Failed to load i18n.js even with fallback method');
+            };
+            script.onload = function() {
+                console.log('i18n.js loaded successfully with fallback method');
+                setTimeout(initI18n, 50);
+            };
+            document.head.appendChild(script);
+        }
+        
+        // i18n.js 加载后立即初始化
+        function initI18n() {
+            if (typeof i18n === 'undefined') {
+                // 如果i18n还没定义，等待一下再试（最多等待5秒）
+                if (typeof initI18n.attempts === 'undefined') {
+                    initI18n.attempts = 0;
+                }
+                initI18n.attempts++;
+                if (initI18n.attempts < 100) { // 最多尝试100次，约5秒
+                    setTimeout(initI18n, 50);
+                } else {
+                    // 如果5秒后还没加载成功，尝试备用方案
+                    console.error('i18n is still undefined after 5 seconds, trying fallback...');
+                    if (!document.querySelector('script[src*="i18n.js"][data-fallback="true"]')) {
+                        loadI18nFallback();
+                    }
+                }
+                return;
+            }
+            
+            console.log('i18n object found, currentLang:', i18n.currentLang);
+            
+            const savedLang = localStorage.getItem('language');
+            console.log('localStorage language:', savedLang);
+            
+            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                i18n.currentLang = savedLang;
+                document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+                console.log('Language set to:', savedLang);
+            }
+            
+            // 立即尝试初始化，不等待DOM
+            if (document.body) {
+                console.log('Body exists, calling i18n.init()');
+                i18n.init();
+            } else {
+                // 如果body还没准备好，等待DOMContentLoaded
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', function() {
+                        console.log('DOMContentLoaded, calling i18n.init()');
+                        i18n.init();
+                    });
+                } else {
+                    setTimeout(function() { 
+                        console.log('Document ready, calling i18n.init()');
+                        i18n.init(); 
+                    }, 0);
+                }
+            }
+        }
+    </script>
+    <script src="/js/i18n.js" onerror="console.error('Failed to load i18n.js'); loadI18nFallback();" onload="setTimeout(initI18n, 50);"></script>
+    <script>
+        // 额外检查：如果脚本加载完成但i18n仍未定义，重试
+        setTimeout(function() {
+            if (typeof i18n === 'undefined') {
+                console.warn('i18n still undefined after script load, retrying...');
+                initI18n();
+            }
+        }, 200);
+    </script>
+    <script src="/js/lang-switcher.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 data-i18n="tool-bandwidth">网络带宽计算</h1>
+            <p class="subtitle" data-i18n="tool-bandwidth-desc">计算下载时间、所需带宽和网络速度单位转换</p>
+        </header>
+        
+        <div class="bandwidth-calculator">
+            <!-- 计算模式选择 -->
+            <div class="mode-selector">
+                <button class="mode-btn active" data-mode="download-time" data-i18n="bandwidth-mode-download-time">下载时间计算</button>
+                <button class="mode-btn" data-mode="required-bandwidth" data-i18n="bandwidth-mode-required-bandwidth">所需带宽计算</button>
+                <button class="mode-btn" data-mode="unit-convert" data-i18n="bandwidth-mode-unit-convert">单位转换</button>
+            </div>
+            
+            <!-- 下载时间计算模式 -->
+            <div class="mode-content active" id="download-time-mode">
+                <h3 data-i18n="bandwidth-download-time">下载时间计算</h3>
+                <p class="mode-description" data-i18n="bandwidth-download-time-desc">根据文件大小和下载速度计算所需时间</p>
+                
+                <div class="input-group">
+                    <label data-i18n="bandwidth-file-size">文件大小：</label>
+                    <div class="input-with-unit">
+                        <input type="number" id="file-size" placeholder="100" min="0" step="0.01">
+                        <select id="file-size-unit">
+                            <option value="1" data-i18n="bandwidth-unit-b">B</option>
+                            <option value="1024" data-i18n="bandwidth-unit-kb">KB</option>
+                            <option value="1048576" selected data-i18n="bandwidth-unit-mb">MB</option>
+                            <option value="1073741824" data-i18n="bandwidth-unit-gb">GB</option>
+                            <option value="1099511627776" data-i18n="bandwidth-unit-tb">TB</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label data-i18n="bandwidth-download-speed">下载速度：</label>
+                    <div class="input-with-unit">
+                        <input type="number" id="download-speed" placeholder="10" min="0" step="0.01">
+                        <select id="speed-unit">
+                            <option value="0.125" data-i18n="bandwidth-unit-kbps">Kbps</option>
+                            <option value="0.000125" data-i18n="bandwidth-unit-mbps">Mbps</option>
+                            <option value="1.25e-7" data-i18n="bandwidth-unit-gbps">Gbps</option>
+                            <option value="1" selected data-i18n="bandwidth-unit-kbs">KB/s</option>
+                            <option value="0.001" data-i18n="bandwidth-unit-mbs">MB/s</option>
+                            <option value="1e-6" data-i18n="bandwidth-unit-gbs">GB/s</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn calculate-btn" onclick="calculateDownloadTime()" data-i18n="bandwidth-calculate">开始计算</button>
+                
+                <div class="result" id="download-time-result">
+                    <h4 data-i18n="bandwidth-result">计算结果：</h4>
+                    <div id="download-time-output" class="result-output"></div>
+                </div>
+            </div>
+            
+            <!-- 所需带宽计算模式 -->
+            <div class="mode-content" id="required-bandwidth-mode">
+                <h3 data-i18n="bandwidth-required-bandwidth">所需带宽计算</h3>
+                <p class="mode-description" data-i18n="bandwidth-required-bandwidth-desc">根据文件大小和目标时间计算所需带宽</p>
+                
+                <div class="input-group">
+                    <label data-i18n="bandwidth-file-size">文件大小：</label>
+                    <div class="input-with-unit">
+                        <input type="number" id="required-file-size" placeholder="100" min="0" step="0.01">
+                        <select id="required-file-size-unit">
+                            <option value="1" data-i18n="bandwidth-unit-b">B</option>
+                            <option value="1024" data-i18n="bandwidth-unit-kb">KB</option>
+                            <option value="1048576" selected data-i18n="bandwidth-unit-mb">MB</option>
+                            <option value="1073741824" data-i18n="bandwidth-unit-gb">GB</option>
+                            <option value="1099511627776" data-i18n="bandwidth-unit-tb">TB</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label data-i18n="bandwidth-target-time">目标时间：</label>
+                    <div class="input-with-unit">
+                        <input type="number" id="target-time" placeholder="60" min="0" step="0.01">
+                        <select id="time-unit">
+                            <option value="1" data-i18n="bandwidth-unit-second">秒</option>
+                            <option value="60" selected data-i18n="bandwidth-unit-minute">分钟</option>
+                            <option value="3600" data-i18n="bandwidth-unit-hour">小时</option>
+                            <option value="86400" data-i18n="bandwidth-unit-day">天</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn calculate-btn" onclick="calculateRequiredBandwidth()" data-i18n="bandwidth-calculate">开始计算</button>
+                
+                <div class="result" id="required-bandwidth-result">
+                    <h4 data-i18n="bandwidth-result">计算结果：</h4>
+                    <div id="required-bandwidth-output" class="result-output"></div>
+                </div>
+            </div>
+            
+            <!-- 单位转换模式 -->
+            <div class="mode-content" id="unit-convert-mode">
+                <h3 data-i18n="bandwidth-unit-convert">单位转换</h3>
+                <p class="mode-description" data-i18n="bandwidth-unit-convert-desc">网络速度单位相互转换</p>
+                
+                <div class="input-group">
+                    <label data-i18n="bandwidth-input-value">输入值：</label>
+                    <div class="input-with-unit">
+                        <input type="number" id="convert-value" placeholder="1" min="0" step="0.01">
+                        <select id="convert-from-unit">
+                            <option value="0.125" data-i18n="bandwidth-unit-kbps">Kbps</option>
+                            <option value="0.000125" selected data-i18n="bandwidth-unit-mbps">Mbps</option>
+                            <option value="1.25e-7" data-i18n="bandwidth-unit-gbps">Gbps</option>
+                            <option value="1" data-i18n="bandwidth-unit-kbs">KB/s</option>
+                            <option value="0.001" data-i18n="bandwidth-unit-mbs">MB/s</option>
+                            <option value="1e-6" data-i18n="bandwidth-unit-gbs">GB/s</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn calculate-btn" onclick="convertUnits()" data-i18n="bandwidth-convert">转换</button>
+                
+                <div class="result" id="unit-convert-result">
+                    <h4 data-i18n="bandwidth-convert-result">转换结果：</h4>
+                    <div id="unit-convert-output" class="result-output"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 常见参考值 -->
+        <div class="reference-section">
+            <h3 data-i18n="bandwidth-reference">常见网络速度参考</h3>
+            <div class="reference-grid">
+                <div class="reference-item">
+                    <span data-i18n="bandwidth-reference-adsl">ADSL宽带：</span>
+                    <span>1-8 Mbps</span>
+                </div>
+                <div class="reference-item">
+                    <span data-i18n="bandwidth-reference-fiber">光纤宽带：</span>
+                    <span>50-1000 Mbps</span>
+                </div>
+                <div class="reference-item">
+                    <span data-i18n="bandwidth-reference-4g">4G网络：</span>
+                    <span>10-100 Mbps</span>
+                </div>
+                <div class="reference-item">
+                    <span data-i18n="bandwidth-reference-5g">5G网络：</span>
+                    <span>100-1000 Mbps</span>
+                </div>
+                <div class="reference-item">
+                    <span data-i18n="bandwidth-reference-wifi">WiFi：</span>
+                    <span>50-800 Mbps</span>
+                </div>
+                <div class="reference-item">
+                    <span data-i18n="bandwidth-reference-gigabit">千兆网络：</span>
+                    <span>1000 Mbps</span>
+                </div>
+            </div>
+        </div>
+        
+        <a href="/index.html" class="back-link" data-i18n="back-home-link">← 返回工具箱首页</a>
+
+        <footer>
+            <p data-i18n="footer-text">© 在线工具箱 - 实用工具集合</p>
+            <p><a href="/contact.html" data-i18n="footer-contact">联系我们</a></p>
+        </footer>
+    </div>
+    
+    <script src="/js/bandwidth.js?v=1.0"></script>
+    <script src="/js/nav.js?v=1.12"></script>
+    <script>
+        // 强制应用语言设置
+        function forceApplyLanguage() {
+            if (typeof i18n === 'undefined') {
+                setTimeout(forceApplyLanguage, 50);
+                return;
+            }
+            
+            const savedLang = localStorage.getItem('language');
+            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                i18n.currentLang = savedLang;
+                document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+                i18n.updatePage();
+                setTimeout(function() { i18n.updatePage(); }, 50);
+                setTimeout(function() { i18n.updatePage(); }, 150);
+            }
+        }
+        
+        // 页面加载后执行
+        window.addEventListener('load', function() {
+            setTimeout(forceApplyLanguage, 100);
+            setTimeout(forceApplyLanguage, 500);
+        });
+        
+        // 监听DOM变化
+        if (typeof MutationObserver !== 'undefined') {
+            let observerTimeout;
+            const observer = new MutationObserver(function(mutations) {
+                clearTimeout(observerTimeout);
+                observerTimeout = setTimeout(function() {
+                    if (typeof i18n !== 'undefined') {
+                        const savedLang = localStorage.getItem('language');
+                        if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                            i18n.currentLang = savedLang;
+                            i18n.updatePage();
+                        }
+                    }
+                }, 150);
+            });
+            
+            if (document.body) {
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            }
+        }
+    </script>
+</body>
+</html>

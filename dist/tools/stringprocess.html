@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="tool-stringprocess">字符串文本处理 - 在线工具箱</title>
+    <link rel="stylesheet" href="/css/tool.css?v=1.21">
+    <script>
+        // 在页面加载的最早时机就设置语言
+        (function() {
+            const savedLang = localStorage.getItem('language');
+            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+            }
+        })();
+    </script>
+    <script>
+        // 备用加载方案
+        function loadI18nFallback() {
+            console.warn('Trying to load i18n.js with fallback method...');
+            const script = document.createElement('script');
+            script.src = '/js/i18n.js?v=' + Date.now(); // 添加时间戳避免缓存
+            script.onerror = function() {
+                console.error('Failed to load i18n.js even with fallback method');
+            };
+            script.onload = function() {
+                console.log('i18n.js loaded successfully with fallback method');
+                setTimeout(initI18n, 50);
+            };
+            document.head.appendChild(script);
+        }
+        
+        // i18n.js 加载后立即初始化
+        function initI18n() {
+            if (typeof i18n === 'undefined') {
+                // 如果i18n还没定义，等待一下再试（最多等待5秒）
+                if (typeof initI18n.attempts === 'undefined') {
+                    initI18n.attempts = 0;
+                }
+                initI18n.attempts++;
+                if (initI18n.attempts < 100) { // 最多尝试100次，约5秒
+                    setTimeout(initI18n, 50);
+                } else {
+                    // 如果5秒后还没加载成功，尝试备用方案
+                    console.error('i18n is still undefined after 5 seconds, trying fallback...');
+                    if (!document.querySelector('script[src*="i18n.js"][data-fallback="true"]')) {
+                        loadI18nFallback();
+                    }
+                }
+                return;
+            }
+            
+            console.log('i18n object found, currentLang:', i18n.currentLang);
+            
+            const savedLang = localStorage.getItem('language');
+            console.log('localStorage language:', savedLang);
+            
+            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                i18n.currentLang = savedLang;
+                document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+                console.log('Language set to:', savedLang);
+            }
+            
+            // 立即尝试初始化，不等待DOM
+            if (document.body) {
+                console.log('Body exists, calling i18n.init()');
+                i18n.init();
+            } else {
+                // 如果body还没准备好，等待DOMContentLoaded
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', function() {
+                        console.log('DOMContentLoaded, calling i18n.init()');
+                        i18n.init();
+                    });
+                } else {
+                    setTimeout(function() { 
+                        console.log('Document ready, calling i18n.init()');
+                        i18n.init(); 
+                    }, 0);
+                }
+            }
+        }
+    </script>
+    <script src="/js/i18n.js" onerror="console.error('Failed to load i18n.js'); loadI18nFallback();" onload="setTimeout(initI18n, 50);"></script>
+    <script>
+        // 额外检查：如果脚本加载完成但i18n仍未定义，重试
+        setTimeout(function() {
+            if (typeof i18n === 'undefined') {
+                console.warn('i18n still undefined after script load, retrying...');
+                initI18n();
+            }
+        }, 200);
+    </script>
+    <script src="/js/lang-switcher.js" defer></script>
+    <style>
+        /* Tab切换样式 */
+        .tab-container {
+            margin-bottom: 20px;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+        
+        .tab-button {
+            padding: 12px 20px;
+            background: #f5f5f5;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            border-radius: 6px 6px 0 0;
+            margin-right: 5px;
+        }
+        
+        .tab-button:hover {
+            background: #e0e0e0;
+        }
+        
+        .tab-button.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* 字符串截取工具特定样式 */
+        .substring-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .control-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .control-group label {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .control-group input, .control-group select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .example-text {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        
+        /* 文本截取工具特定样式 */
+        .text-substring-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        /* 正则替换工具特定样式 */
+        .regex-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .regex-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .regex-toggle input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .suffix-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .suffix-group input {
+            flex: 1;
+        }
+        
+        .suffix-group button {
+            padding: 10px 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .suffix-group button:hover {
+            background: #5a67d8;
+        }
+        
+        /* 行号工具特定样式 */
+        .line-number-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        /* 差异对比工具特定样式 */
+        .diff-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .diff-panel {
+            flex: 1;
+        }
+        
+        .diff-panel textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: monospace;
+            resize: vertical;
+        }
+        
+        .diff-controls {
+            display: flex;
+            gap: 15px;
+            align-items: end;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .diff-controls .control-group {
+            margin-bottom: 0;
+        }
+        
+        .diff-result-container {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .diff-result-panel {
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .diff-result-header {
+            background: #f5f5f5;
+            padding: 10px;
+            font-weight: 500;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .diff-result-content {
+            height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+            white-space: pre;
+            padding: 10px;
+        }
+        
+        .diff-line {
+            line-height: 1.5;
+        }
+        
+        .diff-line-added {
+            background-color: #e6ffec;
+        }
+        
+        .diff-line-removed {
+            background-color: #ffebe9;
+        }
+        
+        .diff-line-unchanged {
+            background-color: #f8f8f8;
+        }
+        
+        /* 确保结果区域初始隐藏 */
+        #substring-result, #text-substring-result, #regex-result, #line-number-result {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 data-i18n="tool-stringprocess">字符串文本处理</h1>
+            <p class="subtitle" data-i18n="tool-stringprocess-desc">提供多种字符串处理功能</p>
+        </header>
+        
+        <!-- Tab切换 -->
+        <div class="tab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="substring" data-i18n="stringprocess-tab-substring">多行字符串批量按索引截取</button>
+                <button class="tab-button" data-tab="text-substring" data-i18n="stringprocess-tab-text-substring">多行字符串批量按文本截取</button>
+                <button class="tab-button" data-tab="regex" data-i18n="stringprocess-tab-regex">多行文本正则替换添加后缀</button>
+                <button class="tab-button" data-tab="line-number" data-i18n="stringprocess-tab-line-number">在线文本列表批量添加行号</button>
+                <button class="tab-button" data-tab="loop-string" data-i18n="stringprocess-tab-loop-string">循环生成字符串</button>
+                <button class="tab-button" data-tab="batch-replace" data-i18n="stringprocess-tab-batch-replace">文本字符串批量替换工具</button>
+                <button class="tab-button" data-tab="diff" data-i18n="stringprocess-tab-diff">文本代码差异对比</button>
+            </div>
+            
+            <!-- 多行字符串批量按索引截取功能 -->
+            <div id="substring" class="tab-content active">
+                <div class="form-group">
+                    <label for="input-text" data-i18n="stringprocess-input-label">输入文本（每行一个字符串）：</label>
+                    <textarea id="input-text" data-i18n="stringprocess-input-placeholder" placeholder="请输入要处理的文本，每行一个字符串">hello world
+test string
+example text</textarea>
+                </div>
+                
+                <div class="substring-controls">
+                    <div class="control-group">
+                        <label for="start-position" data-i18n="stringprocess-start-position">起始位置：</label>
+                        <input type="number" id="start-position" value="0" min="0">
+                        <div class="example-text" data-i18n="stringprocess-help-count-from-zero">从0开始计数</div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="end-position" data-i18n="stringprocess-end-position">结束位置：</label>
+                        <input type="number" id="end-position" value="" min="0">
+                        <div class="example-text" data-i18n="stringprocess-help-empty-to-end">留空表示截取到末尾</div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="substring-length" data-i18n="stringprocess-substring-length">截取长度：</label>
+                        <input type="number" id="substring-length" value="" min="1">
+                        <div class="example-text" data-i18n="stringprocess-help-priority-over-end">优先于结束位置</div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="position-type" data-i18n="stringprocess-position-type">位置类型：</label>
+                        <select id="position-type">
+                            <option value="character" data-i18n="stringprocess-option-by-character">按字符</option>
+                            <option value="byte" data-i18n="stringprocess-option-by-byte">按字节</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="processSubstring()" data-i18n="stringprocess-substring-btn">批量截取</button>
+                <button class="btn" onclick="clearSubstringInput()" data-i18n="btn-clear">清空</button>
+                
+                <div class="result" id="substring-result"></div>
+            </div>
+            
+            <!-- 多行字符串批量按文本截取功能 -->
+            <div id="text-substring" class="tab-content">
+                <div class="form-group">
+                    <label for="text-input-text" data-i18n="stringprocess-input-label">输入文本（每行一个字符串）：</label>
+                    <textarea id="text-input-text" data-i18n="stringprocess-input-placeholder" placeholder="请输入要处理的文本，每行一个字符串">hello world
+test string
+example text</textarea>
+                </div>
+                
+                <div class="text-substring-controls">
+                    <div class="control-group">
+                        <label for="start-text" data-i18n="stringprocess-start-text">起始文本：</label>
+                        <input type="text" id="start-text" data-i18n="stringprocess-start-text-placeholder" placeholder="输入起始文本">
+                        <div class="example-text" data-i18n="stringprocess-help-empty-from-start">留空表示从开头截取</div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="end-text" data-i18n="stringprocess-end-text">结束文本：</label>
+                        <input type="text" id="end-text" data-i18n="stringprocess-end-text-placeholder" placeholder="输入结束文本">
+                        <div class="example-text" data-i18n="stringprocess-help-empty-to-end">留空表示截取到末尾</div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="include-start" data-i18n="stringprocess-include-start">包含起始文本：</label>
+                        <select id="include-start">
+                            <option value="false" data-i18n="stringprocess-option-not-include">不包含</option>
+                            <option value="true" data-i18n="stringprocess-option-include">包含</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="include-end" data-i18n="stringprocess-include-end">包含结束文本：</label>
+                        <select id="include-end">
+                            <option value="false" data-i18n="stringprocess-option-not-include">不包含</option>
+                            <option value="true" data-i18n="stringprocess-option-include">包含</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="processTextSubstring()" data-i18n="stringprocess-text-extract-btn">批量按文本截取</button>
+                <button class="btn" onclick="clearTextSubstringInput()" data-i18n="btn-clear">清空</button>
+                
+                <div class="result" id="text-substring-result"></div>
+            </div>
+            
+            <!-- 多行文本正则替换添加后缀功能 -->
+            <div id="regex" class="tab-content">
+                <div class="form-group">
+                    <label for="regex-input-text" data-i18n="stringprocess-input-label">输入文本（每行一个字符串）：</label>
+                    <textarea id="regex-input-text" data-i18n="stringprocess-input-placeholder" placeholder="请输入要处理的文本，每行一个字符串">1
+12
+123
+1234
+12345</textarea>
+                </div>
+                
+                <div class="regex-controls">
+                    <div class="control-group">
+                        <label for="enable-replace" data-i18n="stringprocess-enable-replace">开启替换：</label>
+                        <div class="regex-toggle">
+                            <input type="checkbox" id="enable-replace" checked>
+                            <label for="enable-replace" data-i18n="stringprocess-enable">启用</label>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="search-text" data-i18n="stringprocess-regex-pattern">将字符（支持正则表达式）：</label>
+                        <input type="text" id="search-text" placeholder="\d{1}">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="replace-text" data-i18n="stringprocess-regex-replacement">替换成：</label>
+                        <input type="text" id="replace-text" data-i18n="stringprocess-replace-text-placeholder" placeholder="要替换成什么字符串">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label data-i18n="stringprocess-add-suffix">添加后缀：</label>
+                        <div class="suffix-group">
+                            <input type="text" id="suffix-text" data-i18n="stringprocess-suffix-placeholder" placeholder=".jpg">
+                            <button onclick="addSuffix()" data-i18n="stringprocess-add-suffix-btn">添加后缀</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="processRegexReplace()" data-i18n="stringprocess-regex-replace-btn">批量正则替换</button>
+                <button class="btn" onclick="clearRegexInput()" data-i18n="btn-clear">清空</button>
+                
+                <div class="result" id="regex-result"></div>
+            </div>
+            
+            <!-- 在线文本列表批量添加行号功能 -->
+            <div id="line-number" class="tab-content">
+                <div class="form-group">
+                    <label for="line-number-input-text" data-i18n="stringprocess-input-label">输入文本（每行一个字符串）：</label>
+                    <textarea id="line-number-input-text" data-i18n="stringprocess-input-placeholder" placeholder="请输入要处理的文本，每行一个字符串">DownloadKittens
+DownloadPuppies
+DownloadBunnies</textarea>
+                </div>
+                
+                <div class="line-number-controls">
+                    <div class="control-group">
+                        <label for="line-number-start" data-i18n="stringprocess-linenumber-start">起始行号：</label>
+                        <input type="number" id="line-number-start" value="1" min="0">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="line-number-separator" data-i18n="stringprocess-linenumber-format">分隔符：</label>
+                        <input type="text" id="line-number-separator" value=". ">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="line-number-skip-empty" data-i18n="stringprocess-linenumber-skip-empty">跳过空行：</label>
+                        <select id="line-number-skip-empty">
+                            <option value="true" data-i18n="option-yes">是</option>
+                            <option value="false" data-i18n="option-no">否</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="processLineNumber()" data-i18n="stringprocess-linenumber-add-btn">批量添加行号</button>
+                <button class="btn" onclick="clearLineNumberInput()" data-i18n="btn-clear">清空</button>
+                
+                <div class="result" id="line-number-result"></div>
+                
+                <div class="example">
+                    <h4>使用示例：</h4>
+                    <p>输入文本：<br>DownloadKittens<br>DownloadPuppies<br>DownloadBunnies</p>
+                    <p>起始行号：1<br>分隔符：. <br>跳过空行：是</p>
+                    <p>结果：<br>1. DownloadKittens<br>2. DownloadPuppies<br>3. DownloadBunnies</p>
+                </div>
+            </div>
+            
+            <!-- 循环生成字符串功能 -->
+            <div id="loop-string" class="tab-content">
+                <div class="form-group">
+                    <label for="loop-input-text">操作文本（使用 %d 作为占位符）：</label>
+                    <textarea id="loop-input-text" placeholder="select * from table_%d where id=%d;">select * from table_%d where id=%d;</textarea>
+                </div>
+                
+                <div class="regex-controls">
+                    <div class="control-group">
+                        <label for="loop-count">循环次数：</label>
+                        <input type="number" id="loop-count" value="10" min="1" max="1000">
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="processLoopString()">生成字符串</button>
+                <button class="btn" onclick="clearLoopStringInput()">清空</button>
+                
+                <div class="result" id="loop-string-result"></div>
+            </div>
+            
+            <!-- 文本字符串批量替换工具 -->
+            <div id="batch-replace" class="tab-content">
+                <div class="form-group">
+                    <label for="batch-replace-input-text">输入文本（每行一个字符串）：</label>
+                    <textarea id="batch-replace-input-text" placeholder="请输入要处理的文本，每行一个字符串"></textarea>
+                </div>
+                
+                <div class="regex-controls">
+                    <div class="control-group">
+                        <label for="search-string">查找文本：</label>
+                        <input type="text" id="search-string" placeholder="请输入要查找的文本">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="replace-string">替换文本：</label>
+                        <input type="text" id="replace-string" placeholder="请输入替换后的文本">
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="replace-mode">替换模式：</label>
+                        <select id="replace-mode">
+                            <option value="normal">普通替换</option>
+                            <option value="regex">正则表达式</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="case-sensitive">大小写敏感：</label>
+                        <select id="case-sensitive">
+                            <option value="true">是</option>
+                            <option value="false">否</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="processBatchReplace()">批量替换</button>
+                <button class="btn" onclick="clearBatchReplaceInput()">清空</button>
+                
+                <div class="result" id="batch-replace-result"></div>
+            </div>
+            
+            <!-- 文本代码差异对比 -->
+            <div id="diff" class="tab-content">
+                <div class="diff-container">
+                    <div class="diff-panel">
+                        <div class="form-group">
+                            <label for="original-text">原始文本：</label>
+                            <textarea id="original-text" placeholder="请输入原始文本"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="diff-panel">
+                        <div class="form-group">
+                            <label for="modified-text">修改后文本：</label>
+                            <textarea id="modified-text" placeholder="请输入修改后的文本"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="diff-controls">
+                    <div class="control-group">
+                        <label for="diff-mode">对比模式：</label>
+                        <select id="diff-mode">
+                            <option value="line">按行对比</option>
+                            <option value="word">按单词对比</option>
+                            <option value="char">按字符对比</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="ignore-whitespace">忽略空白字符：</label>
+                        <select id="ignore-whitespace">
+                            <option value="false">否</option>
+                            <option value="true">是</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn" onclick="processDiff()">对比差异</button>
+                    <button class="btn" onclick="clearDiffInput()">清空</button>
+                </div>
+                
+                <div class="diff-result-container">
+                    <div class="diff-result-panel">
+                        <div class="diff-result-header">原始文本</div>
+                        <div class="diff-result-content" id="original-diff-result"></div>
+                    </div>
+                    
+                    <div class="diff-result-panel">
+                        <div class="diff-result-header">修改后文本</div>
+                        <div class="diff-result-content" id="modified-diff-result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="/index.html" class="back-link" data-i18n="back-home-link">← 返回工具箱首页</a>
+
+        <footer>
+            <p data-i18n="footer-text">© 在线工具箱 - 实用工具集合</p>
+            <p><a href="/contact.html" data-i18n="footer-contact">联系我们</a></p>
+        </footer>
+    </div>
+    
+    <script src="/js/stringprocess.js?v=1.12"></script>
+    <script src="/js/nav.js?v=1.12"></script>
+    <script>
+        // 强制应用语言设置 - 使用多种方式确保执行
+        function forceApplyLanguage() {
+            if (typeof i18n === 'undefined') {
+                setTimeout(forceApplyLanguage, 50);
+                return;
+            }
+            
+            const savedLang = localStorage.getItem('language');
+            if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                i18n.currentLang = savedLang;
+                document.documentElement.lang = savedLang === 'zh' ? 'zh-CN' : 'en';
+                // 多次调用确保生效
+                i18n.updatePage();
+                setTimeout(function() { i18n.updatePage(); }, 50);
+                setTimeout(function() { i18n.updatePage(); }, 150);
+                setTimeout(function() { i18n.updatePage(); }, 300);
+            }
+        }
+        
+        // 立即执行一次（如果DOM已经准备好）
+        if (document.body && document.querySelectorAll('[data-i18n]').length > 0) {
+            setTimeout(forceApplyLanguage, 0);
+        }
+        
+        // DOMContentLoaded时执行
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(forceApplyLanguage, 50);
+                setTimeout(forceApplyLanguage, 200);
+                setTimeout(forceApplyLanguage, 500);
+            });
+        } else {
+            setTimeout(forceApplyLanguage, 50);
+            setTimeout(forceApplyLanguage, 200);
+            setTimeout(forceApplyLanguage, 500);
+        }
+        
+        // window.onload时再执行一次
+        window.addEventListener('load', function() {
+            setTimeout(forceApplyLanguage, 100);
+            setTimeout(forceApplyLanguage, 500);
+            setTimeout(forceApplyLanguage, 1000);
+        });
+        
+        // 使用MutationObserver监听DOM变化，确保动态添加的元素也被更新
+        if (typeof MutationObserver !== 'undefined') {
+            let observerTimeout;
+            const observer = new MutationObserver(function(mutations) {
+                clearTimeout(observerTimeout);
+                observerTimeout = setTimeout(function() {
+                    if (typeof i18n !== 'undefined') {
+                        const savedLang = localStorage.getItem('language');
+                        if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+                            i18n.currentLang = savedLang;
+                            i18n.updatePage();
+                        }
+                    }
+                }, 150);
+            });
+            
+            if (document.body) {
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            } else {
+                document.addEventListener('DOMContentLoaded', function() {
+                    if (document.body) {
+                        observer.observe(document.body, {
+                            childList: true,
+                            subtree: true
+                        });
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

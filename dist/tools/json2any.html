@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="tool-base64">Base64加解密工具 - 在线工具箱</title>
+    <title data-i18n="tool-json2any">Json2Any工具 - 在线工具箱</title>
     <link rel="stylesheet" href="/css/tool.css?v=1.21">
     <script>
         // 在页面加载的最早时机就设置语言
@@ -92,24 +92,63 @@
         }, 200);
     </script>
     <script src="/js/lang-switcher.js" defer></script>
+    <style>
+        /* 调整按钮组样式 */
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .button-group .btn {
+            margin-bottom: 0;
+        }
+        
+        /* 结果标题样式调整 */
+        .result-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .result-title-text {
+            flex-grow: 1;
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        
+        .result-title .copy-btn {
+            margin-left: 10px;
+            flex-shrink: 0;
+            align-self: flex-start;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1 data-i18n="tool-base64">Base64加解密工具</h1>
-            <p class="subtitle" data-i18n="tool-base64-desc">在线Base64编码和解码工具</p>
+            <h1 data-i18n="tool-json2any">Json2Any工具</h1>
+            <p class="subtitle" data-i18n="tool-json2any-desc">JSON转Go结构体、Protobuf消息定义、PHP数组，YAML转Protobuf，SQL转GORM</p>
         </header>
         
         <div class="form-group">
-            <label for="input-text" data-i18n="base64-input-label">输入文本：</label>
-            <textarea id="input-text" data-i18n="base64-input-placeholder" placeholder="请输入要编码或解码的文本"></textarea>
+            <label for="input-text" data-i18n="json2any-input-label">输入JSON、YAML或SQL：</label>
+            <textarea id="input-text" data-i18n="json2any-input-placeholder" placeholder="请输入要转换的JSON、YAML或SQL语句"></textarea>
         </div>
         
-        <button class="btn" onclick="encodeBase64()" data-i18n="base64-encode">Base64编码</button>
-        <button class="btn" onclick="decodeBase64()" data-i18n="base64-decode">Base64解码</button>
-        <button class="btn" onclick="clearInput()" data-i18n="btn-clear">清空</button>
+        <div class="button-group">
+            <button class="btn" onclick="jsonToGoStruct()" data-i18n="json2any-go">JSON转Go结构体</button>
+            <button class="btn" onclick="sqlToGorm()" data-i18n="json2any-sql-gorm">SQL转GORM</button>
+            <button class="btn" onclick="jsonToProtobuf()" data-i18n="json2any-protobuf">JSON转Protobuf</button>
+            <button class="btn" onclick="yamlToProtobuf()" data-i18n="json2any-yaml-protobuf">YAML转Protobuf</button>
+            <button class="btn" onclick="jsonToPhpArray()" data-i18n="json2any-php">JSON转PHP数组</button>
+            <button class="btn" onclick="clearInput()" data-i18n="btn-clear">清空</button>
+        </div>
         
-        <div class="result" id="base64-result"></div>
+        <div class="result" id="json2go-result"></div>
         
         <a href="/index.html" class="back-link" data-i18n="back-home-link">← 返回工具箱首页</a>
 
@@ -119,8 +158,8 @@
         </footer>
     </div>
     
-    <script src="/js/utils.js?v=2.0"></script>
-    <script src="/js/base64.js?v=1.1"></script>
+    <script src="/js/lib/js-yaml.min.js"></script>
+    <script src="/js/json2any.js?v=1.14"></script>
     <script src="/js/nav.js?v=1.12"></script>
     <script>
         // 强制应用语言设置 - 使用多种方式确保执行

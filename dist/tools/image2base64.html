@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="tool-base64">Base64加解密工具 - 在线工具箱</title>
+    <title data-i18n="tool-image2base64">图片转Base64 - 在线工具箱</title>
     <link rel="stylesheet" href="/css/tool.css?v=1.21">
     <script>
         // 在页面加载的最早时机就设置语言
@@ -92,24 +92,170 @@
         }, 200);
     </script>
     <script src="/js/lang-switcher.js" defer></script>
+    <style>
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .upload-area {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+            cursor: pointer;
+        }
+        
+        .upload-area:hover {
+            border-color: #667eea;
+        }
+        
+        .upload-area.dragover {
+            border-color: #667eea;
+            background-color: #f0f8ff;
+        }
+        
+        .upload-icon {
+            font-size: 48px;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .preview-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .preview-image {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+        
+        .result-item {
+            margin-bottom: 20px;
+        }
+        
+        .result-value {
+            font-family: monospace;
+            word-break: break-all;
+            white-space: pre-wrap;
+            color: #555;
+            font-size: 0.85rem;
+            font-weight: normal;
+            margin: 10px 0;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            overflow-x: auto;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        /* 下载按钮样式 */
+        .download-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        
+        .download-btn:hover {
+            background-color: #218838;
+        }
+        
+        .download-btn:before {
+            content: "⬇ ";
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1 data-i18n="tool-base64">Base64加解密工具</h1>
-            <p class="subtitle" data-i18n="tool-base64-desc">在线Base64编码和解码工具</p>
+            <h1 data-i18n="tool-image2base64">图片转Base64</h1>
+            <p class="subtitle" data-i18n="tool-image2base64-desc">将图片转换为Base64编码，支持多种使用方式</p>
         </header>
         
-        <div class="form-group">
-            <label for="input-text" data-i18n="base64-input-label">输入文本：</label>
-            <textarea id="input-text" data-i18n="base64-input-placeholder" placeholder="请输入要编码或解码的文本"></textarea>
+        <!-- 图片上传转Base64区域 -->
+        <div class="section">
+            <div class="section-title" data-i18n="image2base64-section-upload">图片上传转Base64</div>
+            <div class="form-group">
+                <label data-i18n="image2base64-upload-label">上传图片：</label>
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <p data-i18n="image2base64-upload-click">点击选择图片或拖拽图片到此处</p>
+                    <p class="small" data-i18n="image2base64-upload-formats">支持 JPG、PNG、GIF 等常见图片格式</p>
+                    <input type="file" id="fileInput" class="file-input" accept="image/*">
+                </div>
+            </div>
+            
+            <div class="preview-container hidden" id="previewContainer">
+                <img id="previewImage" class="preview-image" data-i18n="image2base64-preview-image" alt="预览图片">
+                <button class="download-btn" id="downloadPreviewBtn" onclick="downloadPreviewImage()" data-i18n="image2base64-download-image">下载图片</button>
+            </div>
+            
+            <div id="results" class="hidden">
+                <div class="result-item">
+                    <div class="result-title" data-i18n="image2base64-base64-content">Base64内容：</div>
+                    <div class="result-value" id="base64Result"></div>
+                    <button class="copy-btn" onclick="copyBase64()" data-i18n="image2base64-copy-base64">复制Base64</button>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-title" data-i18n="image2base64-css-usage">CSS使用：</div>
+                    <div class="result-value" id="cssResult"></div>
+                    <button class="copy-btn" onclick="copyCSS()" data-i18n="image2base64-copy-css">复制CSS</button>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-title" data-i18n="image2base64-html-usage">HTML使用：</div>
+                    <div class="result-value" id="htmlResult"></div>
+                    <button class="copy-btn" onclick="copyHTML()" data-i18n="image2base64-copy-html">复制HTML</button>
+                </div>
+            </div>
         </div>
         
-        <button class="btn" onclick="encodeBase64()" data-i18n="base64-encode">Base64编码</button>
-        <button class="btn" onclick="decodeBase64()" data-i18n="base64-decode">Base64解码</button>
-        <button class="btn" onclick="clearInput()" data-i18n="btn-clear">清空</button>
-        
-        <div class="result" id="base64-result"></div>
+        <!-- Base64转图片区域 -->
+        <div class="section">
+            <div class="section-title" data-i18n="image2base64-section-reverse">Base64转图片</div>
+            <div class="form-group">
+                <label for="base64Input" data-i18n="image2base64-base64-input-label">Base64内容：</label>
+                <textarea id="base64Input" data-i18n="image2base64-base64-input-placeholder" placeholder="粘贴Base64编码内容"></textarea>
+            </div>
+            <button class="btn" onclick="base64ToImage()" data-i18n="image2base64-convert-to-image">转换为图片</button>
+            
+            <div class="preview-container hidden" id="reversePreviewContainer">
+                <img id="reversePreviewImage" class="preview-image" data-i18n="image2base64-reverse-preview" alt="Base64转图片">
+                <button class="download-btn" id="downloadReverseBtn" onclick="downloadReverseImage()" data-i18n="image2base64-download-image">下载图片</button>
+            </div>
+        </div>
         
         <a href="/index.html" class="back-link" data-i18n="back-home-link">← 返回工具箱首页</a>
 
@@ -119,8 +265,7 @@
         </footer>
     </div>
     
-    <script src="/js/utils.js?v=2.0"></script>
-    <script src="/js/base64.js?v=1.1"></script>
+    <script src="/js/image2base64.js?v=1.4"></script>
     <script src="/js/nav.js?v=1.12"></script>
     <script>
         // 强制应用语言设置 - 使用多种方式确保执行
